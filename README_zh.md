@@ -23,6 +23,8 @@
 
 ## 概述
 
+**仓库级任务规范：** 开始任何任务前先阅读 [AGENTS.md](AGENTS.md)，然后阅读本次任务对应的 `src/skills/`。
+
 Collider-Agent 使 AI 编程智能体（Claude Code、Cursor、Windsurf 等）能够自主复现物理论文中的对撞机唯象学结果。它结合了专用子智能体与可复用技能模块，通过 [Magnus](https://github.com/Rise-AGI/magnus) 云平台与标准高能物理工具对接——**无需在本地安装任何 HEP 软件**。
 
 **完整流程，全程自动化：**
