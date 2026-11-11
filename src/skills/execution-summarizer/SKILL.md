@@ -127,7 +127,7 @@ Map the user-specified event selection criteria to the analysis code.
 
 #### Section 5: Output Files
 
-A list of all key output files produced, with their paths and brief descriptions.
+A list of all key output files produced, with their paths and brief descriptions. Include format, byte size, event/row count, and SHA-256 when available.
 
 ```
 - execution_summary.md (or execution_summary_<run_label>.md for incremental runs) — this summary
@@ -138,6 +138,10 @@ A list of all key output files produced, with their paths and brief descriptions
 - events/pp_s1s1/Events/run_01/     — generated events (LHE + HepMC)
 - output/figures/mll_distribution.pdf — dilepton invariant mass plot
 ```
+
+#### Section 6: Archival and Provenance
+
+State where the essential outputs are archived and identify the exact repository path, branch/PR, and commit when known. Use one explicit status: `local only`, `committed to PR branch`, or `merged and verified on main`. Include the run-manifest path and checksums or the manifest path for large external files. Do not claim GitHub archival unless the remote files have actually been retrieved and verified. Do not create a new ZIP/TAR archive as a substitute for extracted result files. If the run has not been committed, say so plainly and give the canonical destination.
 
 ---
 
@@ -152,3 +156,4 @@ After writing `execution_summary.md`, inform the user that the summary has been 
 3. **Keep it concise** — the summary should be informative but not excessively long. Focus on the mapping tables and key results.
 4. **Handle partial pipelines** — if only some steps were executed (e.g., only model building), only include the relevant sections and tables.
 5. **Use LaTeX notation** in the "User Prompt" column of the mapping tables for readability.
+6. **Separate output generation from archival.** A file in the working directory or Magnus workspace is not a GitHub archive. Report the actual archive state, and do not invent hashes or remote commits.

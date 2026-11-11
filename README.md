@@ -209,6 +209,9 @@ claude -p "Execute the analysis following prompt.md"
    - Apply analysis cuts with MadAnalysis5
    - Generate the analysis outputs, such as kinematic distribution plots, parameter exclusion regions, and any other results requested in the user prompt
 
+### Result archival and reproducibility
+
+Generated files in a local or Magnus working directory are not automatically archived. Follow the mandatory [research-result archival policy](docs/RESEARCH_RESULT_ARCHIVAL.md): commit essential native result files directly, do not create a new ZIP/TAR as a substitute for extracted outputs, preserve run provenance and checksums, and verify the remote files after pushing. Large event samples require Git LFS or durable versioned storage with a manifest.
 
 ### Standalone Tasks
 

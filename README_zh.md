@@ -207,6 +207,10 @@ claude -p "Execute the analysis following prompt.md"
    - 使用 MadAnalysis5 施加分析截断
    - 生成分析输出（运动学分布图、参数排除区域等）
 
+### 结果归档与可复现性
+
+本地或 Magnus 工作区中的文件不会自动成为永久研究归档。必须遵守[研究结果归档规范](docs/RESEARCH_RESULT_ARCHIVAL.zh-CN.md)：直接提交必要的原生结果文件，不得新建 ZIP/TAR 代替解压后的输出；保留运行来源和校验和，并在推送后核对 GitHub 远端文件。大型事例样本应使用 Git LFS 或带清单的持久版本化存储。
+
 ### 单项子任务
 
 智能体也可用于独立子任务，无需运行完整的唯象学流程，例如：
