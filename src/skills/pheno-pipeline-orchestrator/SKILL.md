@@ -160,6 +160,8 @@ Execute the following steps **sequentially**, using the specified subagent for e
 5. **Skip steps that are not needed** — not every task requires all 4 steps. For example, if the user already has a UFO model, skip step 1.
 6. **Generate execution summary** — after all steps complete, invoke the `execution-summarizer` skill to produce a detailed `execution_summary.md` with prompt-to-code mapping tables and key results.
 7. **Update manifest after each step** — after a subagent completes, update the run's entry in `progress/run_manifest.yaml` with the step's status (success/failed).
+8. **Archive completed research outputs** — a local or Magnus working directory is not a permanent archive. If this reproduction is maintained here, curate the essential native outputs under `paper-reproduction/<arXiv-ID>/results/<run_label>/`; otherwise archive them in the canonical research repository and record its path. Do not create a new ZIP/TAR archive as a substitute for extracted results. Follow `docs/RESEARCH_RESULT_ARCHIVAL.md`.
+9. **Record archive status truthfully** — distinguish local-only, committed-to-PR, and merged-and-verified-on-main states. Do not claim GitHub archival before retrieving and checking the remote files.
 
 ## Separation of Concerns
 

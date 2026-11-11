@@ -37,6 +37,10 @@ claude
 > [!TIP]
 > Run prompts from a clean working directory to avoid mixing outputs from different runs. Each paper directory also has a `README.md` with a difficulty ranking when multiple figures are available — start with the simpler one.
 
+## Archiving a completed reproduction
+
+A run's working directory is not its permanent archive. If a reproduction is maintained in this repository, curate its essential outputs under `<arXiv-ID>/results/<run_label>/`; otherwise archive them in the canonical research repository for that study and record the destination in the execution summary. Commit native result files, scripts, the run manifest, provenance, and checksums directly. Do not create a new ZIP/TAR archive as a substitute for extracted outputs. For large event samples, use Git LFS or durable versioned storage with a committed manifest. See the [research-result archival policy](../docs/RESEARCH_RESULT_ARCHIVAL.md).
+
 ## Prompt Format
 
 Every prompt follows a standard four-section structure:
