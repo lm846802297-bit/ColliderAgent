@@ -49,3 +49,16 @@ The execution summary must identify the generated files and map the user's physi
 6. Keep archival status separate from physics validation. A successful simulation, a complete event sample, a green CI run, or matching hashes does not by itself validate the model or establish the physical conclusion.
 
 This policy applies to every future paper reproduction and collider-phenomenology result maintained in this repository.
+
+## 6. CI is optional and is not a research or merge gate
+
+CI is optional supporting infrastructure, not a prerequisite for calculation, scientific validation, result submission, pull-request review, or merge.
+
+- Calculations may be run directly on a local machine or an approved compute runner. Do not wait for a CI job before starting, continuing, or completing research.
+- Numerical and scientific acceptance checks remain necessary where appropriate, but they may be run locally or on an approved runner. Record the exact commands, source revision, inputs, settings, outputs, and checks actually performed. CI is neither a substitute for scientific validation nor a mandatory way to perform it.
+- GitHub Actions may still be used as an optional compute or artifact-handoff service. A workflow that performs the calculation is an execution run; record its provenance and outputs. Its existence does not make a separate PR CI check mandatory.
+- A queued, unavailable, disabled, billing-blocked, cancelled, or infrastructure-failed CI job must not by itself block research progress, archival, PR creation, review, or merge. Record its status truthfully and distinguish infrastructure problems from scientific failures.
+- If CI is run, report the exact commit SHA and the checks that actually ran. Never claim an unrun check passed. A green CI result validates only the properties tested by that workflow.
+- Review and merge according to the actual diff, reproducibility, scientific evidence, scope, and relevant checks. Do not require CI status checks as branch-protection gates under this policy. Do not change repository protection settings without explicit authorization.
+- CI is mandatory for a specific task only if the author explicitly requests it.
+
