@@ -25,7 +25,7 @@
 
 ## Overview
 
-**Repository instructions:** before any task, read [AGENTS.md](AGENTS.md) and then follow the relevant Skill under `src/skills/`.
+**Repository instructions:** before any task, read [AGENTS.md](AGENTS.md) and then follow the relevant Skill under `src/skills/`. For PR merge choices, follow [GIT_MERGE_POLICY.md](GIT_MERGE_POLICY.md); substantive research changes default to merge commits.
 
 Collider-Agent enables AI coding agents (Claude Code, Cursor, Windsurf, and more) to autonomously reproduce collider phenomenology results from physics papers. It combines specialized sub-agents and reusable skill modules that interface with standard HEP tools via the [Magnus](https://github.com/Rise-AGI/magnus) cloud platform — no local HEP software installation required.
 
