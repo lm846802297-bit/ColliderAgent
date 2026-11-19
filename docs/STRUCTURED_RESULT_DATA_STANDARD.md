@@ -166,7 +166,7 @@ python docs/schemas/validate_result_records.py --repo-root . <run_manifest.json>
 `extensions.collider_mc` 应记录：
 
 - 模型/UFO 名称、版本和文件指纹，过程定义与粒子多重态；
-- collider 类型、束流能量、(sqrt{s})、PDF set/version、重整化/因子化尺度；
+- collider 类型、束流能量、$\sqrt{s}$、PDF set/version、重整化/因子化尺度；
 - generation cuts、匹配/合并、衰变链、宽度方案、随机种子；
 - MadGraph、Pythia8、Delphes、MadAnalysis5、FeynRules、LHAPDF 等实际使用版本；
 - requested/generated/selected event counts、event weights、截面和统计误差；
