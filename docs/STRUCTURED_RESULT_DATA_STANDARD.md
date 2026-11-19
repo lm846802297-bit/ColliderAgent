@@ -154,6 +154,8 @@ results/<run_label>/
 
 ### 对撞机 Monte Carlo / 论文复现
 
+现有 `progress/run_manifest.yaml` 可继续作为运行中的进度记录；每次重要运行归档时，应同时导出符合本规范的最终 `run_manifest.json`，并与 `result_summary.json`、`validation_report.json` 及原生事例文件一起归档。
+
 `extensions.collider_mc` 应记录：
 
 - 模型/UFO 名称、版本和文件指纹，过程定义与粒子多重态；
