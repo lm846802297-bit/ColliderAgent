@@ -157,3 +157,17 @@ After writing `execution_summary.md`, inform the user that the summary has been 
 4. **Handle partial pipelines** — if only some steps were executed (e.g., only model building), only include the relevant sections and tables.
 5. **Use LaTeX notation** in the "User Prompt" column of the mapping tables for readability.
 6. **Separate output generation from archival.** A file in the working directory or Magnus workspace is not a GitHub archive. Report the actual archive state, and do not invent hashes or remote commits.
+
+
+## Research reporting standard
+
+In addition to the detailed run sections required above, begin the scientific narrative of every execution summary with a compact four-part overview:
+
+1. **Conclusion** — the direct answer and the current research judgment.
+2. **Evidence** — the exact model/code path, data, derivation, or checks supporting it.
+3. **Results** — completed numerical outputs with units, precision, benchmark, uncertainties, and physical interpretation.
+4. **Remaining work** — only pending or blocked steps that affect the next stage.
+
+Keep the required run-info, execution-step, prompt-to-code mapping, output, and archival sections. Report completed stages and their results directly; mark later unfinished stages separately rather than using them to weaken completed results. State approximations and validity domains once. Identify physics or implementation errors directly and state which outputs need recalculation. Do not use generic disclaimers or repeat caveats that do not change the interpretation.
+
+This style requirement does not change the scientific acceptance criteria or the required separation between successful tool execution, validation of each pipeline stage, and a supported physical conclusion.
