@@ -62,3 +62,6 @@ CI is optional supporting infrastructure, not a prerequisite for calculation, sc
 - Review and merge according to the actual diff, reproducibility, scientific evidence, scope, and relevant checks. Do not require CI status checks as branch-protection gates under this policy. Do not change repository protection settings without explicit authorization.
 - CI is mandatory for a specific task only if the author explicitly requests it.
 
+## 7. Structured JSON/CSV result records
+
+For new substantial runs, follow the [Structured Research Result Data Standard](STRUCTURED_RESULT_DATA_STANDARD.md) and validate `run_manifest`, `result_summary`, and `validation_report` records against `schemas/research-result-record-v1.0.0.schema.json`. Keep provenance, physics results, and validation checks separate. Use CSV for cutflows, cross-section scans, and histogram tables; preserve LHE/HepMC/ROOT or other native event formats for event-level data and record event counts, analysis level, weights, and SHA-256. The collider-specific fields are defined in the standard's `extensions.collider_mc` profile.
