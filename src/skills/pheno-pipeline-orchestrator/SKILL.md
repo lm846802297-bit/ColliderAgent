@@ -191,3 +191,15 @@ When running locally:
    - Wait for the `task-notification` to confirm completion. Do NOT use `TaskOutput(block=true)` — it pulls the entire verbose MadGraph log into context.
    - After the notification, use `Grep` on the task output file to extract only the specific lines needed (e.g., run names, output paths).
    - Let downstream subagents read the MadGraph output directories directly for physics results.
+
+
+## User-facing research handoff standard
+
+After completing the pipeline and invoking the execution summarizer, report the handoff using:
+
+1. **Conclusion** — the direct answer and overall stage reached.
+2. **Evidence** — actual source revision, run manifest, executed stages, and validation records.
+3. **Results** — completed cross sections, event counts, uncertainties, yields, plots, and other numerical outputs with units and precision.
+4. **Remaining work** — only stages or checks that are pending, blocked, or required for the next decision.
+
+Never imply that an unexecuted stage ran. Keep completed stage results separate from later pending work. State approximations and their validity domains once, identify errors and their impact directly, and preserve the distinction between pipeline execution, technical validation, and scientific reproduction. Avoid repetitive defensive wording without omitting evidence that materially changes the result.
