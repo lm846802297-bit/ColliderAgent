@@ -1,12 +1,12 @@
 # Repository instructions — Collider-Agent
 
-These instructions are mandatory for agents and contributors. They complement the root README, the paper-reproduction guide, the individual Skills under `src/skills/`, and the research-result archival policy.
+These instructions are mandatory for agents and contributors. They complement the root README, the paper-reproduction guide, the individual Skills under `src/skills/`, and the research-result archival policy. Before computational work, follow [RESEARCH_COMPUTE_POLICY.md](RESEARCH_COMPUTE_POLICY.md): use the current ChatGPT Linux environment for primary calculations when the required HEP tools are available; designate Magnus explicitly as the external execution backend for specialized stages unavailable locally; reserve GitHub Actions for independent verification and CI.
 
 ## 1. Minimal preflight
 
 Before a substantive task:
 
-1. Read this file and the root [README](README.md) or [Chinese README](README_zh.md).
+1. Read this file, the root [README](README.md) or [Chinese README](README_zh.md), and [RESEARCH_COMPUTE_POLICY.md](RESEARCH_COMPUTE_POLICY.md).
 2. Identify whether the task is a standalone model, simulation, analysis, plotting task, or a multi-stage/incremental pipeline.
 3. Read the exact relevant Skill before invoking a subagent or Magnus blueprint. For a full pipeline, read `src/skills/pheno-pipeline-orchestrator/SKILL.md` and the Skills for each stage actually used.
 4. For paper reproduction, read the selected `paper-reproduction/<arXiv-ID>/README.md`, the clean `prompt_figure_N.md`, and its annotated `_with_comments` companion only when debugging or authoring prompts.
