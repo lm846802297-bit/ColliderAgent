@@ -1,6 +1,6 @@
 # Repository instructions — Collider-Agent
 
-These instructions are mandatory for agents and contributors. They complement the root README, the paper-reproduction guide, the individual Skills under `src/skills/`, and the research-result archival policy. Before computational work, follow [RESEARCH_COMPUTE_POLICY.md](RESEARCH_COMPUTE_POLICY.md): use the current ChatGPT Linux environment for primary calculations when the required HEP tools are available; designate Magnus explicitly as the external execution backend for specialized stages unavailable locally; reserve GitHub Actions for independent verification and CI.
+These instructions are mandatory for agents and contributors. They complement the root README, the paper-reproduction guide, the individual Skills under `src/skills/`, and the research-result archival policy. Before computational work, follow [RESEARCH_COMPUTE_POLICY.md](RESEARCH_COMPUTE_POLICY.md): ordinary GPT chat uses ChatGPT Linux as primary; Codex and ChatGPT Work use the user's Windows local environment as primary. Designate Magnus explicitly as the external execution backend for specialized stages unavailable in the selected environment; reserve GitHub Actions for independent verification and CI.
 
 ## 1. Minimal preflight
 
