@@ -84,9 +84,9 @@ Report four statuses separately: **computed**, **archived**, **numerically valid
 
 This repository's existing end-to-end collider workflow uses the Magnus backend to provide specialized HEP software stages (FeynRules, MadGraph5, Pythia8, Delphes, and MadAnalysis5). Apply the following scoped adapter without changing the general primary-compute rule:
 
-- First use the active ChatGPT Linux environment for calculations and checks whose required tools, data, and resources are actually available there.
-- When a pipeline stage requires the specialized Magnus-managed toolchain that is unavailable in the active Linux environment, the task/run brief may designate Magnus as the explicit approved execution backend for that stage. Record the exact Magnus job/run identity, backend/environment, source revision, model and cards, input artifacts, parameters, event counts/seeds, logs, outputs, and checksums.
-- Treat Magnus execution as an explicitly designated external execution environment, not as ChatGPT-local execution and not as GitHub Actions.
+- First use the selected primary environment defined in §2: ChatGPT Linux in ordinary GPT chat, or the Windows local environment in Codex/Work, for calculations and checks whose required tools, data, and resources are available there.
+- When a pipeline stage requires the specialized Magnus-managed toolchain that is unavailable in the selected primary environment, the task/run brief may designate Magnus as the explicit approved execution backend for that stage. Record the exact Magnus job/run identity, backend/environment, source revision, model and cards, input artifacts, parameters, event counts/seeds, logs, outputs, and checksums.
+- Treat Magnus execution as an explicitly designated external execution environment, not as execution in the selected primary environment and not as GitHub Actions.
 - Keep independent checks (analytic checks, reduced local runs, cross-section/normalization checks, and regression tests) separate from the remote production run. Do not infer physics correctness from successful orchestration or job completion.
 - GitHub remains the canonical archive for the reproducible source, run manifest, and essential native outputs; remote working directories and job artifacts alone are not durable archival records.
 
