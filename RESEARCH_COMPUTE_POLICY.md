@@ -83,7 +83,17 @@ Report four statuses separately: **computed**, **archived**, **numerically valid
 - If Actions cannot run, record it as unavailable/blocked/unrun and proceed with the scientific checks that can be performed locally.
 - If the selected primary environment is unavailable or insufficient, state the exact blocker. An explicitly approved switch among ChatGPT Linux, Windows local, and a GPT-managed cloud computer may be used and must be recorded in the run manifest, including why the execution target changed. GitHub Actions must not silently become the replacement primary environment.
 
-## 7. Security and scope / 安全与适用范围
+## 7. ColliderAgent execution adapter / ColliderAgent 专用执行适配
+
+This repository's existing end-to-end collider workflow uses the Magnus backend to provide specialized HEP software stages (FeynRules, MadGraph5, Pythia8, Delphes, and MadAnalysis5). Apply the following scoped adapter without changing the general primary-compute rule:
+
+- First use the selected primary environment defined in §2: ChatGPT Linux in ordinary GPT chat, the Windows local environment in Codex/Work local execution, or the GPT-managed cloud computer in Codex/Work cloud execution, for calculations and checks whose required tools, data, and resources are available there.
+- When a pipeline stage requires the specialized Magnus-managed toolchain that is unavailable in the selected primary environment, the task/run brief may designate Magnus as the explicit approved execution backend for that stage. Record the exact Magnus job/run identity, backend/environment, source revision, model and cards, input artifacts, parameters, event counts/seeds, logs, outputs, and checksums.
+- Treat Magnus execution as an explicitly designated external execution environment, not as execution in the selected primary environment and not as GitHub Actions.
+- Keep independent checks (analytic checks, reduced local runs, cross-section/normalization checks, and regression tests) separate from the remote production run. Do not infer physics correctness from successful orchestration or job completion.
+- GitHub remains the canonical archive for the reproducible source, run manifest, and essential native outputs; remote working directories and job artifacts alone are not durable archival records.
+
+## 8. Security and scope / 安全与适用范围
 
 - Never commit credentials, access tokens, private keys, personal data, or machine-specific secrets.
 - Never run untrusted pull-request code or arbitrary user-supplied commands on a persistent self-hosted runner.
