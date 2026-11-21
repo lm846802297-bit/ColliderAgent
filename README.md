@@ -22,6 +22,8 @@
 
 </div>
 
+> **Research compute policy:** Follow [RESEARCH_COMPUTE_POLICY.md](RESEARCH_COMPUTE_POLICY.md) for primary execution, provenance, numerical convergence, and independent validation.
+
 
 ## Overview
 
