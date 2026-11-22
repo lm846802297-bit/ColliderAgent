@@ -150,3 +150,9 @@ For research questions, calculation reports, reviews, and task handoffs, use thi
 ### Collider pipeline reporting boundary
 
 For an execution or reproduction report, retain the run label and parent run, exact source revision and parameter configuration, stages actually executed, outputs and event counts, cross sections and uncertainties, analysis cuts and yields, validation evidence, deviations from the source paper, and exact archival status. Keep tool/blueprint success, model validation, event-generation validation, analysis validation, and scientific reproduction as separate statuses. A completed stage remains a completed result even when a later stage is pending.
+
+## Shared Particle Physics Research Skill
+
+When available, use the user-level Codex Skill `high-energy-theory-research` for relevant scientific tasks. Explicitly invoke `$high-energy-theory-research` when the task requires it, load only the relevant references, and record the installed source commit when the Skill materially contributes to a result. If unavailable, report that status and follow this repository's existing workflow.
+
+Use it for theory checks, numerical validation, figure audits, and paper reproduction. Preserve `src/skills/`, the FeynRules/MadGraph/Pythia/Delphes workflows, and the project's Magnus execution rules. This repository's instructions, research records, and specialized Skills govern project-specific decisions. Keep the shared Skill centrally maintained and avoid repository-local copies.
