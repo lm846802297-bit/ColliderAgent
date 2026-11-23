@@ -22,7 +22,7 @@ local_extensions:
   - path: "AGENTS.md"
     scope: "ColliderAgent agent/subagent architecture, task routing, model-generation checks, collider simulation, analysis, and paper-reproduction workflow"
   - path: "RESEARCH_COMPUTE_POLICY.md"
-    scope: "Magnus as an explicitly designated external HEP backend and the approved private-runner dispatch boundary"
+    scope: "Magnus as an explicitly designated external HEP backend and the authorized self-hosted-runner verification boundary"
   - path: "docs/RESEARCH_RESULT_ARCHIVAL.md"
     scope: "Collider-specific canonical result locations, native event outputs, large Monte Carlo files, and run handoff"
   - path: "docs/RESEARCH_RESULT_ARCHIVAL.zh-CN.md"
