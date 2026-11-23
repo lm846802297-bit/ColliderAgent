@@ -14,7 +14,7 @@ from pathlib import Path, PurePosixPath
 try:
     from jsonschema import Draft202012Validator, FormatChecker
 except ImportError:
-    print("ERROR: install the pinned dependency with python -m pip install -r research/schemas/requirements-result-validation.txt.", file=sys.stderr)
+    print("ERROR: install the pinned dependency with python -m pip install -r docs/schemas/requirements-result-validation.txt.", file=sys.stderr)
     raise SystemExit(2)
 
 

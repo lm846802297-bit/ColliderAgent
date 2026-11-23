@@ -27,6 +27,19 @@ class SourceControlSchemaTests(unittest.TestCase):
     def errors(self, record: dict):
         return list(self.validator.iter_errors(record))
 
+
+    def test_collider_mc_extension_is_preserved(self):
+        record = minimal_manifest()
+        record["extensions"] = {
+            "collider_mc": {
+                "model": "example-ufo",
+                "beam_energy_gev": 7000,
+                "pdf_set": "NNPDF",
+                "requested_events": 10000,
+            }
+        }
+        self.assertEqual(self.errors(record), [])
+
     def test_schema_is_valid_draft_2020_12(self):
         Draft202012Validator.check_schema(self.schema)
 

@@ -172,7 +172,7 @@ The existing `progress/run_manifest.yaml` remains the incremental orchestration/
 
 ### Capture source-control context at run start
 
-Capture this context before creating the run output directory or generating files in the repository, then carry the frozen object into the final `run_manifest.json`:
+Capture this context before creating the run output directory or generating files in the repository, then carry the frozen object into the final `run_manifest.json`. Record the actual checked-out commit only in `source.commit_sha`; do not add a duplicate checkout SHA:
 
 1. `event`: actual GitHub event name, or `local` for a local run.
 2. `checkout_mode`: one of `pull_request_merge`, `pull_request_head`, `pull_request_base`, `branch_commit`, `detached_commit`, or `unknown`.
@@ -181,7 +181,7 @@ Capture this context before creating the run output directory or generating file
 5. Record `workflow_run_id` and `workflow_run_attempt` together, or set both to `null`.
 6. Record `working_tree_state` and normalized, unique repository-relative POSIX `dirty_paths`. A clean tree requires an empty list; a dirty tree requires at least one path.
 
-For non-PR events, all seven PR-only fields must be present and explicitly `null`. For a detached checkout, `checkout_ref` is `null). Never infer a clean tree from the current post-run state. If the pre-run state was not captured, record `unknown` rather than claiming `clean`.
+For non-PR events, all seven PR-only fields must be present and explicitly `null`. For a detached checkout, `checkout_ref` is `null`. Never infer a clean tree from the current post-run state. If the pre-run state was not captured, record `unknown` rather than claiming `clean`.
 
 Use `docs/schemas/research-result-record-v1.0.1.schema.json` and `docs/schemas/validate_result_records.py` for validation. The v1.0.1 schema also accepts historical v1.0.0 records; leave those records unchanged.
 
