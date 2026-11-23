@@ -21,6 +21,8 @@
 </div>
 
 
+- 结构化科研结果数据规范：[RCRPS v1.0.1](docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.zh-CN.md)，新运行清单必须记录完整的源码控制来源。
+
 ## 概述
 
 **仓库级任务规范：** 开始任何任务前先阅读 [AGENTS.md](AGENTS.md)，然后阅读本次任务对应的 `src/skills/`。PR 合并策略遵循 [GIT_MERGE_POLICY.md](GIT_MERGE_POLICY.md)：实质性科研与流水线变更默认采用 Merge Commit。

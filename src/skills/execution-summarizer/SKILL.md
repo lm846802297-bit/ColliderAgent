@@ -159,6 +159,32 @@ After writing `execution_summary.md`, inform the user that the summary has been 
 6. **Separate output generation from archival.** A file in the working directory or Magnus workspace is not a GitHub archive. Report the actual archive state, and do not invent hashes or remote commits.
 
 
+
+## Structured v1.0.1 research records
+
+For every substantial numerical, simulation, scan, or validation run, produce the final machine-readable records required by RCRPS v1.0.1:
+
+- `run_manifest.json`: exact source revision, inputs, configuration, environment, execution command, outputs, archive state, and the complete 14-field `execution.source_control` object
+- `result_summary.json`: the physical/numerical results, units, uncertainties, scope, and scientific status
+- `validation_report.json`: only the checks actually executed, with methods, observed values, thresholds, and evidence
+
+The existing `progress/run_manifest.yaml` remains the incremental orchestration/progress record. It does not replace the final v1.0.1 JSON run manifest. Preserve the existing collider-specific `extensions.collider_mc` fields and native LHE/HepMC/ROOT/Parquet outputs.
+
+### Capture source-control context at run start
+
+Capture this context before creating the run output directory or generating files in the repository, then carry the frozen object into the final `run_manifest.json`. Record the actual checked-out commit only in `source.commit_sha`; do not add a duplicate checkout SHA:
+
+1. `event`: actual GitHub event name, or `local` for a local run.
+2. `checkout_mode`: one of `pull_request_merge`, `pull_request_head`, `pull_request_base`, `branch_commit`, `detached_commit`, or `unknown`.
+3. `checkout_ref`: actual fully qualified Git ref under `refs/`, or `null` when detached/unavailable.
+4. For PR events, record `pr_number`, `pr_url`, `pr_head_sha`, `base_sha`, `head_ref`, and `base_ref`; record `tested_merge_sha` only when the tested checkout is the PR merge commit.
+5. Record `workflow_run_id` and `workflow_run_attempt` together, or set both to `null`.
+6. Record `working_tree_state` and normalized, unique repository-relative POSIX `dirty_paths`. A clean tree requires an empty list; a dirty tree requires at least one path.
+
+For non-PR events, all seven PR-only fields must be present and explicitly `null`. For a detached checkout, `checkout_ref` is `null`. Never infer a clean tree from the current post-run state. If the pre-run state was not captured, record `unknown` rather than claiming `clean`.
+
+Use `docs/schemas/research-result-record-v1.0.1.schema.json` and `docs/schemas/validate_result_records.py` for validation. The v1.0.1 schema also accepts historical v1.0.0 records; leave those records unchanged.
+
 ## Research reporting standard
 
 In addition to the detailed run sections required above, begin the scientific narrative of every execution summary with a compact four-part overview:
