@@ -13,6 +13,7 @@ This file defines only the ColliderAgent-specific execution adapter. It does not
 ColliderAgent uses Magnus to provide specialized stages involving FeynRules, Mathematica/Wolfram Engine, MadGraph5, Pythia8, Delphes, and MadAnalysis5.
 
 - First use the primary execution environment selected under the central policy for tasks whose required tools, inputs, and resources are available there.
+- When ColliderAgent is launched through another supported Agent host (for example Claude Code, Cursor, Windsurf, or Gemini CLI), inspect the actual machine and command runtime that executes the code. Treat that host as the primary environment only when it genuinely provides the required shell/runtime, tools, inputs, and resources; record its actual OS, hardware, dependencies, and execution details. Do not relabel a third-party Agent host as ChatGPT Linux or a GPT-managed cloud computer.
 - Designate Magnus only for a pipeline stage that requires its specialized toolchain and cannot be run in the selected primary environment. The task brief or run record must explicitly identify the Magnus stage and why it is assigned to that backend.
 - Magnus is an external execution backend. It is not the selected primary environment and is not GitHub Actions.
 - Record the exact Magnus job/run identity, backend or image, source revision, model/UFO identity, process and cards, input artifacts, physical parameters, event counts and random seeds, tool versions, logs, output paths, and SHA-256 checksums.
@@ -36,6 +37,7 @@ Use a self-hosted runner only for an explicitly authorized, trusted, scoped veri
 本文件只规定 ColliderAgent 的专用执行适配；主计算环境、GitHub 归档、Actions 独立验证和运行溯源以锁定版本的中央科研计算规范为准。
 
 - 对于当前主计算环境能够完成的任务，优先在该环境执行。
+- 如果通过 Claude Code、Cursor、Windsurf、Gemini CLI 等其他 Agent 宿主运行 ColliderAgent，应检查实际执行代码的机器和命令运行环境。只有该宿主确实提供所需 shell/runtime、工具、输入和资源时，才将其作为主计算环境，并记录真实操作系统、硬件、依赖和执行信息；不得将第三方 Agent 宿主误记为 ChatGPT Linux 或 GPT 管理的云端计算机。
 - 只有需要专用 HEP 工具链且当前主环境无法提供时，才在任务说明中明确指定 Magnus 执行相应阶段。
 - Magnus 运行必须记录 job/run 身份、环境、源码、模型、卡片、输入、参数、随机种子、工具版本、日志、原生输出和 SHA-256。
 - self-hosted runner 始终属于 GitHub Actions 执行，即使它与 Windows 本机运行在同一台物理机器上，也必须独立记录。仅将其用于明确授权、可信且范围受限的验证任务；不得在持久 runner 上运行不可信 PR 代码或任意用户命令。跨仓库工作流和源码 checkout 应固定已审查的完整 commit SHA，并采用最小权限。
