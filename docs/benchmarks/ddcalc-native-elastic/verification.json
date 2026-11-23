@@ -1,0 +1,126 @@
+{
+  "status": "passed",
+  "observed_events": 0,
+  "expected_signal": 5.754551805903094,
+  "fixed_background": 0.36,
+  "log_likelihood": -6.114551805903094,
+  "signed_rate_deltas": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "signed_poisson_delta": 0.0,
+  "vmin_km_s": 186.73650483949876,
+  "signed_vmin_delta_km_s": 2.842170943040401e-14,
+  "max_eta_abs_delta_s_per_km": 1.9625794045463607e-13,
+  "halo_points": [
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 0.0,
+      "eta_s_per_km": 0.0037381819137212425,
+      "signed_delta_s_per_km": -3.361894096443052e-15
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 100.0,
+      "eta_s_per_km": 0.0033970501107493554,
+      "signed_delta_s_per_km": -1.1956147877301149e-14
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 250.0,
+      "eta_s_per_km": 0.0019540869351157785,
+      "signed_delta_s_per_km": -7.119305145408816e-15
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 311.999,
+      "eta_s_per_km": 0.0013046597716724288,
+      "signed_delta_s_per_km": -3.5498947531520386e-15
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 312.0,
+      "eta_s_per_km": 0.0013046500468104245,
+      "signed_delta_s_per_km": -3.5498947531520386e-15
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 312.001,
+      "eta_s_per_km": 0.0013046403219803733,
+      "signed_delta_s_per_km": -3.550328434021033e-15
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 544.0,
+      "eta_s_per_km": 9.068035564864292e-05,
+      "signed_delta_s_per_km": 2.5196858488563123e-16
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 775.0,
+      "eta_s_per_km": 2.7842676928098424e-10,
+      "signed_delta_s_per_km": -3.549276912100188e-21
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 776.0,
+      "eta_s_per_km": 0.0,
+      "signed_delta_s_per_km": 0.0
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 777.0,
+      "eta_s_per_km": 0.0,
+      "signed_delta_s_per_km": 0.0
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 0.0,
+      "eta_s_per_km": 0.005151861178991607,
+      "signed_delta_s_per_km": -1.9625794045463607e-13
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 100.0,
+      "eta_s_per_km": 0.00418806083772666,
+      "signed_delta_s_per_km": -2.691596945325614e-14
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 250.0,
+      "eta_s_per_km": 0.0014080057649989784,
+      "signed_delta_s_per_km": 4.017836410796782e-15
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 543.0,
+      "eta_s_per_km": 2.5927100831340534e-07,
+      "signed_delta_s_per_km": -1.0123102510872957e-18
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 543.999,
+      "eta_s_per_km": 2.566089637833244e-10,
+      "signed_delta_s_per_km": -1.3121100767834117e-20
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 544.0,
+      "eta_s_per_km": 0.0,
+      "signed_delta_s_per_km": 0.0
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 544.001,
+      "eta_s_per_km": 0.0,
+      "signed_delta_s_per_km": 0.0
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 545.0,
+      "eta_s_per_km": 0.0,
+      "signed_delta_s_per_km": 0.0
+    }
+  ]
+}

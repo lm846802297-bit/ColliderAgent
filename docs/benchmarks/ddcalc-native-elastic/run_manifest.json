@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "20261123-ddcalc-native-elastic",
+  "created_at": "2026-11-23T15:03:06.852731+00:00",
+  "record_type": "run_manifest",
+  "project": {
+    "repository": "lm846802297-bit/ColliderAgent",
+    "project_id": "collideragent-standard-elastic-ddcalc"
+  },
+  "source": {
+    "commit_sha": "7437d7905b3d256984948a1690a70c7b4884966e",
+    "branch": "main",
+    "script_path": "docs/benchmarks/ddcalc-native-elastic/native_elastic.f90",
+    "script_sha256": "0540add1bbf9fd2c661330bdfad92b514767b0a71283e91fec7b6c3ecd31b498"
+  },
+  "inputs": [
+    {
+      "name": "DDCalc_exampleF.f90",
+      "source": "GambitBSM/DDCalc upstream unmodified",
+      "uri": "https://github.com/GambitBSM/DDCalc/blob/065c126c563107de090a9644bed997462d72ec61/examples/DDCalc_exampleF.f90",
+      "version": "065c126c563107de090a9644bed997462d72ec61",
+      "format": "f90",
+      "sha256": "66fbf1f82364599c8f4e5a053313a3a7f85625b86c9902b28f5a096604aa28f6",
+      "bytes": 10165
+    },
+    {
+      "name": "Makefile",
+      "source": "GambitBSM/DDCalc upstream unmodified",
+      "uri": "https://github.com/GambitBSM/DDCalc/blob/065c126c563107de090a9644bed997462d72ec61/Makefile",
+      "version": "065c126c563107de090a9644bed997462d72ec61",
+      "format": "text",
+      "sha256": "38438cdc072fffed6c816849caa29e277fb8623537ad04c8356443450ab2d081",
+      "bytes": 12114
+    },
+    {
+      "name": "DDHalo.f90",
+      "source": "GambitBSM/DDCalc upstream unmodified",
+      "uri": "https://github.com/GambitBSM/DDCalc/blob/065c126c563107de090a9644bed997462d72ec61/src/DDHalo.f90",
+      "version": "065c126c563107de090a9644bed997462d72ec61",
+      "format": "f90",
+      "sha256": "c3e7ef05c339f66f3a22727a7410c7f031bfd799aecd5806bcc18a07288d1529",
+      "bytes": 29233
+    },
+    {
+      "name": "DDStats.f90",
+      "source": "GambitBSM/DDCalc upstream unmodified",
+      "uri": "https://github.com/GambitBSM/DDCalc/blob/065c126c563107de090a9644bed997462d72ec61/src/DDStats.f90",
+      "version": "065c126c563107de090a9644bed997462d72ec61",
+      "format": "f90",
+      "sha256": "56d4e20bee047d52b58b4c3c5eb51926564fbf954aacc87be410b2fdd3396c53",
+      "bytes": 23380
+    },
+    {
+      "name": "DDDetectors.f90",
+      "source": "GambitBSM/DDCalc upstream unmodified",
+      "uri": "https://github.com/GambitBSM/DDCalc/blob/065c126c563107de090a9644bed997462d72ec61/src/DDDetectors.f90",
+      "version": "065c126c563107de090a9644bed997462d72ec61",
+      "format": "f90",
+      "sha256": "ebb0266674c104db8b69a4669482570f011d3685158d7e8a9c16bcff4df582d8",
+      "bytes": 27333
+    },
+    {
+      "name": "DDConstants.f90",
+      "source": "GambitBSM/DDCalc upstream unmodified",
+      "uri": "https://github.com/GambitBSM/DDCalc/blob/065c126c563107de090a9644bed997462d72ec61/src/DDConstants.f90",
+      "version": "065c126c563107de090a9644bed997462d72ec61",
+      "format": "f90",
+      "sha256": "ca1a04ec93a0d98246701ee5de86cdee71451b4b59901938c0293b27af600ede",
+      "bytes": 2647
+    },
+    {
+      "name": "XENON1T_2017.f90",
+      "source": "GambitBSM/DDCalc upstream unmodified",
+      "uri": "https://github.com/GambitBSM/DDCalc/blob/065c126c563107de090a9644bed997462d72ec61/src/analyses/XENON1T_2017.f90",
+      "version": "065c126c563107de090a9644bed997462d72ec61",
+      "format": "f90",
+      "sha256": "f404b5a9bec957418f2e32bb51bb81768dbcd655b10f5be2b88a7e90110dda64",
+      "bytes": 4210
+    },
+    {
+      "name": "gfortran-14-x86-64-linux-gnu_14.2.0-19_amd64.deb",
+      "source": "Debian trixie official package",
+      "uri": "https://deb.debian.org/debian/pool/main/g/gcc-14/gfortran-14-x86-64-linux-gnu_14.2.0-19_amd64.deb",
+      "version": "14.2.0-19",
+      "format": "deb",
+      "sha256": "520b3283edc193b75644d655654834662f56f9006a78751d91feb882b74ca684",
+      "bytes": 11702288
+    },
+    {
+      "name": "libgfortran-14-dev_14.2.0-19_amd64.deb",
+      "source": "Debian trixie official package",
+      "uri": "https://deb.debian.org/debian/pool/main/g/gcc-14/libgfortran-14-dev_14.2.0-19_amd64.deb",
+      "version": "14.2.0-19",
+      "format": "deb",
+      "sha256": "8460dfd941d9f60e92516e5c4e3f8bb08e60983e7526f376a7c87969a8a2dbfb",
+      "bytes": 879856
+    },
+    {
+      "name": "InRelease",
+      "source": "Debian trixie signed release metadata",
+      "uri": "https://deb.debian.org/debian/dists/trixie/InRelease",
+      "version": "2026-11-21",
+      "format": "text",
+      "sha256": "bfacad4ca61899ce20d4a0d439f29339f66541561b67506364efb88e27dee870",
+      "bytes": 140420
+    },
+    {
+      "name": "Packages.xz",
+      "source": "Debian packages index authenticated by InRelease",
+      "uri": "https://deb.debian.org/debian/dists/trixie/main/binary-amd64/by-hash/SHA256/be3d7d96a040eda0505c1808cccc67f183bbc05dff0842c50f88e6c396557412",
+      "version": "2026-11-21",
+      "format": "xz",
+      "sha256": "be3d7d96a040eda0505c1808cccc67f183bbc05dff0842c50f88e6c396557412",
+      "bytes": 9679304
+    },
+    {
+      "name": "reference.json",
+      "source": "Frozen independent Galactic-shell reference",
+      "uri": "https://github.com/lm846802297-bit/ColliderAgent/blob/6886256018ef89ea6bf1ffacf5a5647c4d712683/docs/benchmarks/elastic-shm/reference.json",
+      "version": "6886256018ef89ea6bf1ffacf5a5647c4d712683",
+      "format": "json",
+      "sha256": "9cb0d591fa33416ef6a88ee547a5984102a012823b2c404bbdb97a7012479d50",
+      "bytes": 5567
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "analysis": "XENON1T 2017",
+      "mDM_GeV": 100.0,
+      "sigmap_SI_pb": 4e-09,
+      "sigman_SI_pb": -3e-10,
+      "sigmap_SD_pb": 2e-05,
+      "sigman_SD_pb": 8e-05,
+      "rate_shm": {
+        "rho_GeV_per_cm3": 0.3,
+        "vrot_km_s": 235.0,
+        "v0_km_s": 235.0,
+        "vesc_km_s": 550.0
+      }
+    },
+    "numerics": {
+      "eta_abs_tol_s_per_km": 2e-12,
+      "vmin_abs_tol_km_s": 1e-09,
+      "rate_abs_tol": 1e-10
+    },
+    "conventions": {
+      "scope": "fixed documented standard elastic demo, fixed-background likelihood; no limit"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "compiler": "GNU Fortran Debian 14.2.0-19",
+      "python": "3.12.14",
+      "build": "gfortran -O3; isolated toolchain extraction"
+    },
+    "dependencies": {
+      "ddcalc_release": "2.3.0",
+      "ddcalc_internal_string": "2.1.0"
+    },
+    "hardware": {
+      "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "logical_cpu_count_visible": 9
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "branch_commit",
+      "checkout_ref": "refs/heads/main",
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null,
+      "working_tree_state": "dirty",
+      "dirty_paths": [
+        "docs/benchmarks/ddcalc-native-elastic/TASK_BRIEF.md",
+        "docs/benchmarks/ddcalc-native-elastic/native_elastic.f90"
+      ]
+    },
+    "command": "gfortran -O3 -Ibuild native_elastic.f90 lib/libDDCalc.a -o native_elastic && ./native_elastic",
+    "started_at": "2026-11-23T15:00:40.326556+00:00",
+    "finished_at": "2026-11-23T15:00:40.551078+00:00",
+    "exit_code": 0,
+    "wall_time_s": 0.224522
+  },
+  "outputs": [
+    {
+      "path": "docs/benchmarks/ddcalc-native-elastic/native.stdout",
+      "role": "exact focused native Fortran stdout",
+      "format": "stdout",
+      "sha256": "1456cc1e442ca518432540f6a53eea3aa9b635d3a9d7c5654a5a620b1653280a",
+      "bytes": 1592
+    },
+    {
+      "path": "docs/benchmarks/ddcalc-native-elastic/official.stdout",
+      "role": "exact unmodified official example executable stdout; only Example 1 used for validation",
+      "format": "stdout",
+      "sha256": "23aab24330e0b46b35e7fd9e75f7664945e76f6d80b1059643c1050c7326b1eb",
+      "bytes": 2584
+    },
+    {
+      "path": "docs/benchmarks/ddcalc-native-elastic/verification.json",
+      "role": "all signed residuals and fail-closed validation result",
+      "format": "json",
+      "sha256": "3f74ef3fc3bbb71ca7130edd9775c7aac935d74c1b491e4b50268add047220a9",
+      "bytes": 3187
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "SIGNED-TOOLCHAIN",
+        "name": "Signed Debian toolchain chain",
+        "category": "integrity",
+        "method": "Verify InRelease with the installed Debian signing keys and hash Packages.xz and both debs.",
+        "observed": "Debian 13 stable and automatic signatures valid; 3 SHA-256 pins verified",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/ddcalc-native-elastic/verification.json"
+      },
+      {
+        "check_id": "NATIVE-DEMO",
+        "name": "Official Example 1 agrees with focused native driver",
+        "category": "regression",
+        "method": "Compare all Example 1 printed observables; require positive finite signal, Nobs=0, fixed b=0.36.",
+        "observed": 0.0,
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/ddcalc-native-elastic/verification.json",
+        "threshold": 1e-10,
+        "unit": "counts or 1"
+      },
+      {
+        "check_id": "POISSON",
+        "name": "Independent fixed-background full Poisson log PMF",
+        "category": "independent",
+        "method": "Compute n log(s+b) − (s+b) − lgamma(n+1) without DDCalc.",
+        "observed": 0.0,
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/ddcalc-native-elastic/verification.json",
+        "threshold": 1e-10,
+        "unit": "1"
+      },
+      {
+        "check_id": "HALO",
+        "name": "Independent 18-point Galactic-shell mean inverse speed",
+        "category": "independent",
+        "method": "Compare native DDHalo values to frozen Galactic-shell integrations and enforce exact cutoff zeros.",
+        "observed": 1.9625794045463607e-13,
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/ddcalc-native-elastic/verification.json",
+        "threshold": 2e-12,
+        "unit": "s/km"
+      },
+      {
+        "check_id": "VMIN",
+        "name": "Elastic recoil velocity",
+        "category": "independent",
+        "method": "Compare native EToVmin to the frozen 8 keV kinematic reference.",
+        "observed": 2.842170943040401e-14,
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/ddcalc-native-elastic/verification.json",
+        "threshold": 1e-09,
+        "unit": "km/s"
+      },
+      {
+        "check_id": "REPLAY",
+        "name": "Byte replay and forbidden cutoff injection",
+        "category": "regression",
+        "method": "Repeat both binaries, compare stdout, and inject a nonzero endpoint which the verifier must reject.",
+        "observed": "Both stdout files byte-identical; forbidden cutoff rejected",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/ddcalc-native-elastic/verification.json"
+      }
+    ],
+    "report_path": "docs/benchmarks/ddcalc-native-elastic/validation_report.json"
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "0b2715cf8b70bfa3b42ca804a9e0b4d45a3cd0f78723aedf0d72d88e962b8d10",
+      "task_id": "20261123-ddcalc-native-elastic",
+      "task_brief_path": "docs/benchmarks/ddcalc-native-elastic/TASK_BRIEF.md",
+      "task_brief_sha256": "57a632b469cb716e816b3048969de35a7710b42e8542502676e348e3e99abefb",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1"
+      ],
+      "project_extensions": [
+        "docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md"
+      ]
+    },
+    "parent_commit": "6886256018ef89ea6bf1ffacf5a5647c4d712683",
+    "ddcalc_source_commit": "065c126c563107de090a9644bed997462d72ec61",
+    "ddcalc_source_tree": "ee021be1ccbd1dc265a851b380a6c52f9d1f01c1",
+    "ddcalc_release_tag_object": "f4b81fcf26a58a28555d42c39e45dc019a9a83f6",
+    "confirmed_debian_archive_keys": [
+      "04B54C3CDCA79751B16BC6B5225629DF75B188BD",
+      "41587F7DB8C774BCCF131416762F67A0B2C39DE4"
+    ],
+    "unarchived_build_artifact_sha256": {
+      "native_elastic": "2e5e9a00cc6acbdf67a932e8019071c48f3bedd3cc5643113a50908d3c7c2627",
+      "dd/DDCalc_exampleF": "7af26e77d3be914adad1a9100ad517be3d1acb478dbf2523b6ad4f1dcae40ed9",
+      "dd/lib/libDDCalc.a": "14106f763c4d30c97b77617b75acfa561001e908800f6e4a11090a95a3cb3115"
+    },
+    "not_validated": [
+      "shared-library target link failed with non-PIC isolated runtime",
+      "Python interface",
+      "other upstream examples",
+      "independent physical detector rate",
+      "exclusion"
+    ]
+  }
+}

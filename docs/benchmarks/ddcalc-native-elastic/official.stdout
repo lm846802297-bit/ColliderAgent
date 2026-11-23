@@ -1,0 +1,52 @@
+ ******************************************************************
+ Example 1: Mixed SI and SD interactions at XENON1T (2017)
+            specified by the WIMP-nucleon cross sections.
+ mDM       =    100.00000000000000       GeV
+ sigmap_SI =    4.0000000000000002E-009  pb
+ sigman_SI =   -3.0000000000000000E-010  pb
+ sigmap_SD =    2.0000000000000002E-005  pb
+ sigman_SD =    8.0000000000000007E-005  pb
+
+ Expected number of signal events:         5.7545518059030938     
+ Observed number of events:                        0
+ Expected number of background events:    0.35999999999999999     
+ Log(likelihood):                         -6.1145518059030941     
+ ******************************************************************
+
+ ******************************************************************
+ Example 2: Mixed SI and SD interactions at PICO-60 (2017)
+            specified by the WIMP-nucleon couplings.
+ mDM  =    30.000000000000000       GeV
+ fp   =    1.0000000000000000E-008  GeV^(-2)
+ fn   =    2.9999999999999997E-008  GeV^(-2)
+ ap   =    1.0000000000000000E-002
+ an   =    0.0000000000000000     
+
+ Expected number of signal events:         7.3102080034831642     
+ Observed number of events:                        0
+ Expected number of background events:     0.0000000000000000     
+ Log(likelihood):                         -7.3102080034831642     
+ ******************************************************************
+
+ ******************************************************************
+ Example 3: Non-standard scattering operators at CRESST-II
+            This is also an example for an experiment with
+            several bins.
+ mDM       =    3.0000000000000000       GeV
+ DM spin   =   0.50000000000000000     
+                Expected signal    Observed    Expected background
+All bins        0.23826E+02        500         0.00000E+00
+Bin    1        0.73067E+01          6         0.00000E+00
+Bin    2        0.66989E+01         17         0.00000E+00
+Bin    3        0.29780E+01         18         0.00000E+00
+Bin    4        0.15672E+01         21         0.00000E+00
+Bin    5        0.17139E+01         36         0.00000E+00
+Bin    6        0.15275E+01         57         0.00000E+00
+Bin    7        0.10604E+01         75         0.00000E+00
+Bin    8        0.58757E+00         97         0.00000E+00
+Bin    9        0.29301E+00         89         0.00000E+00
+Bin   10        0.93061E-01         84         0.00000E+00
+
+ Log(likelihood):                         -27.347987129930353     
+ ******************************************************************
+
