@@ -1,55 +1,57 @@
-# 研究结果归档与可复现性规范
+# ColliderAgent 研究结果归档扩展规范
 
-**状态：** 本仓库维护的论文复现和对撞机唯象学计算必须遵守本规范。
+**状态：** 中央计算结果归档规范的项目专属扩展。  
+**中央规范提交：** 142267bc803c90aa681110293b66b73947bbcaa1
 
-Collider-Agent 可以通过本地工具或 Magnus 平台生成模型、Monte Carlo 事例、分析输出、图像和执行报告。文件留在临时工作目录或云端工作区，并不等于形成了持久的研究归档。本规范补充根目录 README、论文复现示例以及执行总结/流程编排 Skill。
+原生文件归档、解压后提交、运行溯源、校验和、远端核验，以及归档状态与科学验证状态分离等共享要求，统一遵循[中央计算结果归档规范](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/CALCULATION_RESULT_ARCHIVAL_POLICY.md)。本文件只规定 ColliderAgent 专属的结果位置、事例数据处理和 HEP 运行元数据。
 
-## 1. 确定结果应归档到哪里
+## 1. 规范结果位置
 
-- Collider-Agent 首先是可复现的计算流程/工具仓库。如果某项结果属于另一个明确的研究项目，应优先归档到拥有该科学研究的规范研究仓库，并在执行总结中记录仓库路径及不可变 commit/PR。
-- 如果明确决定将某项复现作为本仓库的正式示例维护，则将完整运行放在 `paper-reproduction/<arXiv-ID>/results/<run_label>/`。提示词、原始论文文件和生成结果应分开保存。不得覆盖旧运行；使用新的 run label 或版本化目录。
-- 执行脚本、模型文件、分析代码、配置、进度记录和结果文件必须能够区分。执行总结应指向实际生成该结果的准确文件。
+- ColliderAgent 首先是可复现计算流程和 Agent 工具仓库。如果某项论文结果属于另一个研究项目，应将权威科学结果归档到该项目仓库，并在执行总结中记录不可变仓库路径、commit 和 PR。
+- 如果明确决定将某项复现作为 ColliderAgent 示例维护，则使用 paper-reproduction/<arXiv-ID>/results/<run_label>/。
+- 提示词、原始论文材料和生成结果分开保存。每次增量运行使用新的 run label，并记录 parent。
+- 模型源码、UFO 目录、脚本/卡片、原始事例样本、处理后的分析表、图像、进度记录和最终总结应明确区分。
 
-## 2. 直接提交原生结果文件
+## 2. 对撞机原生输出
 
-- 直接提交必要且可使用的原生文件：所需的 `.fr`/UFO 源文件、MadGraph 脚本和卡片、分析脚本、截面表、cutflow 表、CSV/JSON/JSONL/TXT 输出、图像以及准确的运行清单。
-- **不得新建 ZIP/TAR 压缩包来代替提交解压后的结果文件。** 审查者应能够直接查看数据文件。
-- 如果输入以压缩包形式提供，应提取本次运行所需文件，并在允许再分发时提交提取后的文件。记录原压缩包文件名、来源/版本、大小、SHA-256、解压命令以及提取文件的哈希。
-- 如果工具原生输出本身就是某种压缩格式（例如 MadGraph 生成的压缩 LHE 文件），可以保留该格式，但必须记录生成工具和命令。不得再额外将普通输出封装成 ZIP/TAR。
-- 原始模拟输出、处理后的分析表和图像应明确分开。记录筛选、事例选择、归一化、直方图生成和其他后处理步骤。
+根据实际执行的阶段，保留可检查和复现的原生文件：
 
-## 3. 大型 Monte Carlo 与二进制输出
+- FeynRules 模型源码和生成的 UFO 文件；
+- 准确的 MadGraph 过程定义、脚本、参数卡、运行卡、banner 和日志；
+- LHE、HepMC、ROOT 或 Parquet 等原生事例数据；
+- Pythia8 设置、Delphes 探测器卡、MadAnalysis 脚本和分析代码；
+- 截面表、cutflow、加权产额、直方图、图像和后处理输出；
+- 进度记录、最终 RCRPS 记录、执行总结和校验和清单。
 
-- 对于大小合适、许可允许且仓库能够容纳的必要结果，直接提交文件。
-- 超出普通 GitHub 存储限制的大型事例样本、探测器级文件或二进制输出，应使用 Git LFS 或项目批准的持久版本化存储。不得悄然省略，也不得仅依赖即将过期的 Magnus 工作区或 GitHub Actions artifact。
-- 对每项外部存储的输出，都必须提交清单，记录准确文件名、格式、字节数、必要时的事例/记录数量、不可变 URI 或 Release/版本标识、来源 run label 和 SHA-256。优先存放独立原生文件，而不是新建压缩包。
-- 不得提交 Magnus API key、访问令牌、凭据、私人数据或无权再分发的事例/数据文件。对受限数据只提供授权获取说明和校验和。
+原始事例、簇射后事例、探测器/重建级数据、处理后的表格和图像必须分开保存。记录所有事例选择、过滤、归一化、直方图处理和其他数据转换。
 
-## 4. 必需的运行来源记录
+## 3. 大型 Monte Carlo 与受限输出
 
-每次重要运行都必须保留 `progress/run_manifest.yaml` 或等价运行记录，至少按适用情况包含：
+- 对于许可允许且仓库能够容纳的必要输出，直接提交原生文件。
+- 大型事例样本和探测器级二进制输出使用 Git LFS 或经批准的持久版本化存储。
+- 外部存储的输出必须提交清单，包含准确文件名、格式、字节数、事例/记录数量、不可变 URI 或 Release/版本、来源 run label 和 SHA-256。
+- 不得仅依赖 Magnus 工作区或即将过期的 Actions artifact 保存结果。不得提交凭据、私人数据或无权再分发的事例文件。
 
-- run label、时间戳、任务描述，以及增量运行的 parent run；
-- Collider-Agent 的准确源码 commit，以及相关提示词/分析脚本版本；
-- 模型参数、过程定义、对撞能量、PDF set、产生级 cuts、事例数、探测器/分析设置和随机种子；
-- Magnus/本地执行模式，以及实际使用的 MadGraph5、Pythia8、Delphes、MadAnalysis5、FeynRules、Python 等工具版本；
-- 准确命令或 blueprint/CLI 执行说明；
-- 输出路径、格式、字节数、事例数/行数和 SHA-256；
-- 失败步骤、警告、重试、舍弃的运行、后处理和验证状态。
+## 4. 对撞机运行元数据
 
-执行总结必须列出生成文件，并将用户的物理要求映射到实际脚本和参数。运行清单或总结不能代替底层数据文件本身。
+现有 progress/run_manifest.yaml 继续作为增量编排和进度记录。每次重要运行完成后，还必须在结果目录中生成中央 RCRPS v1.0.1 要求的最终记录：
 
-## 5. 宣称归档完成前的验证
+- run_manifest.json：实际源码 checkout、输入、参数、环境、命令、输出、来源和归档状态；
+- result_summary.json：物理/数值结果、单位、不确定度、研究范围和科学状态；
+- validation_report.json：仅记录实际执行的检查、方法、观测值、阈值和证据。
 
-1. 检查必要输出确实存在且非空；核对事例数、表格维度、单位、数值有限性及该运行专属的验收标准。
-2. 将必要交付物整理到规范研究仓库，或本仓库指定的 `paper-reproduction/<arXiv-ID>/results/<run_label>/` 目录。
-3. 通过独立工作分支和 Pull Request 提交。包括运行清单、执行总结、源码/脚本、必要的原生输出、来源记录和校验和。
-4. 推送后从 GitHub 重新读取已提交文件，将路径、大小、数量和 SHA-256 与本地提交逐项比较。合并后还要核对 main 上的实际路径。
-5. 执行总结必须明确标记归档状态：`local only`、`committed to PR branch` 或 `merged and verified on main`。不得仅因流程运行结束或上传命令返回成功，就声称结果已经归档到 GitHub。
-6. 归档状态与物理验证状态必须分开。模拟成功、事例样本完整、CI 通过或哈希一致，都不能单独证明模型正确或物理结论成立。
+JSON 运行清单必须包含中央 RCRPS v1.0.1 要求的完整 14 字段 execution.source_control 对象。应在运行开始、生成输出文件之前捕获该对象，并保留运行时实际使用的 source.commit_sha。进度 YAML 不能代替最终 JSON 运行清单。
 
-本规范适用于本仓库今后的所有论文复现和对撞机唯象学计算结果。
+对撞机专属字段见本地 [RCRPS v1.0.1 ColliderAgent 扩展](STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.zh-CN.md)。
 
-## 7. 结构化 JSON/CSV 结果记录
+## 5. 归档状态与科学状态
 
-新产生的重要运行应遵循[结构化科研结果数据规范](STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.zh-CN.md)，并使用 `schemas/research-result-record-v1.0.1.schema.json` 校验 `run_manifest`、`result_summary` 和 `validation_report`。运行来源、物理结果和验证检查分别记录。新的 v1.0.1 运行清单必须包含完整的 14 个 `execution.source_control` 字段，并在 `source.commit_sha` 中记录实际检出的 commit。cutflow、截面扫描和直方图表使用 CSV；事例级数据保留 LHE/HepMC/ROOT 等原生格式，并记录事件数、分析层级、权重约定和 SHA-256。对撞机专用字段见规范中的 `extensions.collider_mc`。
+执行总结必须使用准确的归档状态：
+
+- local only；
+- committed to PR branch；
+- merged and verified on main。
+
+推送后从远端重新读取文件，比较路径、大小、数量和 SHA-256。不得将 Magnus 任务完成、上传命令成功或程序正常退出等同于 GitHub 永久归档。
+
+归档状态必须与程序执行、模型验证、事例产生验证、探测器/分析验证、数值验证和科学复现状态分开。事例样本完整或哈希一致本身不能证明物理结论成立。
