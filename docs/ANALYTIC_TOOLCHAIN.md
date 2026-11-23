@@ -71,3 +71,5 @@ models, calculations, data, and scientific acceptance evidence in their
 project repository. See the [compute policy](../RESEARCH_COMPUTE_POLICY.md)
 and the upstream [WolframScript documentation](https://reference.wolfram.com/language/ref/program/wolframscript.html)
 and [FeynCalc FeynArts interface notes](https://feyncalc.github.io/FeynCalcBook/Extra/FeynArts.html).
+
+Next interoperability milestone: [known QED tree benchmark](ANALYTIC_QED_TREE_BENCHMARK.md).
