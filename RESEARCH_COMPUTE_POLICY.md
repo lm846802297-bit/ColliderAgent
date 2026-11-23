@@ -19,13 +19,11 @@ ColliderAgent uses Magnus to provide specialized stages involving FeynRules, Mat
 - Keep independent checks separate from the Magnus production run. Use analytic/model checks, reduced local benchmarks, cross-section and normalization checks, regression tests, and downstream analysis validation as appropriate. Successful orchestration or remote job completion does not establish physical correctness.
 - A Magnus working directory or downloadable job artifact is not a permanent archive. GitHub or the designated durable research repository remains the canonical record.
 
-## 2. Approved self-hosted runner boundary
+## 2. Self-hosted runner boundary
 
-This repository is public. Do not register a persistent private Windows self-hosted runner directly with this repository.
+A self-hosted runner remains a GitHub Actions execution even if it is physically hosted on the same Windows machine used for direct local work. Record it as an Actions run, not as direct Windows local execution or a GPT-managed cloud-computer run.
 
-If a task is explicitly approved to use the private Windows runner, dispatch it only through the approved private control workflow. The control path must use reviewed reusable workflows, full immutable commit SHAs, explicit checkout of the intended repository and revision, and least-privilege permissions. Do not execute untrusted pull-request code or arbitrary contributor commands on the persistent runner.
-
-A self-hosted Actions runner remains a GitHub Actions execution even if it is physically hosted on the same Windows machine used for direct local work. Record it as an Actions run, not as direct Windows local execution or a GPT-managed cloud-computer run.
+Use a self-hosted runner only for an explicitly authorized, trusted, scoped verification task. Never run untrusted pull-request code or arbitrary user-supplied commands on a persistent runner. For cross-repository workflows and research checkouts, pin reviewed workflows and source revisions to full commit SHAs and use least-privilege credentials. Follow the central Research Compute Policy for the shared runner-security requirements.
 
 ## 3. Security
 
