@@ -1,0 +1,260 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "20261123-atlas-sbottom-hepdata-parity",
+  "created_at": "2026-11-23T14:03:41.092885+00:00",
+  "record_type": "run_manifest",
+  "project": {
+    "repository": "lm846802297-bit/ColliderAgent",
+    "project_id": "collideragent-preserved-atlas-sbottom-likelihood"
+  },
+  "source": {
+    "commit_sha": "7437d7905b3d256984948a1690a70c7b4884966e",
+    "branch": "main",
+    "script_path": "scripts/atlas_sbottom_hepdata_parity.py",
+    "script_sha256": "7b8255e26d2c21e9f7451dc013c10f2f7638d04ae24650ea0f6428ef657933b1"
+  },
+  "inputs": [
+    {
+      "name": "HEPData_workspaces.tar.gz",
+      "source": "ATLAS via HEPData resource 997020",
+      "version": "v1/r2",
+      "uri": "https://doi.org/10.17182/hepdata.89408.v1/r2",
+      "format": "tar.gz",
+      "bytes": 2036564,
+      "sha256": "9089b0e5fabba335bea4c94545ccca8ddd21289feeab2f85e5bcc8bada37be70"
+    },
+    {
+      "name": "RegionA/BkgOnly.json",
+      "source": "ATLAS original member bytes",
+      "version": "v1/r2",
+      "uri": "https://doi.org/10.17182/hepdata.89408.v1/r2",
+      "format": "json",
+      "sha256": "9f308fb619d6fad7783c61ae7b99532c6154c9dcc30e37821024471b140d8b5b",
+      "bytes": 882559
+    },
+    {
+      "name": "RegionA/patch.sbottom_1300_205_60.json",
+      "source": "ATLAS original member bytes",
+      "version": "v1/r2",
+      "uri": "https://doi.org/10.17182/hepdata.89408.v1/r2",
+      "format": "json",
+      "sha256": "1cc45828ad4c1ff31bdf826b140364f71051490fd0b469d96c12940d522bdb85",
+      "bytes": 58794
+    },
+    {
+      "name": "RegionA/patch.sbottom_1300_230_100.json",
+      "source": "ATLAS original member bytes",
+      "version": "v1/r2",
+      "uri": "https://doi.org/10.17182/hepdata.89408.v1/r2",
+      "format": "json",
+      "sha256": "b87da244cfa08cca84f8e9b636937451f741d749cd821f7fd48f318d34236e13",
+      "bytes": 58703
+    },
+    {
+      "name": "pyhf-0.7.6-py3-none-any.whl",
+      "source": "official PyPI wheel",
+      "version": "0.7.6",
+      "uri": "https://files.pythonhosted.org/packages/de/43/91d24c1b64f576f59b5aa5cbd8e732815bfeb8cf87fcc6fb65027c132e7f/pyhf-0.7.6-py3-none-any.whl",
+      "format": "whl",
+      "sha256": "01b2401b9fdc53d94fa28256128c4898c380c64f71446f1695580fb18fba349d",
+      "bytes": 160220
+    },
+    {
+      "name": "jsonpatch-1.33-py2.py3-none-any.whl",
+      "source": "official PyPI wheel",
+      "version": "1.33",
+      "uri": "https://files.pythonhosted.org/packages/73/07/02e16ed01e04a374e644b575638ec7987ae846d25ad97bcc9945a3ee4b0e/jsonpatch-1.33-py2.py3-none-any.whl",
+      "format": "whl",
+      "sha256": "0ae28c0cd062bbd8b8ecc26d7d164fbbea9652a1a3693f3b956c1eae5145dade",
+      "bytes": 12898
+    },
+    {
+      "name": "tqdm-4.67.1-py3-none-any.whl",
+      "source": "official PyPI wheel",
+      "version": "4.67.1",
+      "uri": "https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl",
+      "format": "whl",
+      "sha256": "26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2",
+      "bytes": 78540
+    },
+    {
+      "name": "jsonpointer-3.0.0-py2.py3-none-any.whl",
+      "source": "official PyPI wheel",
+      "version": "3.0.0",
+      "uri": "https://files.pythonhosted.org/packages/71/92/5e77f98553e9e75130c78900d000368476aed74276eb8ae8796f65f00918/jsonpointer-3.0.0-py2.py3-none-any.whl",
+      "format": "whl",
+      "sha256": "13e088adc14fca8b6aa8177c044e12701e6ad4b28ff10e65f2267a90109c9942",
+      "bytes": 7595
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "measurement": "NormalMeasurement",
+      "region": "RegionA",
+      "poi": "mu_SIG",
+      "poi_value": 1.0,
+      "physical_bins": 6,
+      "free_nuisances": 63
+    },
+    "numerics": {
+      "statistic": "qtilde",
+      "calculator": "asymptotics",
+      "tolerance": 0.0005
+    },
+    "conventions": {
+      "scope": "fixed archived ATLAS HistFactory model; not a new exclusion"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "python": "3.12.14",
+      "python_implementation": "CPython",
+      "numpy_precision": "64b",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1"
+    },
+    "dependencies": {
+      "pyhf": "0.7.6",
+      "jsonpatch": "1.33",
+      "tqdm": "4.67.1",
+      "jsonpointer": "3.0.0",
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "jsonschema": "4.26.0",
+      "click": "8.4.2",
+      "PyYAML": "6.0.3",
+      "attrs": "26.1.0",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.6.3",
+      "jsonschema-specifications": "2025.9.1"
+    },
+    "hardware": {
+      "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "logical_cpu_count_visible": 9
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "branch_commit",
+      "checkout_ref": "refs/heads/main",
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null,
+      "working_tree_state": "dirty",
+      "dirty_paths": [
+        "docs/benchmarks/atlas-sbottom-hepdata-parity/TASK_BRIEF.md",
+        "scripts/atlas_sbottom_hepdata_parity.py"
+      ]
+    },
+    "command": "python scripts/atlas_sbottom_hepdata_parity.py HEPData_workspaces.tar.gz",
+    "started_at": "2026-11-23T14:01:40.830387+00:00",
+    "finished_at": "2026-11-23T14:01:48.180593+00:00",
+    "exit_code": 0,
+    "wall_time_s": 7.350206
+  },
+  "outputs": [
+    {
+      "path": "docs/benchmarks/atlas-sbottom-hepdata-parity/native_pyhf.json",
+      "role": "exact native API stdout",
+      "format": "json",
+      "sha256": "0ab2fbc61b8a61509ad213f83df55a78f5a0d6dc356ea6297c4675ea71685cfd",
+      "bytes": 2423
+    },
+    {
+      "path": "docs/benchmarks/atlas-sbottom-hepdata-parity/cli_1300_205_60.json",
+      "role": "exact native CLI output for first patch",
+      "format": "json",
+      "sha256": "4b449088315a633e330e8ca6269701d5bd7c69e84b9612b9a0419b67fbea9015",
+      "bytes": 204
+    },
+    {
+      "path": "docs/benchmarks/atlas-sbottom-hepdata-parity/cli_1300_230_100.json",
+      "role": "exact native CLI output for second patch",
+      "format": "json",
+      "sha256": "66a1c65915c1919566d63afcfee8112954b08c573815105fcb81be289769d6ba",
+      "bytes": 205
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "INPUT-PIN",
+        "name": "Pinned archive and workspace members",
+        "category": "integrity",
+        "status": "passed",
+        "method": "Verify archive and three named SHA-256s; append one byte and require archive rejection before decoding.",
+        "observed": "4/4 pins; modified archive rejected",
+        "evidence_path": "docs/benchmarks/atlas-sbottom-hepdata-parity/native_pyhf.json"
+      },
+      {
+        "check_id": "PUBLIC-PARITY",
+        "name": "Published CLs reference parity",
+        "category": "regression",
+        "status": "passed",
+        "method": "Apply both exact official patches and compare to signed CHEP and FAIRS pyhf implementation references; check both 0.05 decisions.",
+        "observed": 1.6938933683485757e-06,
+        "evidence_path": "docs/benchmarks/atlas-sbottom-hepdata-parity/native_pyhf.json",
+        "threshold": 0.0005,
+        "unit": "1"
+      },
+      {
+        "check_id": "CLI-API",
+        "name": "Official CLI and native API agree",
+        "category": "software",
+        "status": "passed",
+        "method": "Compare both observed and all ten band entries pairwise against the official pyhf executable (same solver).",
+        "observed": 0.0,
+        "evidence_path": "docs/benchmarks/atlas-sbottom-hepdata-parity/native_pyhf.json",
+        "threshold": 0.0,
+        "unit": "1"
+      },
+      {
+        "check_id": "BYTE-REPLAY",
+        "name": "Offline pinned replay matched",
+        "category": "regression",
+        "status": "passed",
+        "method": "Compare native API runs executed separately in the same pinned environment.",
+        "observed": "byte-identical stdout",
+        "evidence_path": "docs/benchmarks/atlas-sbottom-hepdata-parity/native_pyhf.json"
+      }
+    ],
+    "report_path": "docs/benchmarks/atlas-sbottom-hepdata-parity/validation_report.json"
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "0b2715cf8b70bfa3b42ca804a9e0b4d45a3cd0f78723aedf0d72d88e962b8d10",
+      "task_id": "20261123-atlas-sbottom-hepdata-parity",
+      "task_brief_path": "docs/benchmarks/atlas-sbottom-hepdata-parity/TASK_BRIEF.md",
+      "task_brief_sha256": "d45710d58065b1c5c6fe589a93f1a4785185066c591bc0fb4046082233479630",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1"
+      ],
+      "project_extensions": [
+        "docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md"
+      ]
+    },
+    "parent_commit": "2fe73292c5549ff4063cdc9135a71e123955646d",
+    "pyhf_upstream_version_commit": "b500270c6a7744d16b481dfda247c066ef3c2cb4"
+  }
+}

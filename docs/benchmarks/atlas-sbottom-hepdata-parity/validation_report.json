@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "20261123-atlas-sbottom-hepdata-parity",
+  "created_at": "2026-11-23T14:03:41.092885+00:00",
+  "record_type": "validation_report",
+  "status": "passed",
+  "checks": [
+    {
+      "check_id": "INPUT-PIN",
+      "name": "Pinned archive and workspace members",
+      "category": "integrity",
+      "status": "passed",
+      "method": "Verify archive and three named SHA-256s; append one byte and require archive rejection before decoding.",
+      "observed": "4/4 pins; modified archive rejected",
+      "evidence_path": "docs/benchmarks/atlas-sbottom-hepdata-parity/native_pyhf.json"
+    },
+    {
+      "check_id": "PUBLIC-PARITY",
+      "name": "Published CLs reference parity",
+      "category": "regression",
+      "status": "passed",
+      "method": "Apply both exact official patches and compare to signed CHEP and FAIRS pyhf implementation references; check both 0.05 decisions.",
+      "observed": 1.6938933683485757e-06,
+      "evidence_path": "docs/benchmarks/atlas-sbottom-hepdata-parity/native_pyhf.json",
+      "threshold": 0.0005,
+      "unit": "1"
+    },
+    {
+      "check_id": "CLI-API",
+      "name": "Official CLI and native API agree",
+      "category": "software",
+      "status": "passed",
+      "method": "Compare both observed and all ten band entries pairwise against the official pyhf executable (same solver).",
+      "observed": 0.0,
+      "evidence_path": "docs/benchmarks/atlas-sbottom-hepdata-parity/native_pyhf.json",
+      "threshold": 0.0,
+      "unit": "1"
+    },
+    {
+      "check_id": "BYTE-REPLAY",
+      "name": "Offline pinned replay matched",
+      "category": "regression",
+      "status": "passed",
+      "method": "Compare native API runs executed separately in the same pinned environment.",
+      "observed": "byte-identical stdout",
+      "evidence_path": "docs/benchmarks/atlas-sbottom-hepdata-parity/native_pyhf.json"
+    }
+  ]
+}

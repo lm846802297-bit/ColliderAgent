@@ -1,0 +1,84 @@
+{
+  "archive_sha256": "9089b0e5fabba335bea4c94545ccca8ddd21289feeab2f85e5bcc8bada37be70",
+  "calctype": "asymptotics",
+  "member_sha256": {
+    "RegionA/BkgOnly.json": "9f308fb619d6fad7783c61ae7b99532c6154c9dcc30e37821024471b140d8b5b",
+    "RegionA/patch.sbottom_1300_205_60.json": "1cc45828ad4c1ff31bdf826b140364f71051490fd0b469d96c12940d522bdb85",
+    "RegionA/patch.sbottom_1300_230_100.json": "b87da244cfa08cca84f8e9b636937451f741d749cd821f7fd48f318d34236e13"
+  },
+  "poi_test": 1.0,
+  "published_reference_parity": true,
+  "results": [
+    {
+      "aux_data_count": 62,
+      "channels": {
+        "CRtt_meff": 3,
+        "SR_meff": 3
+      },
+      "data_bins": 6,
+      "expected_cls_bands": [
+        0.09022420614050024,
+        0.19378256294603738,
+        0.38432175544655167,
+        0.6557742761154615,
+        0.8910414289722108
+      ],
+      "free_nuisance_count": 63,
+      "measurements": [
+        "NormalMeasurement"
+      ],
+      "observed_cls": 0.24443572887286977,
+      "patch_member": "RegionA/patch.sbottom_1300_205_60.json",
+      "poi": "mu_SIG",
+      "published_target_gate_passed": true,
+      "signed_residuals": {
+        "expected_minus_fairs": [
+          -8.843945773495676e-07,
+          -1.3565500258105878e-06,
+          -1.6938933683485757e-06,
+          -1.457314891650796e-06,
+          -6.681878972347732e-07
+        ],
+        "observed_minus_chep": -6.510325765429759e-07,
+        "observed_minus_fairs": -5.48717983495095e-07
+      },
+      "workspace_schema": "1.0.0"
+    },
+    {
+      "aux_data_count": 62,
+      "channels": {
+        "CRtt_meff": 3,
+        "SR_meff": 3
+      },
+      "data_bins": 6,
+      "expected_cls_bands": [
+        0.004967128501500837,
+        0.02265195553728436,
+        0.09140733959458865,
+        0.2920562732940169,
+        0.6369630321781723
+      ],
+      "free_nuisance_count": 63,
+      "measurements": [
+        "NormalMeasurement"
+      ],
+      "observed_cls": 0.04076573157590668,
+      "patch_member": "RegionA/patch.sbottom_1300_230_100.json",
+      "poi": "mu_SIG",
+      "published_target_gate_passed": true,
+      "signed_residuals": {
+        "observed_minus_chep": -2.944598460410952e-07
+      },
+      "workspace_schema": "1.0.0"
+    }
+  ],
+  "runtime": {
+    "numpy": "2.3.5",
+    "precision": "64b",
+    "pyhf": "0.7.6",
+    "python": "3.12.14",
+    "scipy": "1.17.0"
+  },
+  "test_stat": "qtilde",
+  "tolerance": 0.0005
+}
