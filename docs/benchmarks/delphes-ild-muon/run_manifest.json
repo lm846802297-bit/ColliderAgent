@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "20261123-delphes-ild-muon",
+  "created_at": "2026-11-23T19:06:26.750469+00:00",
+  "record_type": "run_manifest",
+  "project": {
+    "repository": "lm846802297-bit/ColliderAgent",
+    "project_id": "collideragent-delphes-ild-central-muon"
+  },
+  "source": {
+    "commit_sha": "7437d7905b3d256984948a1690a70c7b4884966e",
+    "branch": "main",
+    "script_path": "docs/benchmarks/delphes-ild-muon/seed_wrapper.tcl",
+    "script_sha256": "d5b97d07ade096a4f6bf717ea4863f1e155fcbb03383df7cf6e3f739a7d140c5"
+  },
+  "inputs": [
+    {
+      "name": "qed_fsr_off.hepmc",
+      "version": "8158d025024363f3870bd0c334a8a19ddc7d2104",
+      "source": "ColliderAgent pinned standard HepMC file",
+      "format": "hepmc",
+      "uri": "https://github.com/lm846802297-bit/ColliderAgent/blob/8158d025024363f3870bd0c334a8a19ddc7d2104/docs/benchmarks/pythia-qed-lhe-hepmc/qed_fsr_off.hepmc",
+      "sha256": "9eb41a2c8a19f35bfab0ffe24bef03ea11f481fa6ab3dbcde68946f747225989",
+      "bytes": 83329
+    },
+    {
+      "name": "cards/delphes_card_ILD.tcl",
+      "version": "28658365abeb71ee36dfc739f9670c1514c0cb10",
+      "source": "Official Delphes source",
+      "format": "tcl",
+      "uri": "https://github.com/delphes/delphes/blob/28658365abeb71ee36dfc739f9670c1514c0cb10/cards/delphes_card_ILD.tcl",
+      "sha256": "067f31d5b49dce9be10e97286d1246a976391db11ad42489d8232ebea1cf7065",
+      "bytes": 17836
+    },
+    {
+      "name": "modules/MomentumSmearing.cc",
+      "version": "28658365abeb71ee36dfc739f9670c1514c0cb10",
+      "source": "Official Delphes source",
+      "format": "cc",
+      "uri": "https://github.com/delphes/delphes/blob/28658365abeb71ee36dfc739f9670c1514c0cb10/modules/MomentumSmearing.cc",
+      "sha256": "f44809b5e04a9a0a5e2f99f2d81ef257e8f305e48f5626c281c9f8e0779b3702",
+      "bytes": 4440
+    },
+    {
+      "name": "classes/DelphesHepMC3Reader.cc",
+      "version": "28658365abeb71ee36dfc739f9670c1514c0cb10",
+      "source": "Official Delphes source",
+      "format": "cc",
+      "uri": "https://github.com/delphes/delphes/blob/28658365abeb71ee36dfc739f9670c1514c0cb10/classes/DelphesHepMC3Reader.cc",
+      "sha256": "ae41b83dc7b044a234bf2ddf80cc078075afd955aea34987aefd7ba6ccbb7bb0",
+      "bytes": 14340
+    },
+    {
+      "name": "Makefile",
+      "version": "28658365abeb71ee36dfc739f9670c1514c0cb10",
+      "source": "Official Delphes source",
+      "format": "text",
+      "uri": "https://github.com/delphes/delphes/blob/28658365abeb71ee36dfc739f9670c1514c0cb10/Makefile",
+      "sha256": "aead84a009c062c686114b9359c4cadec09343c8b9d25661e023592d55b48b69",
+      "bytes": 94598
+    },
+    {
+      "name": "root-0.1a10-cp312-cp312-manylinux_2_28_x86_64.whl",
+      "version": "0.1a10",
+      "source": "CERN ROOT official PyPI wheel (alpha)",
+      "format": "whl",
+      "uri": "https://files.pythonhosted.org/packages/89/0c/f05dacd6f57e00ea5b90be5f062c304c27e3d515bf936c40ac939ba2f47c/root-0.1a10-cp312-cp312-manylinux_2_28_x86_64.whl",
+      "sha256": "9f3adfd54c324cdf46013094f6a9e38d259a61f3c485853ce5879d55c0f5c7b2",
+      "bytes": 243423938
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "experiment_model": "ILD card simulation",
+      "central_eff_reference": 0.9405,
+      "sqrts_GeV": 100
+    },
+    "numerics": {
+      "seed": 314159
+    },
+    "conventions": {
+      "input": "HepMC3 stable truth GeV/mm",
+      "output": "native Delphes ROOT"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "python": "3.12.14",
+      "gxx": "g++ (Debian 14.2.0-19) 14.2.0",
+      "execution": "local transient unprivileged build; CERN ROOT wheel relocation symlink and ROOT_INCLUDE_PATH"
+    },
+    "dependencies": {
+      "delphes": "3.5.1",
+      "root": "6.38.00",
+      "root_distribution": "0.1a10 cp312 alpha"
+    },
+    "hardware": {
+      "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "logical_cpu_count_visible": 9
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "branch_commit",
+      "checkout_ref": "refs/heads/main",
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null,
+      "working_tree_state": "dirty",
+      "dirty_paths": [
+        "docs/benchmarks/delphes-ild-muon/TASK_BRIEF.md",
+        "docs/benchmarks/delphes-ild-muon/check_response.py",
+        "docs/benchmarks/delphes-ild-muon/seed_wrapper.tcl"
+      ]
+    },
+    "command": "DelphesHepMC3 seed_wrapper.tcl delphes.root parent.hepmc",
+    "started_at": "2026-11-23T19:04:02.206921+00:00",
+    "finished_at": "2026-11-23T19:04:03.434845+00:00",
+    "exit_code": 0,
+    "wall_time_s": 1.227924
+  },
+  "outputs": [
+    {
+      "path": "docs/benchmarks/delphes-ild-muon/delphes.root",
+      "role": "Untouched native Delphes ROOT event tree",
+      "format": "root",
+      "sha256": "399e41a9a5268c3f1f52bd7aaa8b4884787b3ed2db817e1af2ff4293891ad8b1",
+      "bytes": 182644
+    },
+    {
+      "path": "docs/benchmarks/delphes-ild-muon/response.json",
+      "role": "Independent ROOT/TRef and HepMC truth response check",
+      "format": "json",
+      "sha256": "3c3be7a9a7dd05a7bcf7c05c8836a35da40ab2f13cb501767abb264ef0088081",
+      "bytes": 597
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "NATIVE",
+        "name": "Official native ROOT tree and HepMC identity",
+        "category": "integrity",
+        "observed": 1.8698366588409954e-06,
+        "method": "Read 128 native ROOT entries, require two status-1 opposite-sign muons per event, compare exact pinned HepMC vectors and native reco TRefs.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/delphes-ild-muon/response.json",
+        "threshold": 2e-05,
+        "unit": "GeV"
+      },
+      {
+        "check_id": "DIRECTION",
+        "name": "Central reco directions preserved",
+        "category": "independent",
+        "observed": 1.1536922395194438e-07,
+        "method": "Independently compute truth eta and wrapped phi from HepMC vectors.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/delphes-ild-muon/response.json",
+        "threshold": 1e-05,
+        "unit": "1"
+      },
+      {
+        "check_id": "EFF",
+        "name": "Central muon efficiency card response",
+        "category": "independent",
+        "observed": 0.8645665580948374,
+        "method": "Fixed central selection and 0.99 x 0.95 target, binomial standard error.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/delphes-ild-muon/response.json",
+        "threshold": 5.0,
+        "unit": "standard errors"
+      },
+      {
+        "check_id": "RES",
+        "name": "Independent central pT smearing distribution",
+        "category": "independent",
+        "observed": 1.0271201422625986,
+        "method": "Derive standardized log-pT behavior from source log-normal transform and stock central resolution; require RMS [0.65,1.35] and absolute mean <= 5 SE.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/delphes-ild-muon/response.json"
+      },
+      {
+        "check_id": "REPLAY",
+        "name": "Separate seeded physics content replay",
+        "category": "regression",
+        "observed": "Exact matched truth+reco event values and metrics",
+        "method": "Independently rerun native Delphes and compare ordered logical payload SHA and summary; ROOT file metadata allowed to differ.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/delphes-ild-muon/response.json"
+      },
+      {
+        "check_id": "INPUT",
+        "name": "Incorrect source identity is rejected",
+        "category": "regression",
+        "observed": "1/1 rejected",
+        "method": "Append a byte to parent HepMC; script rejects it by SHA before opening ROOT.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/delphes-ild-muon/response.json"
+      }
+    ],
+    "report_path": "docs/benchmarks/delphes-ild-muon/validation_report.json"
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "0b2715cf8b70bfa3b42ca804a9e0b4d45a3cd0f78723aedf0d72d88e962b8d10",
+      "task_id": "20261123-delphes-ild-muon",
+      "task_brief_path": "docs/benchmarks/delphes-ild-muon/TASK_BRIEF.md",
+      "task_brief_sha256": "9d9789daaa2187044556e8ac3f6c6d24fe4c45bee43c36dacb8758a39ee82584",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1"
+      ],
+      "project_extensions": [
+        "docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md"
+      ]
+    },
+    "collider_mc": {
+      "event_input": "128-event Pythia FSR-off HepMC3 stable truth projection",
+      "parent_sha": "8158d025024363f3870bd0c334a8a19ddc7d2104",
+      "collider": "100 GeV e+e−, photon-only SM hard source",
+      "output": "native detector-model ROOT",
+      "delphes_card": "stock cards/delphes_card_ILD.tcl at 28658365…; seed wrapper only",
+      "seed": 314159,
+      "event_counts": {
+        "detector_entries": 128,
+        "central_truth_muons": 122,
+        "matched": 117
+      },
+      "selection": "truth |eta|<0.7 and pT>20 GeV; same-charge native linked reconstructed Muon",
+      "upstream_rates": "Parent generator and FSR-off unchanged; no rate or limit inferred from this detector fixture",
+      "weights": "Object-based response fractions only; upstream nominal event weights constant",
+      "pileup": "none",
+      "uncertainties": "Binomial test of card efficiency, model calibration/systematic uncertainties not evaluated"
+    },
+    "delphes_source_commit": "28658365abeb71ee36dfc739f9670c1514c0cb10",
+    "delphes_source_tree": "08bbc1e159eeede21fbe8567d3eec7db8b37ce19",
+    "local_native_fingerprints": {
+      "DelphesHepMC3": "dff82be99afd68cd311823e281936981047c4368710fcf20ea12d9564aed49ec",
+      "libDelphes.so": "3129b279a9f66e069a03dd4a6fb371de1bb0a92607ba5236533b7767c147473b",
+      "libCore.so": "3be8d00a8198ba6aeb272bbdedd5af9e1106b07eaab078b2ed632a2be39e0892"
+    },
+    "analysis_script": {
+      "path": "docs/benchmarks/delphes-ild-muon/check_response.py",
+      "role": "Independent quantitative response verifier",
+      "format": "py",
+      "sha256": "fde504921ba586715bcbca9f0eefdf16ee1e3ade5f358775a42d5dbc80c8c51f",
+      "bytes": 5067
+    },
+    "root_seeded_replay_file_sha256": "dfdf3a8fd8c6564f0fdb8e542cddd200404397c877c4c19d3335bf5f5df314d9",
+    "selected_truth_reco_physics_payload_sha256": "95fd50ab32ebb1d7c90cc5b13bdbe44b78fd7f01d693124c89f72b7fb4b2e308",
+    "first_attempt": "Executable-only build lacked required ROOT PCM dictionaries; reran with stock full detector target dependencies."
+  }
+}

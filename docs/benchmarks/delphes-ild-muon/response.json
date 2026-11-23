@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "root_version": "6.38.00",
+  "events": 128,
+  "reco_muons": 237,
+  "central_truth_muons": 122,
+  "central_matched_muons": 117,
+  "central_efficiency": 0.9590163934426229,
+  "expected_efficiency": 0.9405,
+  "efficiency_signed_binomial_sigma": 0.8645665580948374,
+  "standardized_logpt_mean": 0.006220249649411724,
+  "standardized_logpt_rms": 1.0271201422625986,
+  "max_truth_fourvector_delta_GeV": 1.8698366588409954e-06,
+  "max_matched_angle_delta": 1.1536922395194438e-07,
+  "physics_payload_sha256": "95fd50ab32ebb1d7c90cc5b13bdbe44b78fd7f01d693124c89f72b7fb4b2e308"
+}

@@ -1,0 +1,33 @@
+{
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "0b2715cf8b70bfa3b42ca804a9e0b4d45a3cd0f78723aedf0d72d88e962b8d10",
+  "task_id": "20261123-delphes-ild-muon",
+  "task_brief_path": "docs/benchmarks/delphes-ild-muon/TASK_BRIEF.md",
+  "task_brief_sha256": "9d9789daaa2187044556e8ac3f6c6d24fe4c45bee43c36dacb8758a39ee82584",
+  "applied_profiles": [
+    "core-governance",
+    "research-compute",
+    "task-handoff",
+    "research-quality-gate",
+    "calculation-result-archive",
+    "rcrps-v1.0.1"
+  ],
+  "project_extensions": [
+    {
+      "path": "docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md",
+      "scope": "Collider Monte Carlo native Delphes ROOT stage: data tiers, exact card, reconstruction and truth response.",
+      "sha256": "36c8b57cff417b093c12369cfc54da2a6f0e34fa45d39abc685177fc75d65005"
+    }
+  ],
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "repository": "lm846802297-bit/ColliderAgent",
+  "acceptance_criteria": [
+    "Exact parent 128-event HepMC and native stock ILD card with wrapper seed only.",
+    "Native ROOT truth-muon records stable, opposite-sign and matched event-by-event; checked central direction and charge identity.",
+    "Central efficiency 0.9405 to within five binomial standard errors; independent standardized log-pT mean within five standard errors, RMS 0.65 to 1.35.",
+    "Separate seeded physics payload replay identical, wrong source hash rejected."
+  ]
+}
