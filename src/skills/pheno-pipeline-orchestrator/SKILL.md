@@ -179,26 +179,36 @@ The orchestrator manages **paths and scheduling**, not physics results:
 - **Step 3/4 subagents** are responsible for reading the simulation output files themselves and extracting whatever physics results the task requires.
 
 
-## Local Execution
+## Execution target selection
 
-Local execution is triggered in two cases:
+Before assigning a backend for any pipeline stage, follow the pinned central Research Compute Policy and this repository's [Magnus execution adapter](../../../RESEARCH_COMPUTE_POLICY.md):
 
-### Case 1: User requests local execution
-If the user explicitly asks to run locally (e.g., "run locally", "use local MadGraph", "don't use Magnus"), skip Magnus entirely and use local tools directly. Do not attempt Magnus calls.
+1. Identify the actual primary execution target: ChatGPT Linux for ordinary GPT chat; the user's Windows environment for Codex/Work local execution; or the assigned GPT-managed cloud computer for Codex/Work cloud execution. Do not infer the machine or its capabilities from the product/mode name.
+2. Check whether the selected primary environment actually exposes the required tools, dependencies, input data, and resources for that stage. If it does, execute the stage there.
+3. Designate Magnus only for a specific stage that requires its specialized HEP toolchain and cannot be performed in the selected primary environment. State the reason in the task brief/run record and record the Magnus job identity, backend/environment, source revision, inputs, cards, parameters, tool versions, logs, outputs, and checksums.
+4. Treat Magnus as an explicitly designated external backend, not as the primary environment and not as GitHub Actions. Do not send a stage to Magnus merely because the integration is available or was used in an earlier run.
+5. GitHub Actions is optional independent verification/CI. It is not the default production-compute backend and must not silently replace the selected primary environment.
 
-### Case 2: Magnus is unavailable
-If the Magnus server is unreachable:
-1. **Retry up to 2 times** with a 20-second interval (`sleep 20`) before falling back to local execution. Each failed Magnus call returns a large HTML error page, so limit retries to avoid wasting context.
-2. **Check for local tools** (wolframscript, MadGraph5) and fall back to local execution.
+### Case 1: User explicitly requests local execution
 
-### Local execution guidelines
-When running locally:
-- **Check for local tools** — verify `wolframscript` and MadGraph5 (`mg5_aMC` or `MG5_aMC_v*`) are available before proceeding.
-- **When running MadGraph locally via `Bash(run_in_background=true)`**:
-   - Wait for the `task-notification` to confirm completion. Do NOT use `TaskOutput(block=true)` — it pulls the entire verbose MadGraph log into context.
-   - After the notification, use `Grep` on the task output file to extract only the specific lines needed (e.g., run names, output paths).
-   - Let downstream subagents read the MadGraph output directories directly for physics results.
+If the user explicitly asks to run locally (e.g. "run locally", "use local MadGraph", or "don't use Magnus"), skip Magnus entirely. Check the required local tools and resources before execution. If a required tool is unavailable, report the exact blocker; do not silently dispatch the task to Magnus or Actions.
 
+### Case 2: An explicitly designated Magnus stage is unavailable
+
+If the Magnus backend is unreachable for a stage that was explicitly assigned to it:
+
+1. Retry up to 2 times with a 20-second interval when the failure appears transient.
+2. Check whether the selected primary environment can perform that stage. If it can, switch the stage to that environment and record the actual execution target and reason in the run manifest.
+3. If neither environment can perform the stage, mark it blocked and identify the missing service/tool/resource. Do not substitute GitHub Actions as the production backend.
+
+### Primary-environment execution guidelines
+
+When the selected primary environment is local Windows:
+- Verify that required tools such as wolframscript and MadGraph5 (mg5_aMC or MG5_aMC_v*) are available before proceeding.
+- When running MadGraph locally via Bash(run_in_background=true), wait for the task-notification to confirm completion. Do not use TaskOutput(block=true), which pulls the entire verbose MadGraph log into context.
+- After notification, use Grep on the task output file to extract only the specific lines needed (e.g. run names and output paths). Let downstream subagents read the MadGraph output directories directly for physics results.
+
+For GPT-managed cloud execution, inspect the actual OS/image, available shell/runtime, CPU/GPU, memory, storage, dependencies, and workspace persistence. A browser-only interface is not a scientific compute runtime. Export required native outputs, logs, and manifests before an ephemeral workspace expires.
 
 ## User-facing research handoff standard
 
