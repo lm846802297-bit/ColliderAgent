@@ -38,5 +38,5 @@ Use a self-hosted runner only for an explicitly authorized, trusted, scoped veri
 - 对于当前主计算环境能够完成的任务，优先在该环境执行。
 - 只有需要专用 HEP 工具链且当前主环境无法提供时，才在任务说明中明确指定 Magnus 执行相应阶段。
 - Magnus 运行必须记录 job/run 身份、环境、源码、模型、卡片、输入、参数、随机种子、工具版本、日志、原生输出和 SHA-256。
-- 不得将私有 Windows self-hosted runner 直接注册到公开的 ColliderAgent 仓库。需要使用时，只能经批准的私有控制工作流调度，并固定完整源码 SHA、明确 checkout 和权限。
+- self-hosted runner 始终属于 GitHub Actions 执行，即使它与 Windows 本机运行在同一台物理机器上，也必须独立记录。仅将其用于明确授权、可信且范围受限的验证任务；不得在持久 runner 上运行不可信 PR 代码或任意用户命令。跨仓库工作流和源码 checkout 应固定已审查的完整 commit SHA，并采用最小权限。
 - Magnus 工作区和 Actions artifact 均不能替代 GitHub 上的永久结果归档；工具执行成功也不等于模型、事例产生、分析或物理复现已经验证。
