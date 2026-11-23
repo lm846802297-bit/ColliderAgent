@@ -1,6 +1,6 @@
 # 结构化科研结果数据规范 v1.0.1
 
-**状态：** **已于 2026-11-23 由项目负责人正式采用**，自该日起适用于新的重要数值计算、模拟、参数扫描和计算验证。正式采用记录见[中央正式采用记录](https://github.com/lm846802297-bit/high-energy-theory-research/blob/main/docs/governance/RCRPS_V1.0.1_ADOPTION_RECORD.md)。历史结果不追溯改写。  
+**状态：** **已于 2026-11-23 由项目负责人正式采用**，自该日起适用于新的重要数值计算、模拟、参数扫描和计算验证。正式采用记录见[中央正式采用记录](https://github.com/lm846802297-bit/high-energy-theory-research/pull/33)。历史结果不追溯改写。  
 **规范版本：** `1.0.1`；JSON Schema：Draft 2020-12。  
 **适用边界：** 本规范统一数据结构、运行来源和归档方式；它不把软件测试通过等同于物理结论成立。
 

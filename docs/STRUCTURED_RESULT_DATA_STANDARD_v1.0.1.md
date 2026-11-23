@@ -1,6 +1,6 @@
 # Structured Research Result Data Standard v1.0.1
 
-**Status:** **Adopted on 2026-11-23** by the project owner; effective for new substantial numerical, simulation, scan, and computational-validation runs from this date. See the [central formal adoption record](https://github.com/lm846802297-bit/high-energy-theory-research/blob/main/docs/governance/RCRPS_V1.0.1_ADOPTION_RECORD.md).  
+**Status:** **Adopted on 2026-11-23** by the project owner; effective for new substantial numerical, simulation, scan, and computational-validation runs from this date. See the [central formal adoption record](https://github.com/lm846802297-bit/high-energy-theory-research/pull/33).  
 **Schema:** JSON Schema Draft 2020-12.  
 **Purpose:** Standardize data structure, run provenance, and archival. This standard does not certify scientific correctness.
 
