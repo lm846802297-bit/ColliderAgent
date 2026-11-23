@@ -1,16 +1,20 @@
 # Repository instructions — Collider-Agent
 
-These instructions are mandatory for agents and contributors. They complement the root README, the paper-reproduction guide, the individual Skills under `src/skills/`, and the research-result archival policy. Before computational work, follow [RESEARCH_COMPUTE_POLICY.md](RESEARCH_COMPUTE_POLICY.md): ordinary GPT chat uses ChatGPT Linux as primary; Codex/Work use whichever execution target is active: the user's Windows local environment or a GPT-managed cloud computer. Designate Magnus explicitly as the external execution backend for specialized stages unavailable in the selected environment; reserve GitHub Actions for independent verification and CI.
+These instructions are mandatory for agents and contributors. The shared minimum requirements for research governance, compute execution, task handoff, scientific-change tracking, quality gates, document review, result archival, structured records, and Git integration are maintained centrally and pinned in [research/standards-lock.yaml](research/standards-lock.yaml). Start from the [Central Research Standards Index](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/CENTRAL_STANDARDS_INDEX.md). The local RESEARCH_COMPUTE_POLICY.md is only the ColliderAgent-specific Magnus and approved-runner adapter; it does not redefine the central primary-compute policy. The Agent/subagent architecture, FeynRules/UFO model checks, collider simulation, analysis, and paper-reproduction rules below remain project-specific and authoritative in this repository.
+
 
 ## 1. Minimal preflight
 
 Before a substantive task:
 
-1. Read this file, the root [README](README.md) or [Chinese README](README_zh.md), and [RESEARCH_COMPUTE_POLICY.md](RESEARCH_COMPUTE_POLICY.md).
-2. Identify whether the task is a standalone model, simulation, analysis, plotting task, or a multi-stage/incremental pipeline.
-3. Read the exact relevant Skill before invoking a subagent or Magnus blueprint. For a full pipeline, read `src/skills/pheno-pipeline-orchestrator/SKILL.md` and the Skills for each stage actually used.
-4. For paper reproduction, read the selected `paper-reproduction/<arXiv-ID>/README.md`, the clean `prompt_figure_N.md`, and its annotated `_with_comments` companion only when debugging or authoring prompts.
-5. Inspect existing `progress/run_manifest.yaml`, parent-run records, and generated files before starting. Never assume a prior run completed merely because a directory exists.
+1. Read this file, the root [README](README.md) or [Chinese README](README_zh.md), and [research/standards-lock.yaml](research/standards-lock.yaml).
+2. Read the [Central Research Standards Index](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/CENTRAL_STANDARDS_INDEX.md). The pinned central standards are the authority for shared requirements; the local documents linked below define only ColliderAgent-specific extensions.
+3. For a substantial derivation, simulation, parameter scan, production-code change, scientific validation, or multi-agent handoff, prepare a concise Research Task Brief using the [central Task Handoff Standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/RESEARCH_TASK_HANDOFF_STANDARD.md) and [central task-brief template](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/templates/research-task-brief.md). A trivial editorial or maintenance change may omit a brief when the PR explains why it is not applicable.
+4. Identify whether the task is a standalone model, simulation, analysis, plotting task, or a multi-stage/incremental pipeline.
+5. Read the exact relevant Skill before invoking a subagent or Magnus blueprint. For a full pipeline, read src/skills/pheno-pipeline-orchestrator/SKILL.md and the Skills for each stage actually used.
+6. For paper reproduction, read the selected paper-reproduction/<arXiv-ID>/README.md, the clean prompt_figure_N.md, and its annotated _with_comments companion only when debugging or authoring prompts.
+7. Inspect existing progress/run_manifest.yaml, parent-run records, and generated files before starting. Never assume a prior run completed merely because a directory exists.
+8. For numerical or simulation tasks, apply the task-appropriate profile in the [central Research Quality Gate](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/RESEARCH_QUALITY_GATE.md). Record PASS, FAIL, BLOCKED, NOT RUN, or justified N/A based on evidence actually obtained.
 
 Do not claim that Magnus, FeynRules, MadGraph, Pythia, Delphes, or MadAnalysis ran unless the corresponding execution actually occurred and its result was inspected.
 
@@ -85,10 +89,13 @@ Each reproduction should have one identifiable target figure/observable, a clean
 ## 8. Secrets, archival, and Git workflow
 
 - Never commit Magnus API keys, tokens, credentials, private data, licensed inputs that cannot be redistributed, or local environment files. Use the approved secret mechanism and record authorized retrieval instructions plus checksums for restricted inputs.
-- Follow [docs/RESEARCH_RESULT_ARCHIVAL.md](docs/RESEARCH_RESULT_ARCHIVAL.md) and the [Structured Research Result Data Standard](docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md). Validate JSON records with `docs/schemas/validate_result_records.py` and `docs/schemas/research-result-record-v1.0.1.schema.json`; retain collider-specific configuration, event counts, cutflows, histogram tables, and event-file checksums in the domain extension. Every new v1.0.1 run manifest must include all 14 required `execution.source_control` fields. Commit essential native outputs, scripts, cards, logs, summaries, and run manifests directly; do not create a new ZIP/TAR as a substitute for extracted outputs.
+- Follow [docs/RESEARCH_RESULT_ARCHIVAL.md](docs/RESEARCH_RESULT_ARCHIVAL.md). Commit essential native outputs, scripts, cards, logs, summaries, and run manifests directly; do not create a new ZIP/TAR as a substitute for extracted outputs.
+- The central [Calculation-result Archival Policy](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/CALCULATION_RESULT_ARCHIVAL_POLICY.md) governs shared archival requirements. The local archival document defines ColliderAgent result locations, native event formats, and Magnus-specific handoff.
+- New substantial runs use central RCRPS v1.0.1 plus the local ColliderAgent extension in docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md. Validate records with docs/schemas/validate_result_records.py and docs/schemas/research-result-record-v1.0.1.schema.json. Keep v1.0.0 only for historical compatibility.
+- progress/run_manifest.yaml remains the incremental progress record; it does not replace the final RCRPS v1.0.1 JSON run_manifest, result_summary, and validation_report.
 - For large event samples or binary detector outputs, use Git LFS or durable versioned storage with a committed manifest containing exact filenames, immutable locations, sizes, event counts, provenance, and SHA-256.
 - After pushing, retrieve remote files and verify paths, sizes, counts, and hashes. Do not claim GitHub archival based only on a successful Magnus job or upload command.
-- Use focused branches and PRs. Do not rewrite shared history or force-push over another contributor's work. State the exact checks run against the PR HEAD SHA.
+- Use focused branches and PRs. Do not rewrite shared history or force-push over another contributor's work. Follow the [central Git merge policy](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/GIT_MERGE_POLICY.md) and the local GIT_MERGE_POLICY.md reproduction-archive extension. State the exact checks run against the PR HEAD SHA.
 
 ## 9. Completion report
 
@@ -96,57 +103,19 @@ Report the run label and parent (if any), exact source and parameter configurati
 
 Never describe a simulation as a scientific reproduction merely because it ran successfully. Never describe a reproduced figure as a validated physical conclusion unless the derivation, inputs, statistical interpretation, and independent checks support it.
 
-## CI is optional; research work must not wait for CI
+## CI and independent verification
 
-Continuous integration (CI) is optional supporting infrastructure. It is not a prerequisite, acceptance gate, or merge condition for research work.
+Follow the pinned central [Research Compute Policy](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/RESEARCH_COMPUTE_POLICY.md) and [Research Quality Gate](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/RESEARCH_QUALITY_GATE.md). GitHub Actions is optional supporting infrastructure and does not replace primary computation or scientific validation. Do not wait for CI when the required checks can be performed in the primary or another approved environment. Report the exact commit and checks actually run; never claim an unrun check passed.
 
-- Do not require a CI run to start, continue, or complete a calculation; perform numerical or scientific validation; prepare or archive results; commit or push research files; open or update a pull request; mark a pull request ready for review; or merge a pull request.
-- If the calculation can be run directly on an available local machine or an approved compute runner, proceed. Do not pause research solely because GitHub Actions is queued, unavailable, disabled, blocked by account/billing limits, or failing for infrastructure reasons.
-- GitHub Actions may still be used when useful as an optional compute, dispatch, or artifact-handoff mechanism. A workflow that actually executes a research calculation is an execution run: record its exact source commit, inputs, settings, environment, logs, and outputs. Its use does not make a separate CI status check mandatory.
-- This policy does not waive scientific or numerical validation. Perform the checks appropriate to the claim—such as analytic identities, dimensional and unit checks, limiting cases, independent implementations, convergence, uncertainty estimates, provenance, and output-integrity checks—locally or on an approved runner, and record exactly what was performed. CI neither substitutes for these checks nor adds a mandatory gate.
-- If CI is run, report its exact commit SHA and actual result. If it is not run, queued, blocked, cancelled, or failed, record that status truthfully and distinguish infrastructure failure from a scientific or numerical failure. Never describe an unrun check as passed.
-- Base review and merge decisions on the actual diff, reproducibility, scientific evidence, scope, and the checks that are genuinely relevant to the change—not on whether a CI badge is green. Do not configure CI status checks as required branch-protection gates under this repository policy. Do not change repository protection settings without explicit authorization.
-- CI becomes mandatory for a particular task only when the author explicitly requests it for that task.
+## 10. Pull-request review and merge
 
-## 10. Pull-request merge strategy and commit-history preservation
+Follow the pinned central [Git merge policy](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/GIT_MERGE_POLICY.md). The local GIT_MERGE_POLICY.md adds only ColliderAgent's paper-reproduction lifecycle and main-branch discoverability rules. Substantive model, simulation, analysis, reproduction, and validation work defaults to Create a merge commit under the central policy. Verify the integrated main state after merge.
 
-Before preparing or merging a PR, read [GIT_MERGE_POLICY.md](GIT_MERGE_POLICY.md). For substantive model, simulation, analysis, reproduction, validation, and archival work, **Create a merge commit is the default**. Preserve meaningful topic-branch commits and the explicit PR boundary so model changes, cards/configurations, execution settings, numerical corrections, tests, and evidence remain traceable. Squash is reserved for trivial, indivisible maintenance with no useful per-commit technical provenance. Rebase is allowed only when linear history is explicitly required and commits are already meaningful and reviewable. Do not rewrite reviewed/shared history for cosmetic reasons. After merge, verify the integrated main state and report archival separately from the scientific validation of each pipeline stage.
+## Research communication and task handoff
 
+Follow the pinned central [Research Task Handoff Standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/RESEARCH_TASK_HANDOFF_STANDARD.md), [Research Governance Standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/RESEARCH_GOVERNANCE_STANDARD.md), and the research-reporting requirements in [Scientific Diff §11](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/scientific-diff-workflow.md#11-research-reporting-and-communication-standard). The central standards define shared task briefs, evidence requirements, and the Conclusion → Evidence → Results → Remaining work reporting structure.
 
-## Research communication and decision policy
-
-Research communication must be direct, evidence-led, and useful for advancing the work. Scientific rigor is expressed through derivations, quantitative checks, explicit assumptions, and accurate status labels—not through defensive or repetitive caveats.
-
-### Required report structure
-
-For research questions, calculation reports, reviews, and task handoffs, use this structure unless the task clearly calls for another format:
-
-1. **Conclusion** — answer the question directly and state the current judgment.
-2. **Evidence** — give the equations, derivation, code path, data, or validation that supports it.
-3. **Results** — report numerical values, units, precision, benchmark parameters, comparisons, and physical interpretation.
-4. **Remaining work** — list only tasks that materially affect the next research step.
-
-### Evidence and status rules
-
-- **Completed calculations:** report the actual result, units, numerical precision, parameter point, and checks performed. Do not bury a completed result under generic warnings.
-- **Established formulas or derivations:** state the formula and give the derivation or a precise derivation reference. Do not weaken a proven result with unnecessary hedging.
-- **Explicit approximations:** state the approximation and its domain of validity once where it is introduced. Do not repeat the same limitation in every paragraph or use it to obscure results obtained within that approximation.
-- **Unfinished calculations:** label the specific item as pending, blocked, or in progress and identify what remains. Its status does not downgrade independent completed calculations or results.
-- **Physics or implementation errors:** identify the incorrect statement, equation, sign, normalization, variable, or code path directly; provide the corrected version and explain the impact on affected results.
-- **Alternative theoretical or numerical schemes:** compare them quantitatively under matched assumptions and benchmarks, then state a recommended scheme and why. Preserve an adopted decision unless new evidence materially changes the comparison.
-- **Settled research direction:** execute the adopted direction. Do not repeatedly ask for confirmation or reopen a settled choice. Ask only when a genuinely missing input prevents the next concrete action.
-- **Unavailable resources:** state the exact resource, attempted access route, and resulting limitation, then continue with available alternatives where possible. Avoid generic capability disclaimers.
-
-### Style and scientific integrity
-
-- Do not turn each progress report into a disclaimer.
-- Avoid unnecessary defensive phrases, repetitive caveats, generic risk warnings, and formulaic “however” paragraphs.
-- Do not treat work remaining for a later phase as evidence against a result already established in the current phase.
-- Distinguish a result's scientific scope, validation status, and work not yet performed.
-- Be candid when evidence is insufficient, but make the limitation specific and proportional to the claim.
-- This policy governs communication and task execution; it does not lower scientific acceptance criteria, suppress genuine physical limitations, or permit claims beyond the evidence.
-
-
+For ColliderAgent reports, preserve the additional pipeline-specific mapping and stage-status requirements below. Do not conflate successful tool execution, model validation, event-generation validation, detector/analysis validation, and scientific reproduction.
 ### Collider pipeline reporting boundary
 
 For an execution or reproduction report, retain the run label and parent run, exact source revision and parameter configuration, stages actually executed, outputs and event counts, cross sections and uncertainties, analysis cuts and yields, validation evidence, deviations from the source paper, and exact archival status. Keep tool/blueprint success, model validation, event-generation validation, analysis validation, and scientific reproduction as separate statuses. A completed stage remains a completed result even when a later stage is pending.
