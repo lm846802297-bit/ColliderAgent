@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.1",
+  "record_type": "validation_report",
+  "run_id": "20261123-pyhf-one-bin-native-parity",
+  "created_at": "2026-11-23T13:02:54.908652+00:00",
+  "status": "passed",
+  "checks": [
+    {
+      "check_id": "WHEEL-PIN",
+      "name": "Official wheel and tagged source integrity",
+      "category": "integrity",
+      "status": "passed",
+      "method": "Four official PyPI wheel SHA-256 checks; four core pyhf inference files match pinned source bytes.",
+      "observed": "4/4 wheels and 4/4 core source files",
+      "evidence_path": "docs/benchmarks/one-bin-histfactory-native/replay-wheels.txt"
+    },
+    {
+      "check_id": "CLS-PARITY",
+      "name": "Five observed-on-Asimov and median expected values",
+      "category": "independent",
+      "status": "passed",
+      "method": "Compare native NumPy qtilde CLs to stdlib likelihood ratio and normal-tail oracle.",
+      "observed": 5.939693181744587e-14,
+      "threshold": 5e-07,
+      "unit": "1",
+      "evidence_path": "docs/benchmarks/one-bin-histfactory-native/native_pyhf.json"
+    },
+    {
+      "check_id": "MU95-PARITY",
+      "name": "Observed-on-Asimov and median expected limit parity",
+      "category": "independent",
+      "status": "passed",
+      "method": "Verify each native limit against the independent bracketed reference.",
+      "observed": 2.5268676040468563e-13,
+      "threshold": 5e-06,
+      "unit": "1",
+      "evidence_path": "docs/benchmarks/one-bin-histfactory-native/native_pyhf.json"
+    },
+    {
+      "check_id": "BYTE-REPLAY",
+      "name": "Isolated replay agrees exactly",
+      "category": "regression",
+      "status": "passed",
+      "method": "Compare old pinned checkout direct run/replay to direct run in composed checkout.",
+      "observed": "3 byte-identical stdout JSON records",
+      "evidence_path": "docs/benchmarks/one-bin-histfactory-native/native_pyhf.json"
+    },
+    {
+      "check_id": "UNIT-TESTS",
+      "name": "Fixed benchmark contract tests",
+      "category": "software",
+      "status": "passed",
+      "method": "python -m unittest discover -s scripts/tests -p test_one_bin_asimov_limit.py -v",
+      "observed": 7,
+      "threshold": 7,
+      "unit": "tests",
+      "evidence_path": "scripts/tests/test_one_bin_asimov_limit.py"
+    }
+  ]
+}

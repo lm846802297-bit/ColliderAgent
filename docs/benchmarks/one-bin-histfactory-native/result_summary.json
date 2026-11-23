@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0.1",
+  "record_type": "result_summary",
+  "run_id": "20261123-pyhf-one-bin-native-parity",
+  "created_at": "2026-11-23T13:02:54.908652+00:00",
+  "project": {
+    "repository": "lm846802297-bit/ColliderAgent",
+    "project_id": "collideragent-one-bin-statistics-backend"
+  },
+  "calculation": "Native pyhf parity on the transparent one-bin reference",
+  "scope": {
+    "included": [
+      "fixed no-nuisance Poisson-bin synthetic fixture and five CLs points"
+    ],
+    "excluded": [
+      "experimental data or exclusions",
+      "actual coverage",
+      "nuisance fits",
+      "detector or collider simulation"
+    ]
+  },
+  "benchmark": {
+    "n": 100,
+    "b": 100,
+    "s": 20,
+    "level": 0.05
+  },
+  "observables": [
+    {
+      "name": "mu95_asimov_observation",
+      "value": 1.0450250398230696,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native pyhf synthetic-only asymptotic limit"
+    },
+    {
+      "name": "mu95_asimov_observation_signed_delta",
+      "value": -2.4558133304708463e-13,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native minus independent stdlib limit"
+    },
+    {
+      "name": "mu95_median_expected",
+      "value": 1.0450250398230625,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native pyhf synthetic-only asymptotic limit"
+    },
+    {
+      "name": "mu95_median_expected_signed_delta",
+      "value": -2.5268676040468563e-13,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native minus independent stdlib limit"
+    },
+    {
+      "name": "cls_asimov_observation_at_mu0.25",
+      "value": 0.6227889200687675,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native one-bin CLs for fixed synthetic observation"
+    },
+    {
+      "name": "cls_asimov_observation_signed_delta_at_mu0.25",
+      "value": -5.939693181744587e-14,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native minus independent reference CLs"
+    },
+    {
+      "name": "cls_median_expected_at_mu0.25",
+      "value": 0.6227889200687675,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native one-bin CLs for fixed synthetic observation"
+    },
+    {
+      "name": "cls_median_expected_signed_delta_at_mu0.25",
+      "value": -5.939693181744587e-14,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native minus independent reference CLs"
+    },
+    {
+      "name": "cls_asimov_observation_at_mu0.5",
+      "value": 0.332801989280489,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native one-bin CLs for fixed synthetic observation"
+    },
+    {
+      "name": "cls_asimov_observation_signed_delta_at_mu0.5",
+      "value": 1.9095836023552692e-14,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native minus independent reference CLs"
+    },
+    {
+      "name": "cls_median_expected_at_mu0.5",
+      "value": 0.332801989280489,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native one-bin CLs for fixed synthetic observation"
+    },
+    {
+      "name": "cls_median_expected_signed_delta_at_mu0.5",
+      "value": 1.9095836023552692e-14,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native minus independent reference CLs"
+    },
+    {
+      "name": "cls_asimov_observation_at_mu1.0",
+      "value": 0.060061388388070555,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native one-bin CLs for fixed synthetic observation"
+    },
+    {
+      "name": "cls_asimov_observation_signed_delta_at_mu1.0",
+      "value": -3.0878077872387166e-15,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native minus independent reference CLs"
+    },
+    {
+      "name": "cls_median_expected_at_mu1.0",
+      "value": 0.060061388388070555,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native one-bin CLs for fixed synthetic observation"
+    },
+    {
+      "name": "cls_median_expected_signed_delta_at_mu1.0",
+      "value": -3.0878077872387166e-15,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native minus independent reference CLs"
+    },
+    {
+      "name": "cls_asimov_observation_at_mu1.5",
+      "value": 0.00607760755094191,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native one-bin CLs for fixed synthetic observation"
+    },
+    {
+      "name": "cls_asimov_observation_signed_delta_at_mu1.5",
+      "value": -1.8908485888147197e-16,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native minus independent reference CLs"
+    },
+    {
+      "name": "cls_median_expected_at_mu1.5",
+      "value": 0.00607760755094191,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native one-bin CLs for fixed synthetic observation"
+    },
+    {
+      "name": "cls_median_expected_signed_delta_at_mu1.5",
+      "value": -1.8908485888147197e-16,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native minus independent reference CLs"
+    },
+    {
+      "name": "cls_asimov_observation_at_mu2.0",
+      "value": 0.0003645714232174569,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native one-bin CLs for fixed synthetic observation"
+    },
+    {
+      "name": "cls_asimov_observation_signed_delta_at_mu2.0",
+      "value": -2.2876665839444144e-17,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native minus independent reference CLs"
+    },
+    {
+      "name": "cls_median_expected_at_mu2.0",
+      "value": 0.0003645714232174569,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native one-bin CLs for fixed synthetic observation"
+    },
+    {
+      "name": "cls_median_expected_signed_delta_at_mu2.0",
+      "value": -2.2876665839444144e-17,
+      "unit": "1",
+      "status": "computed",
+      "definition": "native minus independent reference CLs"
+    }
+  ],
+  "data_files": [
+    {
+      "path": "docs/benchmarks/one-bin-histfactory-native/native_pyhf.json",
+      "role": "exact native pyhf stdout comparisons",
+      "format": "json",
+      "sha256": "9e5a22db6234c5df2770226b66b2848ffe269251b6605aa952dd34dbfeb62798",
+      "bytes": 3387
+    }
+  ],
+  "scientific_status": "diagnostic"
+}

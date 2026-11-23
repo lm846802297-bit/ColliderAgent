@@ -1,0 +1,33 @@
+{
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "0b2715cf8b70bfa3b42ca804a9e0b4d45a3cd0f78723aedf0d72d88e962b8d10",
+  "task_id": "20261123-pyhf-one-bin-native-parity",
+  "task_brief_path": "docs/benchmarks/one-bin-histfactory-native/TASK_BRIEF.md",
+  "task_brief_sha256": "2819eff8059ef550ea4c435a9c176d5a20ee60c059ed3d7bae7feb267c97a267",
+  "applied_profiles": [
+    "core-governance",
+    "research-compute",
+    "task-handoff",
+    "research-quality-gate",
+    "calculation-result-archive",
+    "rcrps-v1.0.1"
+  ],
+  "project_extensions": [
+    {
+      "path": "docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md",
+      "scope": "Local run-record conventions; Collider Monte Carlo-specific fields do not apply to a fixed statistical fixture.",
+      "sha256": "36c8b57cff417b093c12369cfc54da2a6f0e34fa45d39abc685177fc75d65005"
+    }
+  ],
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "repository": "lm846802297-bit/ColliderAgent",
+  "acceptance_criteria": [
+    "Exact frozen entrypoint and test bytes; official four wheel hashes and pyhf 0.7.6.",
+    "Five observed-on-Asimov and median-expected CLs comparisons with maximum absolute residual at most 5e-7.",
+    "Both mu95 comparisons with maximum absolute residual at most 5e-6.",
+    "Byte-identical isolated replay; preserve native output with exact fingerprints."
+  ]
+}

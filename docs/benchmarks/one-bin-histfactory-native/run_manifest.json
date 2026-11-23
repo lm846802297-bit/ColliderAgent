@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0.1",
+  "record_type": "run_manifest",
+  "run_id": "20261123-pyhf-one-bin-native-parity",
+  "created_at": "2026-11-23T13:02:54.908652+00:00",
+  "project": {
+    "repository": "lm846802297-bit/ColliderAgent",
+    "project_id": "collideragent-one-bin-statistics-backend"
+  },
+  "source": {
+    "commit_sha": "7437d7905b3d256984948a1690a70c7b4884966e",
+    "branch": "main",
+    "script_path": "scripts/one_bin_asimov_limit.py",
+    "script_sha256": "acacb542bde3113a6723f9c2c3bf7a5b001351ada8afde439053380c93681fe1"
+  },
+  "inputs": [
+    {
+      "name": "frozen-benchmark-source",
+      "source": "lm846802297-bit/ColliderAgent",
+      "version": "1d9d2ea1a6c3cbcdae380ae49d8009ae55d50512",
+      "uri": "https://github.com/lm846802297-bit/ColliderAgent/blob/1d9d2ea1a6c3cbcdae380ae49d8009ae55d50512/scripts/one_bin_asimov_limit.py",
+      "format": "py",
+      "sha256": "acacb542bde3113a6723f9c2c3bf7a5b001351ada8afde439053380c93681fe1",
+      "bytes": 7659,
+      "transformation": "Byte-exact materialization into the clean governance checkout prior to replay."
+    },
+    {
+      "name": "pyhf-0.7.6-py3-none-any.whl",
+      "source": "official PyPI wheel",
+      "version": "0.7.6",
+      "uri": "https://files.pythonhosted.org/packages/de/43/91d24c1b64f576f59b5aa5cbd8e732815bfeb8cf87fcc6fb65027c132e7f/pyhf-0.7.6-py3-none-any.whl",
+      "format": "whl",
+      "sha256": "01b2401b9fdc53d94fa28256128c4898c380c64f71446f1695580fb18fba349d",
+      "bytes": 160220
+    },
+    {
+      "name": "jsonpatch-1.33-py2.py3-none-any.whl",
+      "source": "official PyPI wheel",
+      "version": "1.33",
+      "uri": "https://files.pythonhosted.org/packages/73/07/02e16ed01e04a374e644b575638ec7987ae846d25ad97bcc9945a3ee4b0e/jsonpatch-1.33-py2.py3-none-any.whl",
+      "format": "whl",
+      "sha256": "0ae28c0cd062bbd8b8ecc26d7d164fbbea9652a1a3693f3b956c1eae5145dade",
+      "bytes": 12898
+    },
+    {
+      "name": "tqdm-4.67.1-py3-none-any.whl",
+      "source": "official PyPI wheel",
+      "version": "4.67.1",
+      "uri": "https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl",
+      "format": "whl",
+      "sha256": "26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2",
+      "bytes": 78540
+    },
+    {
+      "name": "jsonpointer-3.0.0-py2.py3-none-any.whl",
+      "source": "official PyPI wheel",
+      "version": "3.0.0",
+      "uri": "https://files.pythonhosted.org/packages/71/92/5e77f98553e9e75130c78900d000368476aed74276eb8ae8796f65f00918/jsonpointer-3.0.0-py2.py3-none-any.whl",
+      "format": "whl",
+      "sha256": "13e088adc14fca8b6aa8177c044e12701e6ad4b28ff10e65f2267a90109c9942",
+      "bytes": 7595
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "nominal_background_count": 100,
+      "nominal_signal_count": 20,
+      "asimov_count": 100,
+      "nuisance_parameters": 0
+    },
+    "numerics": {
+      "prespecified_mu_probes": [
+        0.25,
+        0.5,
+        1,
+        1.5,
+        2
+      ],
+      "scan_bounds": [
+        0.05,
+        10
+      ],
+      "cls_abs_tolerance": 5e-07,
+      "mu95_abs_tolerance": 5e-06,
+      "solver": "pyhf TOMS748 and independent reference bisection"
+    },
+    "conventions": {
+      "scope": "synthetic",
+      "tail": "asymptotic qtilde CLs level 0.05",
+      "units": "counts or dimensionless signal strength"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "python": "3.12.14",
+      "python_implementation": "CPython",
+      "numpy_precision": "64b",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1"
+    },
+    "dependencies": {
+      "pyhf": "0.7.6",
+      "jsonpatch": "1.33",
+      "tqdm": "4.67.1",
+      "jsonpointer": "3.0.0",
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "jsonschema": "4.26.0",
+      "click": "8.4.2",
+      "PyYAML": "6.0.3",
+      "attrs": "26.1.0",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.6.3",
+      "jsonschema-specifications": "2025.9.1"
+    },
+    "hardware": {
+      "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "logical_cpu_count_visible": 9
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "branch_commit",
+      "checkout_ref": "refs/heads/main",
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null,
+      "working_tree_state": "dirty",
+      "dirty_paths": [
+        "scripts/one_bin_asimov_limit.py",
+        "scripts/tests/test_one_bin_asimov_limit.py"
+      ]
+    },
+    "command": "python scripts/one_bin_asimov_limit.py --native",
+    "started_at": "2026-11-23T13:01:35.043919+00:00",
+    "finished_at": "2026-11-23T13:01:36.963170+00:00",
+    "exit_code": 0,
+    "wall_time_s": 1.9192949200005387
+  },
+  "outputs": [
+    {
+      "path": "docs/benchmarks/one-bin-histfactory-native/native_pyhf.json",
+      "role": "exact native pyhf stdout comparisons",
+      "format": "json",
+      "sha256": "9e5a22db6234c5df2770226b66b2848ffe269251b6605aa952dd34dbfeb62798",
+      "bytes": 3387
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "WHEEL-PIN",
+        "name": "Official wheel and tagged source integrity",
+        "category": "integrity",
+        "status": "passed",
+        "method": "Four official PyPI wheel SHA-256 checks; four core pyhf inference files match pinned source bytes.",
+        "observed": "4/4 wheels and 4/4 core source files",
+        "evidence_path": "docs/benchmarks/one-bin-histfactory-native/replay-wheels.txt"
+      },
+      {
+        "check_id": "CLS-PARITY",
+        "name": "Five observed-on-Asimov and median expected values",
+        "category": "independent",
+        "status": "passed",
+        "method": "Compare native NumPy qtilde CLs to stdlib likelihood ratio and normal-tail oracle.",
+        "observed": 5.939693181744587e-14,
+        "threshold": 5e-07,
+        "unit": "1",
+        "evidence_path": "docs/benchmarks/one-bin-histfactory-native/native_pyhf.json"
+      },
+      {
+        "check_id": "MU95-PARITY",
+        "name": "Observed-on-Asimov and median expected limit parity",
+        "category": "independent",
+        "status": "passed",
+        "method": "Verify each native limit against the independent bracketed reference.",
+        "observed": 2.5268676040468563e-13,
+        "threshold": 5e-06,
+        "unit": "1",
+        "evidence_path": "docs/benchmarks/one-bin-histfactory-native/native_pyhf.json"
+      },
+      {
+        "check_id": "BYTE-REPLAY",
+        "name": "Isolated replay agrees exactly",
+        "category": "regression",
+        "status": "passed",
+        "method": "Compare old pinned checkout direct run/replay to direct run in composed checkout.",
+        "observed": "3 byte-identical stdout JSON records",
+        "evidence_path": "docs/benchmarks/one-bin-histfactory-native/native_pyhf.json"
+      },
+      {
+        "check_id": "UNIT-TESTS",
+        "name": "Fixed benchmark contract tests",
+        "category": "software",
+        "status": "passed",
+        "method": "python -m unittest discover -s scripts/tests -p test_one_bin_asimov_limit.py -v",
+        "observed": 7,
+        "threshold": 7,
+        "unit": "tests",
+        "evidence_path": "scripts/tests/test_one_bin_asimov_limit.py"
+      }
+    ],
+    "report_path": "docs/benchmarks/one-bin-histfactory-native/validation_report.json"
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "0b2715cf8b70bfa3b42ca804a9e0b4d45a3cd0f78723aedf0d72d88e962b8d10",
+      "task_id": "20261123-pyhf-one-bin-native-parity",
+      "task_brief_path": "docs/benchmarks/one-bin-histfactory-native/TASK_BRIEF.md",
+      "task_brief_sha256": "2819eff8059ef550ea4c435a9c176d5a20ee60c059ed3d7bae7feb267c97a267",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1"
+      ],
+      "project_extensions": [
+        "docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md"
+      ]
+    },
+    "frozen_source_commit": "1d9d2ea1a6c3cbcdae380ae49d8009ae55d50512",
+    "dependency_lock": {
+      "path": "docs/benchmarks/one-bin-histfactory-native/replay-wheels.txt",
+      "role": "official dependency wheel lock",
+      "format": "txt",
+      "sha256": "0872908aa2829db97fe7c0eaaa783c0ef3bd1cf706da0c4310be38533cf29c11",
+      "bytes": 876
+    },
+    "run_scope": "Synthetic statistical backend; Collider Monte Carlo extension not applicable.",
+    "pyhf_upstream_version_commit": "b500270c6a7744d16b481dfda247c066ef3c2cb4"
+  }
+}

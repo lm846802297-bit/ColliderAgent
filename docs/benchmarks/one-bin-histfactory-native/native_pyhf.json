@@ -1,0 +1,155 @@
+{
+  "schema": "collideragent-one-bin-asimov-limit-v1",
+  "scope": "SYNTHETIC_BACKEND_PARITY_NOT_AN_EXPERIMENTAL_LIMIT",
+  "level": 0.05,
+  "workspace": {
+    "version": "1.0.0",
+    "channels": [
+      {
+        "name": "count",
+        "samples": [
+          {
+            "name": "signal",
+            "data": [
+              20.0
+            ],
+            "modifiers": [
+              {
+                "name": "mu",
+                "type": "normfactor",
+                "data": null
+              }
+            ]
+          },
+          {
+            "name": "background",
+            "data": [
+              100.0
+            ],
+            "modifiers": []
+          }
+        ]
+      }
+    ],
+    "observations": [
+      {
+        "name": "count",
+        "data": [
+          100.0
+        ]
+      }
+    ],
+    "measurements": [
+      {
+        "name": "expected",
+        "config": {
+          "poi": "mu",
+          "parameters": [
+            {
+              "name": "mu",
+              "inits": [
+                1.0
+              ],
+              "bounds": [
+                [
+                  0.0,
+                  10.0
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "independent_reference": {
+    "status": "COMPUTED_STDLIB_REFERENCE",
+    "mu95": 1.0450250398233152,
+    "bracket": [
+      {
+        "mu": 1.045025039823031,
+        "cls": 0.050000000000009245
+      },
+      {
+        "mu": 1.0450250398235994,
+        "cls": 0.04999999999989205
+      }
+    ],
+    "cls_at_mu95": 0.04999999999995066,
+    "points": [
+      {
+        "mu": 0.25,
+        "q_mu": 0.24196716611359914,
+        "cls": 0.6227889200688269
+      },
+      {
+        "mu": 0.5,
+        "q_mu": 0.937964039135028,
+        "cls": 0.3328019892804699
+      },
+      {
+        "mu": 1.0,
+        "q_mu": 3.535688641209078,
+        "cls": 0.06006138838807364
+      },
+      {
+        "mu": 1.5,
+        "q_mu": 7.527147106501786,
+        "cls": 0.006077607550942099
+      },
+      {
+        "mu": 2.0,
+        "q_mu": 12.705552675757414,
+        "cls": 0.0003645714232174798
+      }
+    ]
+  },
+  "native_pyhf": {
+    "status": "PASS",
+    "mu95_asimov_observation": 1.0450250398230696,
+    "mu95_median_expected": 1.0450250398230625,
+    "max_cls_abs_residual": 5.939693181744587e-14,
+    "max_mu95_abs_residual": 2.5268676040468563e-13,
+    "points": [
+      {
+        "mu": 0.25,
+        "cls_asimov_observation": 0.6227889200687675,
+        "cls_median_expected": 0.6227889200687675
+      },
+      {
+        "mu": 0.5,
+        "cls_asimov_observation": 0.332801989280489,
+        "cls_median_expected": 0.332801989280489
+      },
+      {
+        "mu": 1.0,
+        "cls_asimov_observation": 0.060061388388070555,
+        "cls_median_expected": 0.060061388388070555
+      },
+      {
+        "mu": 1.5,
+        "cls_asimov_observation": 0.00607760755094191,
+        "cls_median_expected": 0.00607760755094191
+      },
+      {
+        "mu": 2.0,
+        "cls_asimov_observation": 0.0003645714232174569,
+        "cls_median_expected": 0.0003645714232174569
+      }
+    ],
+    "pyhf_version": "0.7.6",
+    "backend": "numpy-64b",
+    "test_stat": "qtilde",
+    "calculator": "asymptotics",
+    "poi_bounds": [
+      0.0,
+      10.0
+    ],
+    "scan_bounds": [
+      0.05,
+      10.0
+    ],
+    "cls_abs_tolerance": 5e-07,
+    "mu95_abs_tolerance": 5e-06
+  }
+}

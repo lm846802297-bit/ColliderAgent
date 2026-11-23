@@ -1,0 +1,14 @@
+# Research task brief: native pyhf one-bin parity
+
+Task ID: 20261123-pyhf-one-bin-native-parity
+
+1. **Objective and question:** Verify a real inference backend for ColliderAgent with one synthetic control. Does the previously frozen one-bin HistFactory Asimov fixture run through pyhf 0.7.6 and match its independent reference?
+2. **Primary inputs:** Public fork benchmark commit 1d9d2ea1a6c3cbcdae380ae49d8009ae55d50512, script scripts/one_bin_asimov_limit.py. pyhf 0.7.6 source at b500270c6a7744d16b481dfda247c066ef3c2cb4 and official PyPI wheel SHA-256 01b2401b9fdc53d94fa28256128c4898c380c64f71446f1695580fb18fba349d; exact dependency wheel hashes retained separately. Analytic basis: Cowan et al. arXiv:1007.1727v3.
+3. **Baselines and standards:** Scientific input is the pristine feature branch at 1d9d2ea1a6c3cbcdae380ae49d8009ae55d50512; project policy snapshot is fork main 7437d7905b3d256984948a1690a70c7b4884966e. Apply lock research/standards-lock.yaml at that main snapshot, central db503f0eb579bdbcac702e44237a6610c34690e7.
+4. **Conventions:** One Poisson bin with n=b=100 and s=20 nominal signal events; only nonnegative dimensionless signal normfactor mu. Background Asimov median, asymptotic qtilde CLs and level 0.05. No nuisance inputs or measured data. Mathematica and collision conventions N/A.
+5. **Assumptions:** Use the pinned PyPI Python wheel and four-wheel verification only; stdlib reference and NumPy 64-bit pyhf backend, bounded positive scan. No installation outside temporary local directory, no services, no experiment, no scientific exclusion.
+6. **Validated prior evidence:** Standard-library limit from this exact script is 1.0450250398233152; independent high-precision Poisson result 1.0450250398230760. Prior native status was NOT_RUN.
+7. **Independent comparison:** Evaluate five predetermined mu points 0.25, 0.5, 1, 1.5, 2. Compare observed-on-Asimov and median-expected CLs and their two mu95 values against the frozen independent reference. Reuse the prior analytic derivation without changing the oracle.
+8. **Predeclared acceptance:** Exact clean source and official wheel hashes/local version 0.7.6. Native run emits an actual PASS with finite signed comparisons: absolute pointwise CLs residual at most 5e-7, and absolute residual of each mu95 limit at most 5e-6. Check reproducibility by repeated direct replay and output fingerprints. Stop if package access, completeness, version, or scientific criteria fail.
+9. **Outputs:** Preserve native stdout JSON, digests, run environment, standards provenance, and acceptance evidence without changing the old benchmark or remote refs. Use RCRPS v1.0.1 record triplet for this substantial validation run; Collider Monte Carlo fields are inapplicable.
+10. **Remaining gaps:** Does not test detector likelihoods, nuisance parameters, statistical coverage, or a physical exclusion. No PR, main update, or CI in this task.
