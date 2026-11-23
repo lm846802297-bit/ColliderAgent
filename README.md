@@ -22,12 +22,14 @@
 
 </div>
 
-> **Research compute policy:** Follow [RESEARCH_COMPUTE_POLICY.md](RESEARCH_COMPUTE_POLICY.md) for primary execution, provenance, numerical convergence, and independent validation.
+> **Shared research standards:** Follow the [Central Research Standards Index](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/CENTRAL_STANDARDS_INDEX.md) and the exact revision pinned in [research/standards-lock.yaml](research/standards-lock.yaml). ColliderAgent-specific Agent architecture, FeynRules/UFO generation, collider simulation, analysis, and Magnus integration remain in this repository.
+
+> **Compute adapter:** [RESEARCH_COMPUTE_POLICY.md](RESEARCH_COMPUTE_POLICY.md) contains only the ColliderAgent-specific Magnus and authorized self-hosted-runner adapter to the central compute policy.
 
 
 ## Overview
 
-**Repository instructions:** before any task, read [AGENTS.md](AGENTS.md), follow the [research compute policy](RESEARCH_COMPUTE_POLICY.md), and then use the relevant Skill under `src/skills/`. For PR merge choices, follow [GIT_MERGE_POLICY.md](GIT_MERGE_POLICY.md); substantive research changes default to merge commits.
+**Repository instructions:** before any task, read [AGENTS.md](AGENTS.md), [research/standards-lock.yaml](research/standards-lock.yaml), and the [central standards index](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/CENTRAL_STANDARDS_INDEX.md). Then use the relevant Skill under `src/skills/`. The local compute, archival, RCRPS, and Git documents define ColliderAgent-specific extensions to the pinned central standards.
 
 Collider-Agent enables AI coding agents (Claude Code, Cursor, Windsurf, and more) to autonomously reproduce collider phenomenology results from physics papers. It combines specialized sub-agents and reusable skill modules that interface with standard HEP tools via the [Magnus](https://github.com/Rise-AGI/magnus) cloud platform — no local HEP software installation required.
 

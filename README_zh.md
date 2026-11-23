@@ -21,11 +21,13 @@
 </div>
 
 
-- 结构化科研结果数据规范：[RCRPS v1.0.1](docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.zh-CN.md)，新运行清单必须记录完整的源码控制来源。
+- 中央科研规范：阅读[中央科研规范索引](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/CENTRAL_STANDARDS_INDEX.zh-CN.md)，并遵循 [research/standards-lock.yaml](research/standards-lock.yaml) 锁定的中央版本。
+- 结构化结果记录：公共字段遵循中央 RCRPS v1.0.1；本地 [ColliderAgent 扩展](docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.zh-CN.md)只定义 `extensions.collider_mc`。
+- Magnus 执行适配：[RESEARCH_COMPUTE_POLICY.md](RESEARCH_COMPUTE_POLICY.md) 仅规定本项目的专用 HEP 后端及自托管 runner 验证边界。
 
 ## 概述
 
-**仓库级任务规范：** 开始任何任务前先阅读 [AGENTS.md](AGENTS.md)，然后阅读本次任务对应的 `src/skills/`。PR 合并策略遵循 [GIT_MERGE_POLICY.md](GIT_MERGE_POLICY.md)：实质性科研与流水线变更默认采用 Merge Commit。
+**仓库级任务规范：** 开始任务前先阅读 [AGENTS.md](AGENTS.md)、[research/standards-lock.yaml](research/standards-lock.yaml) 和[中央科研规范索引](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/CENTRAL_STANDARDS_INDEX.zh-CN.md)，再阅读本次任务对应的 `src/skills/`。本仓库的 Agent 架构、FeynRules/UFO、MadGraph/Pythia8/Delphes/MadAnalysis 工作流及 Magnus 适配仍由本地专属规范定义。
 
 Collider-Agent 使 AI 编程智能体（Claude Code、Cursor、Windsurf 等）能够自主复现物理论文中的对撞机唯象学结果。它结合了专用子智能体与可复用技能模块，通过 [Magnus](https://github.com/Rise-AGI/magnus) 云平台与标准高能物理工具对接——**无需在本地安装任何 HEP 软件**。
 

@@ -8,6 +8,13 @@ description: >
 
 # Execution Summarizer
 
+## Central standards integration
+
+The pre-execution task brief is governed by the pinned central [Research Task Handoff Standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/RESEARCH_TASK_HANDOFF_STANDARD.md). This summary is completion evidence and must not be replaced by the brief or by a subagent's prose-only status.
+
+Apply the task-appropriate [central Research Quality Gate](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/RESEARCH_QUALITY_GATE.md). Report only checks actually performed, identify their exact source/input revisions and acceptance criteria, and keep tool execution, model validation, event generation, detector/analysis validation, numerical/statistical validation, and scientific reproduction separate.
+
+
 ## Overview
 
 This skill produces a structured execution summary after the agent completes a user prompt. The summary covers **what was done, what results were obtained**, and provides a **detailed mapping between the user's physics specification and the generated code/scripts**.
@@ -187,13 +194,6 @@ Use `docs/schemas/research-result-record-v1.0.1.schema.json` and `docs/schemas/v
 
 ## Research reporting standard
 
-In addition to the detailed run sections required above, begin the scientific narrative of every execution summary with a compact four-part overview:
+Follow the pinned central [Research Task Handoff Standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/RESEARCH_TASK_HANDOFF_STANDARD.md) and [Scientific Diff §11](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/scientific-diff-workflow.md#11-research-reporting-and-communication-standard) for the shared reporting structure and evidence-proportional language.
 
-1. **Conclusion** — the direct answer and the current research judgment.
-2. **Evidence** — the exact model/code path, data, derivation, or checks supporting it.
-3. **Results** — completed numerical outputs with units, precision, benchmark, uncertainties, and physical interpretation.
-4. **Remaining work** — only pending or blocked steps that affect the next stage.
-
-Keep the required run-info, execution-step, prompt-to-code mapping, output, and archival sections. Report completed stages and their results directly; mark later unfinished stages separately rather than using them to weaken completed results. State approximations and validity domains once. Identify physics or implementation errors directly and state which outputs need recalculation. Do not use generic disclaimers or repeat caveats that do not change the interpretation.
-
-This style requirement does not change the scientific acceptance criteria or the required separation between successful tool execution, validation of each pipeline stage, and a supported physical conclusion.
+Retain the detailed ColliderAgent deliverables above: run information, executed stages, prompt-to-code mapping tables, native output inventory, RCRPS records, and archive provenance. Begin the scientific narrative with Conclusion, Evidence, Results, and Remaining work. Report completed stages directly; list only pending or blocked work that affects the next step. State approximations and validity domains once. Do not infer scientific reproduction from successful tool execution or structural validation.

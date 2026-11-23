@@ -1,67 +1,57 @@
-# Research-result archival and reproducibility policy
+# ColliderAgent research-result archival extension
 
-**Status:** Mandatory for completed paper-reproduction and collider-phenomenology runs maintained in this repository.
+**Status:** Project-specific extension to the central Calculation-result Archival Policy.  
+**Central source commit:** 142267bc803c90aa681110293b66b73947bbcaa1
 
-Collider-Agent can generate models, Monte Carlo events, analysis outputs, plots, and execution reports through local tools or the Magnus platform. A file remaining in a temporary working directory or cloud workspace is not a durable research archive. This policy complements the root README, the paper-reproduction examples, and the execution-summary/orchestrator Skills.
+The shared requirements for native-file archival, extract-before-upload, run provenance, checksums, remote verification, and the separation of archival from scientific validation are defined by the [central Calculation-result Archival Policy](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/CALCULATION_RESULT_ARCHIVAL_POLICY.md). This document defines the ColliderAgent-specific result locations, event-data handling, and HEP run metadata.
 
-## 1. Decide where the canonical result belongs
+## 1. Canonical result location
 
-- Collider-Agent is primarily the reproducible pipeline/tool repository. A paper-specific result should be archived in the research repository that owns the scientific study whenever one exists; record the repository path and immutable commit/PR in the execution summary.
-- If a reproduction is deliberately maintained as an example in this repository, put the completed run under `paper-reproduction/<arXiv-ID>/results/<run_label>/`. Keep prompts and original paper assets separate from generated results. Do not overwrite a previous run; use a new run label or versioned directory.
-- Keep executable scripts, model files, analysis code, configuration, progress records, and outputs distinguishable. The generated execution summary must point to the exact files used for the result.
+- ColliderAgent is primarily the reproducible pipeline and Agent-tool repository. When a paper-specific result belongs to another research project, archive the authoritative scientific result in that project's repository and record its immutable repository path, commit, and PR in the execution summary.
+- When a reproduction is deliberately maintained here, use paper-reproduction/<arXiv-ID>/results/<run_label>/.
+- Keep prompts and original paper assets separate from generated results. Preserve a unique run label and parent relationship for every incremental run.
+- Keep model sources, UFO directories, scripts/cards, raw event samples, processed analysis tables, plots, progress records, and final summaries distinguishable.
 
-## 2. Commit native result files directly
+## 2. Collider-native outputs
 
-- Commit the essential, directly usable outputs in their native formats: generated `.fr`/UFO sources where needed, MadGraph scripts and cards, analysis scripts, cross-section tables, cutflow tables, CSV/JSON/JSONL/TXT outputs, plots, and the exact run manifest.
-- **Do not create a new ZIP/TAR archive as a substitute for committing the extracted result files.** Reviewers must be able to inspect the data files directly.
-- If an input was provided as an archive, extract the files required for the run and commit those extracted files when redistribution is permitted. Record the original archive filename, source/version, size, SHA-256, extraction command, and hashes of the extracted files.
-- Preserve tool-native formats when they are the actual data product (for example a MadGraph-generated compressed LHE file); document the producing tool and command. Do not wrap ordinary outputs in an extra ZIP/TAR.
-- Keep raw simulation output, processed analysis tables, and plots clearly separated. Record any filtering, event selection, normalization, histogramming, or other post-processing.
+Retain the native files needed to inspect and reproduce the executed stages, as applicable:
 
-## 3. Large Monte Carlo and binary outputs
+- FeynRules model sources and generated UFO files;
+- exact MadGraph process definitions, scripts, parameter cards, run cards, banners, and logs;
+- native event data such as LHE, HepMC, ROOT, or Parquet;
+- Pythia8 settings, Delphes detector cards, MadAnalysis scripts, and analysis code;
+- cross-section tables, cutflows, weighted yields, histograms, plots, and post-processing outputs;
+- progress records, final RCRPS records, execution summaries, and checksum manifests.
+
+Keep raw event data, showered event data, detector/reconstruction-level data, processed tables, and plots separate. Record every event selection, filtering, normalization, histogramming, and other transformation.
+
+## 3. Large Monte Carlo and restricted outputs
 
 - Commit reasonably sized essential outputs directly when licensing and repository limits permit.
-- Large event samples, detector-level files, or binary outputs that exceed ordinary GitHub limits should use Git LFS or a durable, versioned storage location approved for the project. Do not silently omit them and do not rely on an expiring Magnus workspace or GitHub Actions artifact as the only copy.
-- Commit a manifest for every externally stored output, listing the exact filename, format, byte size, event/record count where relevant, immutable URI or release/version identifier, source run label, and SHA-256 checksum. Prefer separate native files over newly created archive bundles.
-- Never commit Magnus API keys, tokens, credentials, private data, or non-redistributable event/data files. Store only permitted files and provide authorized retrieval instructions plus checksums for restricted data.
+- Use Git LFS or approved durable, versioned storage for large event samples and detector-level binary outputs.
+- For externally stored outputs, commit a manifest with exact filenames, format, byte size, event/record count, immutable URI or release/version, source run label, and SHA-256.
+- Do not rely on a Magnus workspace or expiring Actions artifact as the only copy of a result. Do not commit credentials, private data, or event files that cannot be redistributed.
 
-## 4. Required run provenance
+## 4. Collider run metadata
 
-For each substantial run, retain `progress/run_manifest.yaml` and/or an equivalent run record with:
+The existing progress/run_manifest.yaml remains the incremental orchestration and progress record. For each substantial completed run, also produce the final RCRPS v1.0.1 records under the run's result directory:
 
-- run label, timestamp, task description, and parent run for incremental runs;
-- exact Collider-Agent source commit and the relevant prompt/analysis-script revisions;
-- model parameters, process definition, collider energy, PDF set, generation cuts, event count, detector/analysis settings, and random seeds;
-- Magnus/local execution mode and relevant versions of MadGraph5, Pythia8, Delphes, MadAnalysis5, FeynRules, Python, and other tools actually used;
-- exact commands or blueprint/CLI execution instructions;
-- output paths, formats, byte sizes, event/row counts, and SHA-256 checksums;
-- failed steps, warnings, retries, discarded runs, post-processing, and validation status.
+- run_manifest.json: actual source checkout, inputs, parameters, environment, commands, outputs, provenance, and archive state;
+- result_summary.json: physical/numerical results, units, uncertainties, scope, and scientific status;
+- validation_report.json: only checks actually executed, with methods, observed values, thresholds, and evidence.
 
-The execution summary must identify the generated files and map the user's physics specification to the actual scripts and parameters. A run manifest or summary is not a substitute for the underlying data files.
+The JSON run manifest must contain the complete 14-field execution.source_control object required by central RCRPS v1.0.1. Capture it at run start, before generating files, and preserve the actual source.commit_sha used by the run. The progress YAML does not replace the final JSON run manifest.
 
-## 5. Verification before claiming archival completion
+The collider-specific fields are defined in the local [RCRPS v1.0.1 ColliderAgent extension](STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md).
 
-1. Check that required outputs exist and are non-empty; verify event counts, table dimensions, units, finite values, and the run-specific validation criteria.
-2. Curate the essential deliverables into the canonical research repository or the designated `paper-reproduction/<arXiv-ID>/results/<run_label>/` directory.
-3. Commit through a focused branch and pull request. Include the run manifest, execution summary, source/scripts, essential native outputs, provenance, and checksums.
-4. After pushing, retrieve the committed files from GitHub and compare paths, sizes, counts, and SHA-256 checksums with the local submission. Verify the merged main-branch paths after merge.
-5. In the execution summary, state the archive status explicitly: `local only`, `committed to PR branch`, or `merged and verified on main`. Never claim a result is archived on GitHub merely because a pipeline or upload command completed.
-6. Keep archival status separate from physics validation. A successful simulation, a complete event sample, a green CI run, or matching hashes does not by itself validate the model or establish the physical conclusion.
+## 5. Archive status and scientific status
 
-This policy applies to every future paper reproduction and collider-phenomenology result maintained in this repository.
+The execution summary must use one truthful archive status:
 
-## 6. CI is optional and is not a research or merge gate
+- local only;
+- committed to PR branch;
+- merged and verified on main.
 
-CI is optional supporting infrastructure, not a prerequisite for calculation, scientific validation, result submission, pull-request review, or merge.
+After pushing, retrieve the remote files and compare paths, sizes, counts, and SHA-256. Do not claim that a Magnus job, upload command, or successful process exit constitutes a permanent GitHub archive.
 
-- Calculations may be run directly on a local machine or an approved compute runner. Do not wait for a CI job before starting, continuing, or completing research.
-- Numerical and scientific acceptance checks remain necessary where appropriate, but they may be run locally or on an approved runner. Record the exact commands, source revision, inputs, settings, outputs, and checks actually performed. CI is neither a substitute for scientific validation nor a mandatory way to perform it.
-- GitHub Actions may still be used as an optional compute or artifact-handoff service. A workflow that performs the calculation is an execution run; record its provenance and outputs. Its existence does not make a separate PR CI check mandatory.
-- A queued, unavailable, disabled, billing-blocked, cancelled, or infrastructure-failed CI job must not by itself block research progress, archival, PR creation, review, or merge. Record its status truthfully and distinguish infrastructure problems from scientific failures.
-- If CI is run, report the exact commit SHA and the checks that actually ran. Never claim an unrun check passed. A green CI result validates only the properties tested by that workflow.
-- Review and merge according to the actual diff, reproducibility, scientific evidence, scope, and relevant checks. Do not require CI status checks as branch-protection gates under this policy. Do not change repository protection settings without explicit authorization.
-- CI is mandatory for a specific task only if the author explicitly requests it.
-
-## 7. Structured JSON/CSV result records
-
-For new substantial runs, follow the [Structured Research Result Data Standard](STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md) and validate `run_manifest`, `result_summary`, and `validation_report` records against `schemas/research-result-record-v1.0.1.schema.json`. Keep provenance, physics results, and validation checks separate. New v1.0.1 run manifests must include the complete 14-field `execution.source_control` object and identify the actual checkout in `source.commit_sha`. Use CSV for cutflows, cross-section scans, and histogram tables; preserve LHE/HepMC/ROOT or other native event formats for event-level data and record event counts, analysis level, weights, and SHA-256. The collider-specific fields are defined in the standard's `extensions.collider_mc` profile.
+Keep archive status separate from execution, model validation, event-generation validation, detector/analysis validation, numerical validation, and scientific reproduction. A complete event sample or matching checksum does not establish a physical conclusion.

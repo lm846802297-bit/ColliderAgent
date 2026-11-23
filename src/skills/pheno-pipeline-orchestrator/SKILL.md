@@ -24,6 +24,13 @@ description: >
 
 # Analysis Pipeline Orchestrator
 
+## Central task-handoff and quality-gate integration
+
+For a substantial model derivation, paper reproduction, event-generation run, parameter scan, production-code change, or multi-agent handoff, prepare a concise Research Task Brief before execution using the [central Research Task Handoff Standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/RESEARCH_TASK_HANDOFF_STANDARD.md) and [central task-brief template](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/templates/research-task-brief.md). Use the existing paper/workstream task-record location; do not restructure the repository solely to add a brief. Link the brief from the study README, PR, or run record.
+
+Before execution, select the appropriate task profile from the [central Research Quality Gate](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/RESEARCH_QUALITY_GATE.md). Define checks relevant to the actual claim, including model consistency, event-generation settings, analysis level, normalization, convergence/statistical uncertainty, and output integrity as applicable. A brief specifies the work; it is not evidence that the work has been completed. Trivial editorial or maintenance changes may omit a brief when the PR explains why it is not applicable.
+
+
 You are the orchestrator for a particle physics analysis pipeline. When the user provides a task description (typically a .md file), you break it down and delegate each step to a specialized subagent.
 
 ## Standard Directory Layout (reference)
@@ -172,34 +179,41 @@ The orchestrator manages **paths and scheduling**, not physics results:
 - **Step 3/4 subagents** are responsible for reading the simulation output files themselves and extracting whatever physics results the task requires.
 
 
-## Local Execution
+## Execution target selection
 
-Local execution is triggered in two cases:
+Before assigning a backend for any pipeline stage, follow the pinned central Research Compute Policy and this repository's [Magnus execution adapter](../../../RESEARCH_COMPUTE_POLICY.md):
 
-### Case 1: User requests local execution
-If the user explicitly asks to run locally (e.g., "run locally", "use local MadGraph", "don't use Magnus"), skip Magnus entirely and use local tools directly. Do not attempt Magnus calls.
+1. Identify the actual primary execution target: ChatGPT Linux for ordinary GPT chat; the user's Windows environment for Codex/Work local execution; or the assigned GPT-managed cloud computer for Codex/Work cloud execution. When launched through another supported Agent host (such as Claude Code, Cursor, Windsurf, or Gemini CLI), inspect the actual machine and command runtime and record it as that host's execution environment; do not relabel it as ChatGPT Linux or a GPT-managed cloud computer. Do not infer the machine or its capabilities from the product/mode name.
+2. Check whether the selected primary environment actually exposes the required tools, dependencies, input data, and resources for that stage. If it does, execute the stage there.
+3. Designate Magnus only for a specific stage that requires its specialized HEP toolchain and cannot be performed in the selected primary environment. State the reason in the task brief/run record and record the Magnus job identity, backend/environment, source revision, inputs, cards, parameters, tool versions, logs, outputs, and checksums.
+4. Treat Magnus as an explicitly designated external backend, not as the primary environment and not as GitHub Actions. Do not send a stage to Magnus merely because the integration is available or was used in an earlier run.
+5. GitHub Actions is optional independent verification/CI. It is not the default production-compute backend and must not silently replace the selected primary environment.
 
-### Case 2: Magnus is unavailable
-If the Magnus server is unreachable:
-1. **Retry up to 2 times** with a 20-second interval (`sleep 20`) before falling back to local execution. Each failed Magnus call returns a large HTML error page, so limit retries to avoid wasting context.
-2. **Check for local tools** (wolframscript, MadGraph5) and fall back to local execution.
+### Case 1: User explicitly requests local execution
 
-### Local execution guidelines
-When running locally:
-- **Check for local tools** — verify `wolframscript` and MadGraph5 (`mg5_aMC` or `MG5_aMC_v*`) are available before proceeding.
-- **When running MadGraph locally via `Bash(run_in_background=true)`**:
-   - Wait for the `task-notification` to confirm completion. Do NOT use `TaskOutput(block=true)` — it pulls the entire verbose MadGraph log into context.
-   - After the notification, use `Grep` on the task output file to extract only the specific lines needed (e.g., run names, output paths).
-   - Let downstream subagents read the MadGraph output directories directly for physics results.
+If the user explicitly asks to run locally (e.g. "run locally", "use local MadGraph", or "don't use Magnus"), skip Magnus entirely. Check the required local tools and resources before execution. If a required tool is unavailable, report the exact blocker; do not silently dispatch the task to Magnus or Actions.
 
+### Case 2: An explicitly designated Magnus stage is unavailable
+
+If the Magnus backend is unreachable for a stage that was explicitly assigned to it:
+
+1. Retry up to 2 times with a 20-second interval when the failure appears transient.
+2. Check whether the selected primary environment can perform that stage. If it can, switch the stage to that environment and record the actual execution target and reason in the run manifest.
+3. If neither environment can perform the stage, mark it blocked and identify the missing service/tool/resource. Do not substitute GitHub Actions as the production backend.
+
+### Primary-environment execution guidelines
+
+When the selected primary environment is local Windows:
+- Verify that required tools such as wolframscript and MadGraph5 (mg5_aMC or MG5_aMC_v*) are available before proceeding.
+- When running MadGraph locally via Bash(run_in_background=true), wait for the task-notification to confirm completion. Do not use TaskOutput(block=true), which pulls the entire verbose MadGraph log into context.
+- After notification, use Grep on the task output file to extract only the specific lines needed (e.g. run names and output paths). Let downstream subagents read the MadGraph output directories directly for physics results.
+
+For GPT-managed cloud execution, inspect the actual OS/image, available shell/runtime, CPU/GPU, memory, storage, dependencies, and workspace persistence. A browser-only interface is not a scientific compute runtime. Export required native outputs, logs, and manifests before an ephemeral workspace expires.
 
 ## User-facing research handoff standard
 
-After completing the pipeline and invoking the execution summarizer, report the handoff using:
+Follow the pinned central [Research Task Handoff Standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/RESEARCH_TASK_HANDOFF_STANDARD.md) and the evidence-led reporting requirements in [Scientific Diff §11](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/scientific-diff-workflow.md#11-research-reporting-and-communication-standard). Begin with Conclusion, Evidence, Results, and Remaining work.
 
-1. **Conclusion** — the direct answer and overall stage reached.
-2. **Evidence** — actual source revision, run manifest, executed stages, and validation records.
-3. **Results** — completed cross sections, event counts, uncertainties, yields, plots, and other numerical outputs with units and precision.
-4. **Remaining work** — only stages or checks that are pending, blocked, or required for the next decision.
+Retain the ColliderAgent-specific handoff details: run label and parent, exact source revision and task brief, executed pipeline stages, model/UFO and process configuration, event counts, cross sections and uncertainties, analysis cuts and yields, output paths, validation evidence, deviations from the source paper, and exact archival status.
 
-Never imply that an unexecuted stage ran. Keep completed stage results separate from later pending work. State approximations and their validity domains once, identify errors and their impact directly, and preserve the distinction between pipeline execution, technical validation, and scientific reproduction. Avoid repetitive defensive wording without omitting evidence that materially changes the result.
+Never imply that an unexecuted stage ran. Keep completed stage results separate from later pending work. Distinguish tool/blueprint execution, model validation, event-generation validation, detector/analysis validation, numerical/statistical validation, and scientific reproduction.
