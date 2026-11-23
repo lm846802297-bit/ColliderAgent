@@ -1,0 +1,161 @@
+{
+  "status": "passed",
+  "scope": "published selected weighted yields vs native nominal means; no fit",
+  "sqrts_TeV": 13,
+  "lumi_inverse_fb": 139,
+  "pyhf": "0.7.6",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "channels_per_workspace": 8,
+  "rows": [
+    {
+      "region": "LM",
+      "workspace_channel": "SRLMEM_mct2",
+      "benchmark_masses_GeV": [
+        300,
+        75
+      ],
+      "bin_mCT_GeV": "[180,230]",
+      "table_doi": "10.17182/hepdata.90607.v4/t42",
+      "cutflow_printed": "6.2",
+      "rounding_tolerance_events": "0.05",
+      "nominal_sample_events": 6.165480613708496,
+      "native_delta_mu_events": 6.165480613708496,
+      "sample_minus_cutflow_events": -0.034519386291504,
+      "native_minus_sample_events": 0.0
+    },
+    {
+      "region": "LM",
+      "workspace_channel": "SRLMEM_mct2",
+      "benchmark_masses_GeV": [
+        300,
+        75
+      ],
+      "bin_mCT_GeV": "[230,280]",
+      "table_doi": "10.17182/hepdata.90607.v4/t43",
+      "cutflow_printed": "10.5",
+      "rounding_tolerance_events": "0.05",
+      "nominal_sample_events": 10.525634765625,
+      "native_delta_mu_events": 10.525634765625,
+      "sample_minus_cutflow_events": 0.025634765625,
+      "native_minus_sample_events": 0.0
+    },
+    {
+      "region": "LM",
+      "workspace_channel": "SRLMEM_mct2",
+      "benchmark_masses_GeV": [
+        300,
+        75
+      ],
+      "bin_mCT_GeV": ">280",
+      "table_doi": "10.17182/hepdata.90607.v4/t44",
+      "cutflow_printed": "10.6",
+      "rounding_tolerance_events": "0.05",
+      "nominal_sample_events": 10.640666007995605,
+      "native_delta_mu_events": 10.640666007995605,
+      "sample_minus_cutflow_events": 0.040666007995605,
+      "native_minus_sample_events": 0.0
+    },
+    {
+      "region": "MM",
+      "workspace_channel": "SRMMEM_mct2",
+      "benchmark_masses_GeV": [
+        500,
+        0
+      ],
+      "bin_mCT_GeV": "[180,230]",
+      "table_doi": "10.17182/hepdata.90607.v4/t45",
+      "cutflow_printed": "2.6",
+      "rounding_tolerance_events": "0.05",
+      "nominal_sample_events": 2.5762078762054443,
+      "native_delta_mu_events": 2.5762078762054443,
+      "sample_minus_cutflow_events": -0.0237921237945557,
+      "native_minus_sample_events": 0.0
+    },
+    {
+      "region": "MM",
+      "workspace_channel": "SRMMEM_mct2",
+      "benchmark_masses_GeV": [
+        500,
+        0
+      ],
+      "bin_mCT_GeV": "[230,280]",
+      "table_doi": "10.17182/hepdata.90607.v4/t46",
+      "cutflow_printed": "3.4",
+      "rounding_tolerance_events": "0.05",
+      "nominal_sample_events": 3.436703681945801,
+      "native_delta_mu_events": 3.436703681945801,
+      "sample_minus_cutflow_events": 0.036703681945801,
+      "native_minus_sample_events": 0.0
+    },
+    {
+      "region": "MM",
+      "workspace_channel": "SRMMEM_mct2",
+      "benchmark_masses_GeV": [
+        500,
+        0
+      ],
+      "bin_mCT_GeV": ">280",
+      "table_doi": "10.17182/hepdata.90607.v4/t47",
+      "cutflow_printed": "5.4",
+      "rounding_tolerance_events": "0.05",
+      "nominal_sample_events": 5.351271629333496,
+      "native_delta_mu_events": 5.351271629333496,
+      "sample_minus_cutflow_events": -0.048728370666504,
+      "native_minus_sample_events": 0.0
+    },
+    {
+      "region": "HM",
+      "workspace_channel": "SRHMEM_mct2",
+      "benchmark_masses_GeV": [
+        750,
+        100
+      ],
+      "bin_mCT_GeV": "[180,230]",
+      "table_doi": "10.17182/hepdata.90607.v4/t48",
+      "cutflow_printed": "1.89",
+      "rounding_tolerance_events": "0.005",
+      "nominal_sample_events": 1.8876292705535889,
+      "native_delta_mu_events": 1.8876292705535889,
+      "sample_minus_cutflow_events": -0.0023707294464111,
+      "native_minus_sample_events": 0.0
+    },
+    {
+      "region": "HM",
+      "workspace_channel": "SRHMEM_mct2",
+      "benchmark_masses_GeV": [
+        750,
+        100
+      ],
+      "bin_mCT_GeV": "[230,280]",
+      "table_doi": "10.17182/hepdata.90607.v4/t49",
+      "cutflow_printed": "2.19",
+      "rounding_tolerance_events": "0.005",
+      "nominal_sample_events": 2.190779685974121,
+      "native_delta_mu_events": 2.190779685974121,
+      "sample_minus_cutflow_events": 0.000779685974121,
+      "native_minus_sample_events": 0.0
+    },
+    {
+      "region": "HM",
+      "workspace_channel": "SRHMEM_mct2",
+      "benchmark_masses_GeV": [
+        750,
+        100
+      ],
+      "bin_mCT_GeV": ">280",
+      "table_doi": "10.17182/hepdata.90607.v4/t50",
+      "cutflow_printed": "6.0",
+      "rounding_tolerance_events": "0.05",
+      "nominal_sample_events": 6.010156631469727,
+      "native_delta_mu_events": 6.010156631469727,
+      "sample_minus_cutflow_events": 0.010156631469727,
+      "native_minus_sample_events": 0.0
+    }
+  ],
+  "swapped_controls_rejected": [
+    "LM_swapped_low_high",
+    "MM_swapped_low_high",
+    "HM_swapped_low_high"
+  ]
+}

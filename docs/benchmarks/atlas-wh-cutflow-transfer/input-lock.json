@@ -1,0 +1,146 @@
+{
+  "archive": {
+    "filename": "ewk-v4.tar.gz",
+    "uri": "https://doi.org/10.17182/hepdata.90607.v4/r3",
+    "bytes": 2616683,
+    "sha256": "7b223b5da4aae2e049593fe5c7b1563f0f54974d50c375a1a37b82c112a29551"
+  },
+  "members": {
+    "BkgOnly.json": {
+      "bytes": 4436904,
+      "sha256": "be293b0316ec6c84ac07fb37d28916ee94d8aa4164dda89a6835dcbc157ad742"
+    },
+    "patchset.json": {
+      "bytes": 57332112,
+      "sha256": "32b94a2867b2fe2d3efcf51911b8c8438bcf8432e4988b3efe45f339c3c4ae34"
+    }
+  },
+  "tables": [
+    {
+      "name": "cutflow_SR_LM_Low_MCT",
+      "region": "LM",
+      "benchmark_masses_GeV": [
+        300,
+        75
+      ],
+      "index": 0,
+      "filename": "cutflow_SR_LM_Low_MCT.json",
+      "doi": "10.17182/hepdata.90607.v4/t42",
+      "uri": "https://www.hepdata.net/download/table/ins1755298/cutflow_SR_LM_Low_MCT/json?version=4",
+      "bytes": 3737,
+      "sha256": "4f1b9188f65951d4f0d0827e51685dcb79f9dc5ef8ed220b066f04862c4fa94c"
+    },
+    {
+      "name": "cutflow_SR_LM_Med_MCT",
+      "region": "LM",
+      "benchmark_masses_GeV": [
+        300,
+        75
+      ],
+      "index": 1,
+      "filename": "cutflow_SR_LM_Med_MCT.json",
+      "doi": "10.17182/hepdata.90607.v4/t43",
+      "uri": "https://www.hepdata.net/download/table/ins1755298/cutflow_SR_LM_Med_MCT/json?version=4",
+      "bytes": 3739,
+      "sha256": "cfd1ab40b7bf1840213cc2f40ba482afd27a85a7686cc88836d7d496b7c55d36"
+    },
+    {
+      "name": "cutflow_SR_LM_High_MCT",
+      "region": "LM",
+      "benchmark_masses_GeV": [
+        300,
+        75
+      ],
+      "index": 2,
+      "filename": "cutflow_SR_LM_High_MCT.json",
+      "doi": "10.17182/hepdata.90607.v4/t44",
+      "uri": "https://www.hepdata.net/download/table/ins1755298/cutflow_SR_LM_High_MCT/json?version=4",
+      "bytes": 3731,
+      "sha256": "419d5ff24ed1e2a6cf83d1fadb7c5aff2a6b7840e4c2a5bc26c28bfe120330de"
+    },
+    {
+      "name": "cutflow_SR_MM_Low_MCT",
+      "region": "MM",
+      "benchmark_masses_GeV": [
+        500,
+        0
+      ],
+      "index": 0,
+      "filename": "cutflow_SR_MM_Low_MCT.json",
+      "doi": "10.17182/hepdata.90607.v4/t45",
+      "uri": "https://www.hepdata.net/download/table/ins1755298/cutflow_SR_MM_Low_MCT/json?version=4",
+      "bytes": 3732,
+      "sha256": "c67666d7677395c52f55d5b38414a52e20756e52abd27d7b8f30f0b3d4460240"
+    },
+    {
+      "name": "cutflow_SR_MM_Med_MCT",
+      "region": "MM",
+      "benchmark_masses_GeV": [
+        500,
+        0
+      ],
+      "index": 1,
+      "filename": "cutflow_SR_MM_Med_MCT.json",
+      "doi": "10.17182/hepdata.90607.v4/t46",
+      "uri": "https://www.hepdata.net/download/table/ins1755298/cutflow_SR_MM_Med_MCT/json?version=4",
+      "bytes": 3733,
+      "sha256": "5a6250fcbf88ab5d8c5889958e215d019367a2ed53777f93b1ae6a6c234459d0"
+    },
+    {
+      "name": "cutflow_SR_MM_High_MCT",
+      "region": "MM",
+      "benchmark_masses_GeV": [
+        500,
+        0
+      ],
+      "index": 2,
+      "filename": "cutflow_SR_MM_High_MCT.json",
+      "doi": "10.17182/hepdata.90607.v4/t47",
+      "uri": "https://www.hepdata.net/download/table/ins1755298/cutflow_SR_MM_High_MCT/json?version=4",
+      "bytes": 3727,
+      "sha256": "d09186db6332ffa30bed462dbe44a3a399bc7a2029161e5299994678f112a31d"
+    },
+    {
+      "name": "cutflow_SR_HM_Low_MCT",
+      "region": "HM",
+      "benchmark_masses_GeV": [
+        750,
+        100
+      ],
+      "index": 0,
+      "filename": "cutflow_SR_HM_Low_MCT.json",
+      "doi": "10.17182/hepdata.90607.v4/t48",
+      "uri": "https://www.hepdata.net/download/table/ins1755298/cutflow_SR_HM_Low_MCT/json?version=4",
+      "bytes": 3872,
+      "sha256": "257d895e9c1f0522d69bd7b194b97a489b25d2067f5519bc43be0a6dd60961b8"
+    },
+    {
+      "name": "cutflow_SR_HM_Med_MCT",
+      "region": "HM",
+      "benchmark_masses_GeV": [
+        750,
+        100
+      ],
+      "index": 1,
+      "filename": "cutflow_SR_HM_Med_MCT.json",
+      "doi": "10.17182/hepdata.90607.v4/t49",
+      "uri": "https://www.hepdata.net/download/table/ins1755298/cutflow_SR_HM_Med_MCT/json?version=4",
+      "bytes": 3870,
+      "sha256": "ac020c81c80da88e37c1f971b94ab0a0cd024f0d801e1c50b782cd7b1bfc626a"
+    },
+    {
+      "name": "cutflow_SR_HM_High_MCT",
+      "region": "HM",
+      "benchmark_masses_GeV": [
+        750,
+        100
+      ],
+      "index": 2,
+      "filename": "cutflow_SR_HM_High_MCT.json",
+      "doi": "10.17182/hepdata.90607.v4/t50",
+      "uri": "https://www.hepdata.net/download/table/ins1755298/cutflow_SR_HM_High_MCT/json?version=4",
+      "bytes": 3864,
+      "sha256": "b4f08ac571af542e7840566c412a560f73cf05db42eaf622f3a38754d8064032"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "0b2715cf8b70bfa3b42ca804a9e0b4d45a3cd0f78723aedf0d72d88e962b8d10",
+  "task_id": "20261123-atlas-wh-cutflow-transfer",
+  "task_brief_path": "docs/benchmarks/atlas-wh-cutflow-transfer/TASK_BRIEF.md",
+  "task_brief_sha256": "f8b4ab353ab2930222896b5329ab20738cc0aeef8d924783e00b469148a4adec",
+  "applied_profiles": [
+    "core-governance",
+    "research-compute",
+    "task-handoff",
+    "research-quality-gate",
+    "calculation-result-archive",
+    "rcrps-v1.0.1"
+  ],
+  "project_extensions": [
+    {
+      "path": "docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md",
+      "scope": "Statistical transfer and archive guard; collider event generation or detector assumptions are out of scope here.",
+      "sha256": "36c8b57cff417b093c12369cfc54da2a6f0e34fa45d39abc685177fc75d65005"
+    }
+  ],
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "repository": "lm846802297-bit/ColliderAgent",
+  "acceptance_criteria": [
+    "Exact ATLAS SUSY-2019-08 HEPData version 4 cutflows t42–t50 and full v4/r3 model, same mass pair and mCT bins.",
+    "Compare terminal weighted counts within a half-unit of their published decimal precision in all nine bins.",
+    "Apply native pyhf with all eight channels and exact original signal template; mu=1 minus mu=0 agrees with the raw signal within 1e-9 events.",
+    "Reject wrong table/hash and deliberately misplaced bin; complete JSON byte replay. No fit, detector recast, or new limit."
+  ]
+}
