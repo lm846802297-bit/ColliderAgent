@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "20261123-pythia-qed-lhe-hepmc",
+  "created_at": "2026-11-23T18:09:49.977109+00:00",
+  "record_type": "run_manifest",
+  "project": {
+    "repository": "lm846802297-bit/ColliderAgent",
+    "project_id": "collideragent-pythia-qed-hepmc"
+  },
+  "source": {
+    "commit_sha": "7437d7905b3d256984948a1690a70c7b4884966e",
+    "branch": "main",
+    "script_path": "docs/benchmarks/pythia-qed-lhe-hepmc/shower_bridge.py",
+    "script_sha256": "cfea07c61d17801da581af720c9b65e05523789dc7469bf3e9bd6d58b7864925"
+  },
+  "inputs": [
+    {
+      "name": "unweighted_events.lhe.gz",
+      "uri": "https://github.com/lm846802297-bit/ColliderAgent/blob/82176bc774410f07584a03adeccbc5673a7b57ea/docs/benchmarks/mg5-qed-lived-lhe/unweighted_events.lhe.gz",
+      "source": "Parent MG5 native LHE archive",
+      "version": "82176bc774410f07584a03adeccbc5673a7b57ea",
+      "format": "lhe.gz",
+      "bytes": 193245,
+      "sha256": "a327716b960989c32bcf34d8f59d7ddf3899f52a5ddbdf0478b5d329f7ab54fd"
+    },
+    {
+      "name": "pythia8mc-8.317.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "source": "Publisher PyPI wheel",
+      "uri": "https://files.pythonhosted.org/packages/e5/d8/26dbd4f3a708a45a13e0239098bbd31fe49ff5b86ac891c9a31dbb1c0030/pythia8mc-8.317.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "version": "8.317.0",
+      "format": "whl",
+      "bytes": 29594006,
+      "sha256": "a91dca2a00db43e8b27350bc914db26e951a8b8ad991243e16b67d7b9ba13e3a"
+    },
+    {
+      "name": "pyhepmc-2.15.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+      "source": "Publisher PyPI wheel",
+      "uri": "https://files.pythonhosted.org/packages/9f/50/9b660a076314730dd6e4430db177d276464cb307276929ed5372df4cbca7/pyhepmc-2.15.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "2.15.1",
+      "format": "whl",
+      "bytes": 624528,
+      "sha256": "d6a62304979717d51048dd1bf2d415ebc1e5c3efc7d523a2dada6706a75d777f"
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "sqrts_GeV": 100,
+      "FSR": "leptonic QED on/off"
+    },
+    "numerics": {
+      "seed": 314159,
+      "n": 128,
+      "rate_tolerance_pb": 1e-07,
+      "momentum_tolerance_GeV": 1e-05
+    },
+    "conventions": {
+      "weight": "LHA -4 pb and native generated mb",
+      "hepmc": "GeV/mm"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "python": "3.12.14",
+      "tools": "isolated publisher binary wheels; default CPython environment and bundled native libraries",
+      "xml_locator": "PYTHIA8DATA must point to the pinned wheel xmldoc"
+    },
+    "dependencies": {
+      "pythia8mc": "8.317.0",
+      "pyhepmc": "2.15.1",
+      "HepMC3": "3.02.05"
+    },
+    "hardware": {
+      "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "logical_cpu_count_visible": 9
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "branch_commit",
+      "checkout_ref": "refs/heads/main",
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null,
+      "working_tree_state": "dirty",
+      "dirty_paths": [
+        "docs/benchmarks/pythia-qed-lhe-hepmc/TASK_BRIEF.md",
+        "docs/benchmarks/pythia-qed-lhe-hepmc/shower_bridge.py"
+      ]
+    },
+    "command": "python shower_bridge.py PARENT_LHE_GZ PYTHIA8DATA OUTPUT_DIRECTORY",
+    "started_at": "2026-11-23T18:08:48.744875+00:00",
+    "finished_at": "2026-11-23T18:08:49.578551+00:00",
+    "exit_code": 0,
+    "wall_time_s": 0.833676
+  },
+  "outputs": [
+    {
+      "path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json",
+      "role": "Exact signed-rate and event summary emitted by benchmark program",
+      "format": "json",
+      "sha256": "4c6b43f1981c930eabbda66110bce0188fe15fe43166daaec8c4f6b02deaea57",
+      "bytes": 1336
+    },
+    {
+      "path": "docs/benchmarks/pythia-qed-lhe-hepmc/qed_fsr_off.hepmc",
+      "role": "Native HepMC3 writer stable projection, QED-FSR off",
+      "format": "hepmc",
+      "sha256": "9eb41a2c8a19f35bfab0ffe24bef03ea11f481fa6ab3dbcde68946f747225989",
+      "bytes": 83329
+    },
+    {
+      "path": "docs/benchmarks/pythia-qed-lhe-hepmc/qed_fsr_on.hepmc",
+      "role": "Native HepMC3 writer stable projection, QED-FSR on",
+      "format": "hepmc",
+      "sha256": "007ee2f8e418a709a7a30b5b09e04fe600f1d60ad0f3ea35029ac97f0e137b89",
+      "bytes": 100054
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "SOURCE",
+        "name": "Original MG5 event ensemble and native libraries",
+        "category": "integrity",
+        "observed": "Exact parent gzip and decompressed bytes; Pythia and HepMC wheel hashes match",
+        "method": "Authenticate file and wheel package hashes; bind preset XML/particle data to native execution.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json"
+      },
+      {
+        "check_id": "FSR",
+        "name": "Leptonic QED shower and off control",
+        "category": "software",
+        "observed": "128 accepted each; off=0 photons, on=79 events with photons and 67 with E>1 MeV",
+        "method": "Equal raw initial sample, differing QED-lepton switch only; beam/final statuses and PDGs checked.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json"
+      },
+      {
+        "check_id": "CLOSURE",
+        "name": "Final-vs-beam four-momentum",
+        "category": "independent",
+        "observed": 1.2385328318487154e-09,
+        "method": "Independently sum projected momenta component-wise; validate energies, PDGs and final-state status.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json",
+        "threshold": 1e-05,
+        "unit": "GeV"
+      },
+      {
+        "check_id": "NORMALIZATION",
+        "name": "Parent LHE nominal cross section and weight",
+        "category": "independent",
+        "observed": 1.7763568394002505e-15,
+        "method": "Compare nominal Pythia strategem -4 weights in pb and sigmaGen in mb times 1e9 to the frozen LHE init normalization.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json",
+        "threshold": 1e-07,
+        "unit": "pb"
+      },
+      {
+        "check_id": "ROUNDTRIP",
+        "name": "HepMC3 projected identity and vectors",
+        "category": "regression",
+        "observed": 0.0,
+        "method": "Reopen HepMC3 ASCII, require GeV/mm, event sequence, weight and cross section, identical status/PDGs and projected vectors.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json",
+        "threshold": 1e-10,
+        "unit": "GeV"
+      },
+      {
+        "check_id": "NEGATIVE",
+        "name": "Wrong input or output units fail closed",
+        "category": "regression",
+        "observed": "2/2 rejected",
+        "method": "Run on wrong parent bytes and reopen valid file with first unit changed from GEV to MEV.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json"
+      },
+      {
+        "check_id": "REPLAY",
+        "name": "All three output artefacts match on separate replay",
+        "category": "regression",
+        "observed": "3/3 byte-identical",
+        "method": "Independent process using authenticated wheels and same fixed seeds produces exact HepMC and JSON bytes.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json"
+      }
+    ],
+    "report_path": "docs/benchmarks/pythia-qed-lhe-hepmc/validation_report.json"
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "0b2715cf8b70bfa3b42ca804a9e0b4d45a3cd0f78723aedf0d72d88e962b8d10",
+      "task_id": "20261123-pythia-qed-lhe-hepmc",
+      "task_brief_path": "docs/benchmarks/pythia-qed-lhe-hepmc/TASK_BRIEF.md",
+      "task_brief_sha256": "f9056b0178a465cfc1c53bbbd7e577a50ecae29aa5bbd9ea7514ca9c4cb3baf7",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1"
+      ],
+      "project_extensions": [
+        "docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md"
+      ]
+    },
+    "collider_mc": {
+      "parent_event_sha": "82176bc774410f07584a03adeccbc5673a7b57ea",
+      "parent_event_level": "massless SM photon-only e+e- to μ+μ− native MG5 LHEF 3.0",
+      "sqrts_GeV": 100,
+      "beam_ids": [
+        -11,
+        11
+      ],
+      "control": "leptonic QED FSR disabled",
+      "signal": "leptonic QED FSR enabled",
+      "other_showers": "ISR, MPI, QCD FSR, other QED FSR splittings and hadron level disabled",
+      "decays": "not run",
+      "hadronization": "not run",
+      "shower_model": "Pythia simple shower model 1",
+      "weight_conventions": "LHA strategy -4 nominal in pb, Pythia total native mb, export pb",
+      "stages": {
+        "input": "parton LHEF no edits apart from exact decompression",
+        "output": "one-vertex post-QED-shower stable particle truth HepMC3 GeV/mm; no ancestry/hadronization/detector"
+      },
+      "seeds": [
+        314159,
+        314159
+      ],
+      "event_counts": {
+        "off": 128,
+        "on": 128
+      },
+      "resolved_photon_energy_min_GeV": 0.001,
+      "xsec_err_pb": 0.0038517,
+      "uncertainties": "Source MG5 integration error copied; no shower modeling, detector or new cross-section uncertainties estimated."
+    },
+    "frozen_parent_commit": "82176bc774410f07584a03adeccbc5673a7b57ea",
+    "uncompressed_input_sha256": "dcfc8bee00f318ba4c037a059bdafd531bdc0223d239e2c10f6e7aee459fc13e",
+    "module_hashes": {
+      "pythia8mc.cpython-312-x86_64-linux-gnu.so": "2ed957300516e721ca865974e84687084f0a922054ba9ed85947c0d83580159f",
+      "_core.cpython-312-x86_64-linux-gnu.so": "cae7920102311132689856a5906f3c95bb4ba911c1929e4b16896aee34e19ae2"
+    },
+    "xml_hashes": {
+      "Index.xml": "403305b7aee68321b9655d7a56a658b1093284170afd849e0cc5b238963d9afa",
+      "ParticleData.xml": "330ba4e7f5a081235b5055f7b312fe6f5c9fe9c95411a845cba7a3e82e67ecca",
+      "TimelikeShowers.xml": "5cb214f66e3d06b1fa6e53f313ad4ba97ed95dd7346e43b4a3e30ac130cf37ad"
+    },
+    "dependencies_lock": {
+      "path": "docs/benchmarks/pythia-qed-lhe-hepmc/wheels.lock",
+      "role": "Official wheel URLs and hashes",
+      "format": "lock",
+      "sha256": "fd66ed29dcd8a37eb5cdc4313d782ac265e4abef6d3447975c3931ba457f4da0",
+      "bytes": 524
+    }
+  }
+}

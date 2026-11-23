@@ -1,0 +1,33 @@
+{
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "0b2715cf8b70bfa3b42ca804a9e0b4d45a3cd0f78723aedf0d72d88e962b8d10",
+  "task_id": "20261123-pythia-qed-lhe-hepmc",
+  "task_brief_path": "docs/benchmarks/pythia-qed-lhe-hepmc/TASK_BRIEF.md",
+  "task_brief_sha256": "f9056b0178a465cfc1c53bbbd7e577a50ecae29aa5bbd9ea7514ca9c4cb3baf7",
+  "applied_profiles": [
+    "core-governance",
+    "research-compute",
+    "task-handoff",
+    "research-quality-gate",
+    "calculation-result-archive",
+    "rcrps-v1.0.1"
+  ],
+  "project_extensions": [
+    {
+      "path": "docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md",
+      "scope": "Collider MC: exact external LHE input, controlled QED FSR, and standard HepMC truth projection.",
+      "sha256": "36c8b57cff417b093c12369cfc54da2a6f0e34fa45d39abc685177fc75d65005"
+    }
+  ],
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "repository": "lm846802297-bit/ColliderAgent",
+  "acceptance_criteria": [
+    "Exact raw LHE, official pinned Pythia 8.317.0 and native HepMC3 writer wheels, same first 128 and seed 314159.",
+    "Both modes select and accept 128; physical beam and muon IDs and stable statuses; zero FSR-off photons and a positive FSR-on resolved-photon sample.",
+    "Four-momentum balance <=1e-5 GeV and nominal weight/total cross-section residual <=1e-7 pb.",
+    "Stable beam/final HepMC projection roundtrip preserves GeV/mm, PDGs, statuses, weights and vectors; fail on wrong units/input."
+  ]
+}

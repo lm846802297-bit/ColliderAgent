@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "20261123-pythia-qed-lhe-hepmc",
+  "created_at": "2026-11-23T18:09:49.977109+00:00",
+  "record_type": "result_summary",
+  "project": {
+    "repository": "lm846802297-bit/ColliderAgent",
+    "project_id": "collideragent-pythia-qed-hepmc"
+  },
+  "calculation": "Pinned native Pythia QED shower with HepMC3 stable-beam/final-state projection",
+  "scope": {
+    "included": [
+      "two native 128-event QED configurations; stable beam/final file"
+    ],
+    "excluded": [
+      "full Pythia genealogy",
+      "hadronization",
+      "detector",
+      "new cross section or limit"
+    ]
+  },
+  "benchmark": {
+    "sqrts_GeV": 100,
+    "seed": 314159
+  },
+  "observables": [
+    {
+      "name": "off_n_accepted",
+      "value": 128,
+      "unit": "count",
+      "status": "computed",
+      "definition": "Native fixed-input benchmark sample"
+    },
+    {
+      "name": "off_radiation_events",
+      "value": 0,
+      "unit": "count",
+      "status": "computed",
+      "definition": "Native fixed-input benchmark sample"
+    },
+    {
+      "name": "off_hard_photon_events",
+      "value": 0,
+      "unit": "count",
+      "status": "computed",
+      "definition": "Native fixed-input benchmark sample"
+    },
+    {
+      "name": "off_photon_count",
+      "value": 0,
+      "unit": "count",
+      "status": "computed",
+      "definition": "Native fixed-input benchmark sample"
+    },
+    {
+      "name": "off_native_cross_section_pb",
+      "value": 8.684499999999998,
+      "unit": "pb",
+      "status": "computed",
+      "definition": "Native fixed-input benchmark sample"
+    },
+    {
+      "name": "on_n_accepted",
+      "value": 128,
+      "unit": "count",
+      "status": "computed",
+      "definition": "Native fixed-input benchmark sample"
+    },
+    {
+      "name": "on_radiation_events",
+      "value": 79,
+      "unit": "count",
+      "status": "computed",
+      "definition": "Native fixed-input benchmark sample"
+    },
+    {
+      "name": "on_hard_photon_events",
+      "value": 67,
+      "unit": "count",
+      "status": "computed",
+      "definition": "Native fixed-input benchmark sample"
+    },
+    {
+      "name": "on_photon_count",
+      "value": 125,
+      "unit": "count",
+      "status": "computed",
+      "definition": "Native fixed-input benchmark sample"
+    },
+    {
+      "name": "on_native_cross_section_pb",
+      "value": 8.684499999999998,
+      "unit": "pb",
+      "status": "computed",
+      "definition": "Native fixed-input benchmark sample"
+    }
+  ],
+  "data_files": [
+    {
+      "path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json",
+      "role": "Exact signed-rate and event summary emitted by benchmark program",
+      "format": "json",
+      "sha256": "4c6b43f1981c930eabbda66110bce0188fe15fe43166daaec8c4f6b02deaea57",
+      "bytes": 1336
+    },
+    {
+      "path": "docs/benchmarks/pythia-qed-lhe-hepmc/qed_fsr_off.hepmc",
+      "role": "Native HepMC3 writer stable projection, QED-FSR off",
+      "format": "hepmc",
+      "sha256": "9eb41a2c8a19f35bfab0ffe24bef03ea11f481fa6ab3dbcde68946f747225989",
+      "bytes": 83329
+    },
+    {
+      "path": "docs/benchmarks/pythia-qed-lhe-hepmc/qed_fsr_on.hepmc",
+      "role": "Native HepMC3 writer stable projection, QED-FSR on",
+      "format": "hepmc",
+      "sha256": "007ee2f8e418a709a7a30b5b09e04fe600f1d60ad0f3ea35029ac97f0e137b89",
+      "bytes": 100054
+    }
+  ],
+  "scientific_status": "diagnostic"
+}

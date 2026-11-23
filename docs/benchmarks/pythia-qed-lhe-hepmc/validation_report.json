@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "20261123-pythia-qed-lhe-hepmc",
+  "created_at": "2026-11-23T18:09:49.977109+00:00",
+  "record_type": "validation_report",
+  "status": "passed",
+  "checks": [
+    {
+      "check_id": "SOURCE",
+      "name": "Original MG5 event ensemble and native libraries",
+      "category": "integrity",
+      "observed": "Exact parent gzip and decompressed bytes; Pythia and HepMC wheel hashes match",
+      "method": "Authenticate file and wheel package hashes; bind preset XML/particle data to native execution.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json"
+    },
+    {
+      "check_id": "FSR",
+      "name": "Leptonic QED shower and off control",
+      "category": "software",
+      "observed": "128 accepted each; off=0 photons, on=79 events with photons and 67 with E>1 MeV",
+      "method": "Equal raw initial sample, differing QED-lepton switch only; beam/final statuses and PDGs checked.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json"
+    },
+    {
+      "check_id": "CLOSURE",
+      "name": "Final-vs-beam four-momentum",
+      "category": "independent",
+      "observed": 1.2385328318487154e-09,
+      "method": "Independently sum projected momenta component-wise; validate energies, PDGs and final-state status.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json",
+      "threshold": 1e-05,
+      "unit": "GeV"
+    },
+    {
+      "check_id": "NORMALIZATION",
+      "name": "Parent LHE nominal cross section and weight",
+      "category": "independent",
+      "observed": 1.7763568394002505e-15,
+      "method": "Compare nominal Pythia strategem -4 weights in pb and sigmaGen in mb times 1e9 to the frozen LHE init normalization.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json",
+      "threshold": 1e-07,
+      "unit": "pb"
+    },
+    {
+      "check_id": "ROUNDTRIP",
+      "name": "HepMC3 projected identity and vectors",
+      "category": "regression",
+      "observed": 0.0,
+      "method": "Reopen HepMC3 ASCII, require GeV/mm, event sequence, weight and cross section, identical status/PDGs and projected vectors.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json",
+      "threshold": 1e-10,
+      "unit": "GeV"
+    },
+    {
+      "check_id": "NEGATIVE",
+      "name": "Wrong input or output units fail closed",
+      "category": "regression",
+      "observed": "2/2 rejected",
+      "method": "Run on wrong parent bytes and reopen valid file with first unit changed from GEV to MEV.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json"
+    },
+    {
+      "check_id": "REPLAY",
+      "name": "All three output artefacts match on separate replay",
+      "category": "regression",
+      "observed": "3/3 byte-identical",
+      "method": "Independent process using authenticated wheels and same fixed seeds produces exact HepMC and JSON bytes.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/pythia-qed-lhe-hepmc/bridge_result.json"
+    }
+  ]
+}

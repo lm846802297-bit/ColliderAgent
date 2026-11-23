@@ -1,0 +1,7 @@
+# Native Pythia QED shower to HepMC3
+
+Goal: verify a new ColliderAgent LHE→native shower→standard record handoff, continuing native MadGraph archive 82176bc774410f07584a03adeccbc5673a7b57ea. Question: does the official Pythia binding shower the first 128 exact 100-GeV muon-pair LHE entries and can the stable post-shower particles be serialized and read in HepMC3 with rates, units and conservation intact?
+
+Exact tools: pinned official Pythia team wheel 8.317.0 and Scikit-HEP pyhepmc 2.15.1 wheels; original gzip SHA-256 a327716b960989c32bcf34d8f59d7ddf3899f52a5ddbdf0478b5d329f7ab54fd. Read original event content, with no event edits, and same fixed seed 314159 in both configurations. ISR, MPI, hadronization, decays and other QED splitting categories disabled; switch only leptonic QED FSR. No detector, fit, prediction of radiation fraction, or physics limit.
+
+Acceptance fixed before native run: 128 consecutive accepted events per mode, two opposite-sign stable muons and only additional photons; none in control; at least one photon with E>0.001 GeV when enabled. Require closure within 1e-5 GeV and agreement of average LHE -4 nominal Pythia weights (pb) and generated cross-section (native mb→pb) with 8.6845 pb to 1e-7 pb. A HepMC3 roundtrip must preserve beam/final statuses, IDs, order-independent momenta, GeV/mm, nominal weight and cross section. Detect corrupt/wrong-hash source and corrupted record. The wheel has no Pythia HepMC converter: intentionally project real native beam/final particles onto one truth vertex, not event history.

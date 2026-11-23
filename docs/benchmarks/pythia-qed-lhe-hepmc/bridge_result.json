@@ -1,0 +1,43 @@
+{
+  "parent_lhe_gzip_sha256": "a327716b960989c32bcf34d8f59d7ddf3899f52a5ddbdf0478b5d329f7ab54fd",
+  "parent_uncompressed_sha256": "dcfc8bee00f318ba4c037a059bdafd531bdc0223d239e2c10f6e7aee459fc13e",
+  "seed": 314159,
+  "results": {
+    "off": {
+      "native_cross_section_pb": 8.684499999999998,
+      "avg_weight_pb": 8.6845,
+      "n_selected": 128,
+      "n_accepted": 128,
+      "radiation_events": 0,
+      "hard_photon_events": 0,
+      "photon_count": 0,
+      "pythia_final_photon_status": [],
+      "roundtrip": {
+        "events": 128,
+        "photon_events": 0,
+        "max_closure_GeV": 1.2385328318487154e-09,
+        "max_native_roundtrip_GeV": 0.0
+      },
+      "hepmc_sha256": "9eb41a2c8a19f35bfab0ffe24bef03ea11f481fa6ab3dbcde68946f747225989"
+    },
+    "on": {
+      "native_cross_section_pb": 8.684499999999998,
+      "avg_weight_pb": 8.6845,
+      "n_selected": 128,
+      "n_accepted": 128,
+      "radiation_events": 79,
+      "hard_photon_events": 67,
+      "photon_count": 125,
+      "pythia_final_photon_status": [
+        51
+      ],
+      "roundtrip": {
+        "events": 128,
+        "photon_events": 79,
+        "max_closure_GeV": 1.2384759884298546e-09,
+        "max_native_roundtrip_GeV": 0.0
+      },
+      "hepmc_sha256": "007ee2f8e418a709a7a30b5b09e04fe600f1d60ad0f3ea35029ac97f0e137b89"
+    }
+  }
+}
