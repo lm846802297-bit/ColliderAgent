@@ -1,0 +1,33 @@
+{
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "0b2715cf8b70bfa3b42ca804a9e0b4d45a3cd0f78723aedf0d72d88e962b8d10",
+  "task_id": "20261123-ddcalc-native-python-binding",
+  "task_brief_path": "docs/benchmarks/ddcalc-python-binding/TASK_BRIEF.md",
+  "task_brief_sha256": "65f2996839af3ba5cebbc39218ffb7be5d0112a4ffc9ccef1c64a6e7a1e243f9",
+  "applied_profiles": [
+    "core-governance",
+    "research-compute",
+    "task-handoff",
+    "research-quality-gate",
+    "calculation-result-archive",
+    "rcrps-v1.0.1"
+  ],
+  "project_extensions": [
+    {
+      "path": "docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md",
+      "scope": "Local statistical run-record conventions; no Collider Monte Carlo generation.",
+      "sha256": "36c8b57cff417b093c12369cfc54da2a6f0e34fa45d39abc685177fc75d65005"
+    }
+  ],
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "repository": "lm846802297-bit/ColliderAgent",
+  "acceptance_criteria": [
+    "Build DDCalc shared ELF and use unmodified Python binding; authenticate matching Debian package and map its exact runtime.",
+    "At nominal density require Nobs=0, b=0.36 and both static-parent signal and log-likelihood residuals at most 1e-10.",
+    "At half density require exactly the same n and b and a half-signal residual at most 1e-10; check independent full Poisson residual ≤1e-10 at both points.",
+    "Byte-identical replay and rejection of wrong mapped-library path."
+  ]
+}

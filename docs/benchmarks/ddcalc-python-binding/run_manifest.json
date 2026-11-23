@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "20261123-ddcalc-native-python-binding",
+  "created_at": "2026-11-23T16:07:48.864579+00:00",
+  "record_type": "run_manifest",
+  "project": {
+    "repository": "lm846802297-bit/ColliderAgent",
+    "project_id": "collideragent-ddcalc-python-native"
+  },
+  "source": {
+    "commit_sha": "7437d7905b3d256984948a1690a70c7b4884966e",
+    "branch": "main",
+    "script_path": "docs/benchmarks/ddcalc-python-binding/replay.py",
+    "script_sha256": "702761228fb4fdbc916dcd0548c6d089b309bd1ea288147aea2af8db86bcfd0b"
+  },
+  "inputs": [
+    {
+      "name": "DDCalc.py",
+      "version": "065c126c563107de090a9644bed997462d72ec61",
+      "source": "Unmodified GAMBIT DDCalc source",
+      "uri": "https://github.com/GambitBSM/DDCalc/blob/065c126c563107de090a9644bed997462d72ec61/include/DDCalc.py",
+      "format": "py",
+      "sha256": "6de8ffbe8db5b4bcc3d405e8a534ee5df152528bfa33e2b2c46282deed3dce6c",
+      "bytes": 8441
+    },
+    {
+      "name": "DDCalc.f90",
+      "version": "065c126c563107de090a9644bed997462d72ec61",
+      "source": "Unmodified GAMBIT DDCalc source",
+      "uri": "https://github.com/GambitBSM/DDCalc/blob/065c126c563107de090a9644bed997462d72ec61/src/DDCalc.f90",
+      "format": "f90",
+      "sha256": "07cc0b03ff0538413d154d29550359506c5b608857361483f8ec0b6cfdb98cd7",
+      "bytes": 33209
+    },
+    {
+      "name": "Makefile",
+      "version": "065c126c563107de090a9644bed997462d72ec61",
+      "source": "Unmodified GAMBIT DDCalc source",
+      "uri": "https://github.com/GambitBSM/DDCalc/blob/065c126c563107de090a9644bed997462d72ec61/Makefile",
+      "format": "text",
+      "sha256": "38438cdc072fffed6c816849caa29e277fb8623537ad04c8356443450ab2d081",
+      "bytes": 12114
+    },
+    {
+      "name": "DDCalc_exampleF.f90",
+      "version": "065c126c563107de090a9644bed997462d72ec61",
+      "source": "Unmodified GAMBIT DDCalc source",
+      "uri": "https://github.com/GambitBSM/DDCalc/blob/065c126c563107de090a9644bed997462d72ec61/examples/DDCalc_exampleF.f90",
+      "format": "f90",
+      "sha256": "66fbf1f82364599c8f4e5a053313a3a7f85625b86c9902b28f5a096604aa28f6",
+      "bytes": 10165
+    },
+    {
+      "name": "gfortran-14-x86-64-linux-gnu_14.2.0-19_amd64.deb",
+      "version": "14.2.0-19",
+      "source": "Debian trixie signed archive",
+      "uri": "https://deb.debian.org/debian/pool/main/g/gcc-14/gfortran-14-x86-64-linux-gnu_14.2.0-19_amd64.deb",
+      "format": "deb",
+      "sha256": "520b3283edc193b75644d655654834662f56f9006a78751d91feb882b74ca684",
+      "bytes": 11702288
+    },
+    {
+      "name": "libgfortran-14-dev_14.2.0-19_amd64.deb",
+      "version": "14.2.0-19",
+      "source": "Debian trixie signed archive",
+      "uri": "https://deb.debian.org/debian/pool/main/g/gcc-14/libgfortran-14-dev_14.2.0-19_amd64.deb",
+      "format": "deb",
+      "sha256": "8460dfd941d9f60e92516e5c4e3f8bb08e60983e7526f376a7c87969a8a2dbfb",
+      "bytes": 879856
+    },
+    {
+      "name": "libgfortran5_14.2.0-19_amd64.deb",
+      "version": "14.2.0-19",
+      "source": "Debian trixie signed archive",
+      "uri": "https://deb.debian.org/debian/pool/main/g/gcc-14/libgfortran5_14.2.0-19_amd64.deb",
+      "format": "deb",
+      "sha256": "11b62b53f4704de557e44b510e18a1a2106bcd9a3fc31a475a45952a9aa3dbb2",
+      "bytes": 836252
+    },
+    {
+      "name": "InRelease",
+      "source": "Debian trixie signed release metadata",
+      "uri": "https://deb.debian.org/debian/dists/trixie/InRelease",
+      "version": "2026-11-21",
+      "format": "text",
+      "sha256": "bfacad4ca61899ce20d4a0d439f29339f66541561b67506364efb88e27dee870",
+      "bytes": 140420
+    },
+    {
+      "name": "Packages.xz",
+      "source": "Debian packages index authenticated by InRelease",
+      "uri": "https://deb.debian.org/debian/dists/trixie/main/binary-amd64/by-hash/SHA256/be3d7d96a040eda0505c1808cccc67f183bbc05dff0842c50f88e6c396557412",
+      "version": "2026-11-21",
+      "format": "xz",
+      "sha256": "be3d7d96a040eda0505c1808cccc67f183bbc05dff0842c50f88e6c396557412",
+      "bytes": 9679304
+    },
+    {
+      "name": "parent-native.stdout",
+      "version": "2c38172ffbc29246fade0138446d900dfad0a103",
+      "source": "Byte-exact archived native Fortran reference",
+      "uri": "https://github.com/lm846802297-bit/ColliderAgent/blob/2c38172ffbc29246fade0138446d900dfad0a103/docs/benchmarks/ddcalc-native-elastic/native.stdout",
+      "format": "stdout",
+      "sha256": "1456cc1e442ca518432540f6a53eea3aa9b635d3a9d7c5654a5a620b1653280a",
+      "bytes": 1592
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "analysis": "XENON1T 2017 Example 1",
+      "mDM_GeV": 100.0,
+      "sigmap_SI_pb": 4e-09,
+      "sigman_SI_pb": -3e-10,
+      "sigmap_SD_pb": 2e-05,
+      "sigman_SD_pb": 8e-05,
+      "rho_GeV_per_cm3": [
+        0.3,
+        0.15
+      ],
+      "vrot_km_s": 235.0,
+      "v0_km_s": 235.0,
+      "vesc_km_s": 550.0
+    },
+    "numerics": {
+      "abs_tolerance": 1e-10
+    },
+    "conventions": {
+      "scope": "local one-point elastic rate bridge and density control; no limit"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "compiler": "GNU Fortran Debian 14.2.0-19",
+      "python": "3.12.14",
+      "build": "unmodified upstream GNU Make make -j3 lib ddcalcinclude and transient Debian GNU Fortran toolchain"
+    },
+    "dependencies": {
+      "ddcalc_release": "2.3.0",
+      "ddcalc_internal_string": "2.1.0",
+      "libgfortran5": "14.2.0-19"
+    },
+    "hardware": {
+      "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "logical_cpu_count_visible": 9
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "branch_commit",
+      "checkout_ref": "refs/heads/main",
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null,
+      "working_tree_state": "dirty",
+      "dirty_paths": [
+        "docs/benchmarks/ddcalc-python-binding/TASK_BRIEF.md",
+        "docs/benchmarks/ddcalc-python-binding/replay.py"
+      ]
+    },
+    "command": "python docs/benchmarks/ddcalc-python-binding/replay.py DDCALC_ROOT PARENT_STDOUT DDCALC_RUNTIME",
+    "started_at": "2026-11-23T16:06:36.896803+00:00",
+    "finished_at": "2026-11-23T16:06:37.158542+00:00",
+    "exit_code": 0,
+    "wall_time_s": 0.261739
+  },
+  "outputs": [
+    {
+      "path": "docs/benchmarks/ddcalc-python-binding/native_python.json",
+      "role": "Exact native upstream Python-binding benchmark stdout",
+      "format": "json",
+      "sha256": "3a3a9628eb98d0b625b71efd2ddcd770fb98ae683d920ea6edca33f200225134",
+      "bytes": 1035
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "ABI",
+        "name": "Exact ELF, binding and actual Fortran shared runtime",
+        "category": "integrity",
+        "observed": "Native ELF and authenticated runtime loaded",
+        "method": "Check exact binding and runtime SHA-256 and actual library/runtime procfs mappings; reject an identical unmapped copy.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/ddcalc-python-binding/native_python.json"
+      },
+      {
+        "check_id": "NATIVE-PARITY",
+        "name": "Static Fortran and upstream Python/shared parity",
+        "category": "regression",
+        "observed": 0.0,
+        "method": "Exact XENON1T 2017 native reference output; observed count and fixed background unchanged.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/ddcalc-python-binding/native_python.json",
+        "threshold": 1e-10,
+        "unit": "counts or dimensionless"
+      },
+      {
+        "check_id": "DENSITY",
+        "name": "Halving halo density halves the signal",
+        "category": "regression",
+        "observed": 0.0,
+        "method": "Change density only from 0.30 to 0.15 GeV/cm³ under same cross sections, masses and halo speeds; require unchanged n and b.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/ddcalc-python-binding/native_python.json",
+        "threshold": 1e-10,
+        "unit": "counts or dimensionless"
+      },
+      {
+        "check_id": "POISSON",
+        "name": "Independent full fixed-background Poisson log PMF",
+        "category": "independent",
+        "observed": 0.0,
+        "method": "Independent stdlib n log(s+b) − (s+b) − lgamma(n+1).",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/ddcalc-python-binding/native_python.json",
+        "threshold": 1e-10,
+        "unit": "counts or dimensionless"
+      },
+      {
+        "check_id": "REPLAY",
+        "name": "Local exact replay",
+        "category": "regression",
+        "observed": "Byte-identical native JSON",
+        "method": "Repeat original upstream Python binding in a separate process under matched Linux environment.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/ddcalc-python-binding/native_python.json"
+      }
+    ],
+    "report_path": "docs/benchmarks/ddcalc-python-binding/validation_report.json"
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "0b2715cf8b70bfa3b42ca804a9e0b4d45a3cd0f78723aedf0d72d88e962b8d10",
+      "task_id": "20261123-ddcalc-native-python-binding",
+      "task_brief_path": "docs/benchmarks/ddcalc-python-binding/TASK_BRIEF.md",
+      "task_brief_sha256": "65f2996839af3ba5cebbc39218ffb7be5d0112a4ffc9ccef1c64a6e7a1e243f9",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1"
+      ],
+      "project_extensions": [
+        "docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md"
+      ]
+    },
+    "parent_commit": "2c38172ffbc29246fade0138446d900dfad0a103",
+    "ddcalc_source_commit": "065c126c563107de090a9644bed997462d72ec61",
+    "ddcalc_release_tag_object": "f4b81fcf26a58a28555d42c39e45dc019a9a83f6",
+    "ddcalc_source_tree": "ee021be1ccbd1dc265a851b380a6c52f9d1f01c1",
+    "confirmed_debian_archive_keys": [
+      "04B54C3CDCA79751B16BC6B5225629DF75B188BD",
+      "41587F7DB8C774BCCF131416762F67A0B2C39DE4"
+    ],
+    "native_build_identity": {
+      "native_shared_sha256": "3ab75b2ab68dea75a0fa631202efdfc6c8209fd0a08bc8d05c98d3b3afcdaba9",
+      "loaded_runtime_sha256": "d1c716d10039872bb5481b921d2142577c7873cad4d8d9f09028231aa7e42127"
+    },
+    "native_dt_needed": [
+      "libgfortran.so.5",
+      "libm.so.6",
+      "libmvec.so.1",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ]
+  }
+}

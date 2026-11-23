@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "20261123-ddcalc-native-python-binding",
+  "created_at": "2026-11-23T16:07:48.864579+00:00",
+  "record_type": "validation_report",
+  "status": "passed",
+  "checks": [
+    {
+      "check_id": "ABI",
+      "name": "Exact ELF, binding and actual Fortran shared runtime",
+      "category": "integrity",
+      "observed": "Native ELF and authenticated runtime loaded",
+      "method": "Check exact binding and runtime SHA-256 and actual library/runtime procfs mappings; reject an identical unmapped copy.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/ddcalc-python-binding/native_python.json"
+    },
+    {
+      "check_id": "NATIVE-PARITY",
+      "name": "Static Fortran and upstream Python/shared parity",
+      "category": "regression",
+      "observed": 0.0,
+      "method": "Exact XENON1T 2017 native reference output; observed count and fixed background unchanged.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/ddcalc-python-binding/native_python.json",
+      "threshold": 1e-10,
+      "unit": "counts or dimensionless"
+    },
+    {
+      "check_id": "DENSITY",
+      "name": "Halving halo density halves the signal",
+      "category": "regression",
+      "observed": 0.0,
+      "method": "Change density only from 0.30 to 0.15 GeV/cm³ under same cross sections, masses and halo speeds; require unchanged n and b.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/ddcalc-python-binding/native_python.json",
+      "threshold": 1e-10,
+      "unit": "counts or dimensionless"
+    },
+    {
+      "check_id": "POISSON",
+      "name": "Independent full fixed-background Poisson log PMF",
+      "category": "independent",
+      "observed": 0.0,
+      "method": "Independent stdlib n log(s+b) − (s+b) − lgamma(n+1).",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/ddcalc-python-binding/native_python.json",
+      "threshold": 1e-10,
+      "unit": "counts or dimensionless"
+    },
+    {
+      "check_id": "REPLAY",
+      "name": "Local exact replay",
+      "category": "regression",
+      "observed": "Byte-identical native JSON",
+      "method": "Repeat original upstream Python binding in a separate process under matched Linux environment.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/ddcalc-python-binding/native_python.json"
+    }
+  ]
+}

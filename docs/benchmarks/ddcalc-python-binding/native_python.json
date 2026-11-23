@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "binding_sha256": "6de8ffbe8db5b4bcc3d405e8a534ee5df152528bfa33e2b2c46282deed3dce6c",
+  "static_reference_sha256": "1456cc1e442ca518432540f6a53eea3aa9b635d3a9d7c5654a5a620b1653280a",
+  "native_shared_sha256": "3ab75b2ab68dea75a0fa631202efdfc6c8209fd0a08bc8d05c98d3b3afcdaba9",
+  "loaded_runtime_sha256": "d1c716d10039872bb5481b921d2142577c7873cad4d8d9f09028231aa7e42127",
+  "absolute_tolerance": 1e-10,
+  "signed_density_half_rate_delta": 0.0,
+  "rows": [
+    {
+      "density_GeV_per_cm3": 0.3,
+      "observed": 0,
+      "signal": 5.754551805903094,
+      "background": 0.36,
+      "log_likelihood": -6.114551805903094,
+      "signed_signal_delta": 0.0,
+      "signed_logl_delta": 0.0,
+      "signed_poisson_delta": 0.0
+    },
+    {
+      "density_GeV_per_cm3": 0.15,
+      "observed": 0,
+      "signal": 2.877275902951547,
+      "background": 0.36,
+      "log_likelihood": -3.2372759029515468,
+      "signed_signal_delta": 0.0,
+      "signed_logl_delta": 0.0,
+      "signed_poisson_delta": 0.0
+    }
+  ]
+}
