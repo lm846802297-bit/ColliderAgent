@@ -1,0 +1,177 @@
+{
+  "schema": "collideragent-elastic-shm-reference-v1",
+  "scope": "SYNTHETIC_HALO_AND_ELASTIC_KINEMATICS_ONLY",
+  "reference_status": "PASS",
+  "native_ddcalc": "NOT_RUN",
+  "halo_parameters_km_s": {
+    "v0": 220.0,
+    "escape": 544.0,
+    "boost": [
+      232.0,
+      0.0
+    ]
+  },
+  "radial_panels_per_segment": [
+    256,
+    512
+  ],
+  "eta_abs_tolerance_s_per_km": 2e-11,
+  "normalization_rel_tolerance": 2e-09,
+  "max_eta_abs_residual_s_per_km": 1.9625794045463607e-13,
+  "max_eta_refinement_s_per_km": 2.9441397236817934e-12,
+  "max_normalization_relative_residual": 3.8652414602324825e-12,
+  "unit_control": {
+    "recoil_kev": 8.0,
+    "target_gev": 122.0,
+    "dm_gev": 50.0,
+    "correct_vmin_km_s": 186.73650483949874,
+    "omitted_kev_to_gev_vmin_km_s": 186736.50483949875,
+    "wrong_units_remove_support": true
+  },
+  "points": [
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 0.0,
+      "analytic_s_per_km": 0.0037381819137212425,
+      "galactic_shell_s_per_km": 0.0037381819137246044,
+      "absolute_residual_s_per_km": 3.361894096443052e-15,
+      "refinement_s_per_km": 5.0421472552741875e-14
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 100.0,
+      "analytic_s_per_km": 0.0033970501107493554,
+      "galactic_shell_s_per_km": 0.0033970501107613116,
+      "absolute_residual_s_per_km": 1.1956147877301149e-14,
+      "refinement_s_per_km": 1.7933267718039936e-13
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 250.0,
+      "analytic_s_per_km": 0.0019540869351157785,
+      "galactic_shell_s_per_km": 0.001954086935122898,
+      "absolute_residual_s_per_km": 7.119305145408816e-15,
+      "refinement_s_per_km": 1.067852403724423e-13
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 311.999,
+      "analytic_s_per_km": 0.001304659771672429,
+      "galactic_shell_s_per_km": 0.0013046597716759787,
+      "absolute_residual_s_per_km": 3.5496779127175415e-15,
+      "refinement_s_per_km": 5.324560237163212e-14
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 312.0,
+      "analytic_s_per_km": 0.0013046500468104245,
+      "galactic_shell_s_per_km": 0.0013046500468139744,
+      "absolute_residual_s_per_km": 3.5498947531520386e-15,
+      "refinement_s_per_km": 5.3244951850328626e-14
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 312.001,
+      "analytic_s_per_km": 0.0013046403219803733,
+      "galactic_shell_s_per_km": 0.0013046403219839236,
+      "absolute_residual_s_per_km": 3.550328434021033e-15,
+      "refinement_s_per_km": 5.3244301329025134e-14
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 544.0,
+      "analytic_s_per_km": 9.068035564864292e-05,
+      "galactic_shell_s_per_km": 9.068035564839095e-05,
+      "absolute_residual_s_per_km": 2.5196858488563123e-16,
+      "refinement_s_per_km": 3.780152189533648e-15
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 775.0,
+      "analytic_s_per_km": 2.784267692809916e-10,
+      "galactic_shell_s_per_km": 2.784267692845335e-10,
+      "absolute_residual_s_per_km": 3.54193568416378e-21,
+      "refinement_s_per_km": 1.6142998340643465e-20
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 776.0,
+      "analytic_s_per_km": 0.0,
+      "galactic_shell_s_per_km": 0.0,
+      "absolute_residual_s_per_km": 0.0,
+      "refinement_s_per_km": 0.0
+    },
+    {
+      "boost_km_s": 232.0,
+      "vmin_km_s": 777.0,
+      "analytic_s_per_km": 0.0,
+      "galactic_shell_s_per_km": 0.0,
+      "absolute_residual_s_per_km": 0.0,
+      "refinement_s_per_km": 0.0
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 0.0,
+      "analytic_s_per_km": 0.005151861178991607,
+      "galactic_shell_s_per_km": 0.005151861179187865,
+      "absolute_residual_s_per_km": 1.9625794045463607e-13,
+      "refinement_s_per_km": 2.9441397236817934e-12
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 100.0,
+      "analytic_s_per_km": 0.00418806083772666,
+      "galactic_shell_s_per_km": 0.004188060837753576,
+      "absolute_residual_s_per_km": 2.691596945325614e-14,
+      "refinement_s_per_km": 4.03746480692746e-13
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 250.0,
+      "analytic_s_per_km": 0.0014080057649989784,
+      "galactic_shell_s_per_km": 0.0014080057649949605,
+      "absolute_residual_s_per_km": 4.017836410796782e-15,
+      "refinement_s_per_km": 6.027665346020061e-14
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 543.0,
+      "analytic_s_per_km": 2.5927100831340534e-07,
+      "galactic_shell_s_per_km": 2.5927100831441765e-07,
+      "absolute_residual_s_per_km": 1.0123102510872957e-18,
+      "refinement_s_per_km": 1.503234665448127e-17
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 543.999,
+      "analytic_s_per_km": 2.5660896378327987e-10,
+      "galactic_shell_s_per_km": 2.566089637964455e-10,
+      "absolute_residual_s_per_km": 1.3165613424547127e-20,
+      "refinement_s_per_km": 1.4878032388896748e-20
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 544.0,
+      "analytic_s_per_km": 0.0,
+      "galactic_shell_s_per_km": 0.0,
+      "absolute_residual_s_per_km": 0.0,
+      "refinement_s_per_km": 0.0
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 544.001,
+      "analytic_s_per_km": 0.0,
+      "galactic_shell_s_per_km": 0.0,
+      "absolute_residual_s_per_km": 0.0,
+      "refinement_s_per_km": 0.0
+    },
+    {
+      "boost_km_s": 0.0,
+      "vmin_km_s": 545.0,
+      "analytic_s_per_km": 0.0,
+      "galactic_shell_s_per_km": 0.0,
+      "absolute_residual_s_per_km": 0.0,
+      "refinement_s_per_km": 0.0
+    }
+  ]
+}

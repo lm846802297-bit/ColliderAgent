@@ -1,0 +1,57 @@
+{
+  "schema": "collideragent-synthetic-tooling-fixture-manifest-v1",
+  "scope": "Synthetic standard elastic SHM interface fixture; not a paper result, production run, or RCRPS record.",
+  "run_label": "20261123-collider-elastic-shm-interface",
+  "timestamp_utc": "2026-11-23T11:07:45.279002+00:00",
+  "source_fork": "lm846802297-bit/ColliderAgent",
+  "baseline_commit": "a6663822dc478cfe81f39e61e3970d0abdb205cf",
+  "environment": {
+    "type": "isolated GPT-managed Linux workspace",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "dependencies": "Python standard library"
+  },
+  "sources": {
+    "ddcalc_release": "v2.3.0",
+    "ddcalc_commit": "065c126c563107de090a9644bed997462d72ec61",
+    "ddhalo_sha256": "c3e7ef05c339f66f3a22727a7410c7f031bfd799aecd5806bcc18a07288d1529",
+    "reporting_conventions": "arXiv:2105.00599v3"
+  },
+  "replay": {
+    "argv": [
+      "python",
+      "scripts/elastic_shm_reference.py"
+    ],
+    "source_sha256": "88e0f2d5c4e511f5b9b3ec51ee58791d9acf7788b34a90ec9011ae94f3d47085",
+    "byte_identical_repeats_in_recorded_environment": 2,
+    "evidence": "The standard-library output was reproduced directly; this is not a native DDCalc test."
+  },
+  "files": {
+    "scripts/elastic_shm_reference.py": {
+      "sha256": "88e0f2d5c4e511f5b9b3ec51ee58791d9acf7788b34a90ec9011ae94f3d47085",
+      "bytes": 6340
+    },
+    "scripts/tests/test_elastic_shm_reference.py": {
+      "sha256": "57b7709cacd8c3db4a1cfe60f6a00fdd05aa24a6ddae7cf0ef9a2be34c3c0970",
+      "bytes": 2729
+    },
+    "docs/benchmarks/elastic-shm/TASK_BRIEF.md": {
+      "sha256": "e06727e5f5e44906864a72ecc4a6d11f55ab8f44dec64a967f45d76613246697",
+      "bytes": 2078
+    },
+    "docs/benchmarks/elastic-shm/reference.json": {
+      "sha256": "9cb0d591fa33416ef6a88ee547a5984102a012823b2c404bbdb97a7012479d50",
+      "bytes": 5567
+    }
+  },
+  "validation": {
+    "point_count": 18,
+    "reference_status": "PASS",
+    "native_ddcalc": "NOT_RUN",
+    "max_eta_abs_residual_s_per_km": 1.9625794045463607e-13,
+    "max_eta_refinement_s_per_km": 2.9441397236817934e-12,
+    "max_normalization_relative_residual": 3.8652414602324825e-12,
+    "targeted_tests_passed": 5,
+    "structured_schema_tests_passed": 66
+  }
+}
