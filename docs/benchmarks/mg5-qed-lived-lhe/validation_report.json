@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "20261123-mg5-qed-live-lhe-cutflow",
+  "created_at": "2026-11-23T17:03:35.955507+00:00",
+  "record_type": "validation_report",
+  "status": "passed",
+  "checks": [
+    {
+      "check_id": "NATIVE",
+      "name": "Compiled generator and native LHE",
+      "category": "software",
+      "observed": 5000,
+      "method": "Verify process executable ELF, MG5 version, native LHE records and fixed seed.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/mg5-qed-lived-lhe/native_cutflow.json"
+    },
+    {
+      "check_id": "BORN",
+      "name": "Independent total rate",
+      "category": "independent",
+      "observed": 0.0009475669944496445,
+      "method": "Massless Born cross section from actual archived alpha.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/mg5-qed-lived-lhe/native_cutflow.json",
+      "threshold": 0.04342723783497225,
+      "unit": "pb"
+    },
+    {
+      "check_id": "MOMENTUM",
+      "name": "Native four-momentum checks",
+      "category": "integrity",
+      "observed": 0.0,
+      "method": "Require masses, particle IDs, status and beam energies plus momentum balance.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/mg5-qed-lived-lhe/native_cutflow.json",
+      "threshold": 2e-05,
+      "unit": "GeV"
+    },
+    {
+      "check_id": "ANGLE",
+      "name": "Independent truth angular acceptance",
+      "category": "independent",
+      "observed": 0.985204870100515,
+      "method": "Integrate analytic Born distribution and compare using binomial variance.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/mg5-qed-lived-lhe/native_cutflow.json",
+      "threshold": 5.0,
+      "unit": "binomial standard errors"
+    },
+    {
+      "check_id": "NEGATIVE",
+      "name": "Malformed sample controls",
+      "category": "regression",
+      "observed": "3/3 rejected",
+      "method": "Truncated file, incorrect outgoing PDG, or unexpected ANSI inside an event.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/mg5-qed-lived-lhe/native_cutflow.json"
+    },
+    {
+      "check_id": "REPLAY",
+      "name": "Offline reader replay",
+      "category": "regression",
+      "observed": "Byte-identical cross-check",
+      "method": "Analyze same untouched native gzip twice.",
+      "status": "passed",
+      "evidence_path": "docs/benchmarks/mg5-qed-lived-lhe/native_cutflow.json"
+    }
+  ]
+}

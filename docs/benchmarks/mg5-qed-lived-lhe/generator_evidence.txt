@@ -1,0 +1,5 @@
+Using random number seed offset = 27183
+INFO: Generating 5000.0 unweighted events.
+     Cross-section :   8.684 +- 0.003852 pb
+     Nb of events :  5000
+INFO: Storing parton level results

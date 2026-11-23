@@ -1,0 +1,18 @@
+set automatic_html_opening False
+set run_mode 0
+import model sm
+generate e+ e- > mu+ mu- / z
+output qedpair -f
+launch qedpair
+set lpp1 0
+set lpp2 0
+set ebeam1 50.0
+set ebeam2 50.0
+set nevents 5000
+set iseed 27183
+set ptl 0.0
+set etal -1.0
+set drll 0.0
+set mmll 0.0
+set aEWM1 137.035999084
+done

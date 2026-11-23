@@ -1,0 +1,19 @@
+{
+  "raw_gzip_sha256": "a327716b960989c32bcf34d8f59d7ddf3899f52a5ddbdf0478b5d329f7ab54fd",
+  "raw_lhe_sha256": "dcfc8bee00f318ba4c037a059bdafd531bdc0223d239e2c10f6e7aee459fc13e",
+  "read_view_sha256": "a6ec3dd2ae58ad0c0ee20631c61f97ed3c4c374f8553a0ad7c94a563d26b45e7",
+  "header_ansi_escapes_removed": 8,
+  "accepted": 3671,
+  "generated": 5000,
+  "acceptance": 0.7342,
+  "analytic_acceptance": 0.7280000000000001,
+  "signed_acceptance_sigma": 0.985204870100515,
+  "sum_weights_pb": 43422.5,
+  "cross_section_pb": 8.6845,
+  "integration_sigma_pb": 0.0038517,
+  "analytic_cross_section_pb": 8.68544756699445,
+  "signed_cross_section_delta_pb": -0.0009475669944496445,
+  "fiducial_cross_section_pb": 6.376159899999999,
+  "alpha_inverse": 137.036,
+  "max_conservation_residual_GeV": 0.0
+}

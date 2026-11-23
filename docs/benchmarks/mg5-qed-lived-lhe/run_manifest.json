@@ -1,0 +1,406 @@
+{
+  "schema_version": "1.0.1",
+  "run_id": "20261123-mg5-qed-live-lhe-cutflow",
+  "created_at": "2026-11-23T17:03:35.955507+00:00",
+  "record_type": "run_manifest",
+  "project": {
+    "repository": "lm846802297-bit/ColliderAgent",
+    "project_id": "collideragent-qed-lhe-cutflow"
+  },
+  "source": {
+    "commit_sha": "7437d7905b3d256984948a1690a70c7b4884966e",
+    "branch": "main",
+    "script_path": "docs/benchmarks/mg5-qed-lived-lhe/generate.mg5",
+    "script_sha256": "79e70d0b48e6877436db93b991fe90356812e2bfd08c90e32a56fa11c0a02edd"
+  },
+  "inputs": [
+    {
+      "name": "VERSION",
+      "version": "4492b3e392effbb650447763fef5f67700673f03",
+      "source": "Official MG5 tagged Git source",
+      "uri": "https://github.com/mg5amcnlo/mg5amcnlo/blob/4492b3e392effbb650447763fef5f67700673f03/VERSION",
+      "format": "text",
+      "sha256": "066f15b3dcdf087b4ab947f4ada4b0b5cf50acb55413ea5ed8068d07b24211a8",
+      "bytes": 35
+    },
+    {
+      "name": "bin/mg5_aMC",
+      "version": "4492b3e392effbb650447763fef5f67700673f03",
+      "source": "Official MG5 tagged Git source",
+      "uri": "https://github.com/mg5amcnlo/mg5amcnlo/blob/4492b3e392effbb650447763fef5f67700673f03/bin/mg5_aMC",
+      "format": "text",
+      "sha256": "d899f9f367376cded43e5caed2eab6adf9a541a59982cfe10e39b33c8608ea64",
+      "bytes": 8766
+    },
+    {
+      "name": "models/sm/particles.py",
+      "version": "4492b3e392effbb650447763fef5f67700673f03",
+      "source": "Official MG5 tagged Git source",
+      "uri": "https://github.com/mg5amcnlo/mg5amcnlo/blob/4492b3e392effbb650447763fef5f67700673f03/models/sm/particles.py",
+      "format": "py",
+      "sha256": "5a18af7aadba847f6b70749dcd2a787f95f9075c4c8de4406b2138314defe414",
+      "bytes": 10444
+    },
+    {
+      "name": "models/sm/couplings.py",
+      "version": "4492b3e392effbb650447763fef5f67700673f03",
+      "source": "Official MG5 tagged Git source",
+      "uri": "https://github.com/mg5amcnlo/mg5amcnlo/blob/4492b3e392effbb650447763fef5f67700673f03/models/sm/couplings.py",
+      "format": "py",
+      "sha256": "26ea8b77bc510057305420ec9e8424faf996888236e9cfd29f741da8921922dc",
+      "bytes": 14117
+    },
+    {
+      "name": "models/sm/parameters.py",
+      "version": "4492b3e392effbb650447763fef5f67700673f03",
+      "source": "Official MG5 tagged Git source",
+      "uri": "https://github.com/mg5amcnlo/mg5amcnlo/blob/4492b3e392effbb650447763fef5f67700673f03/models/sm/parameters.py",
+      "format": "py",
+      "sha256": "2e4046c3566f1fb62fad92ffa705eef66a0124cc2a1cf4cc0d0ff2dc7f94c8fc",
+      "bytes": 15693
+    },
+    {
+      "name": "models/sm/vertices.py",
+      "version": "4492b3e392effbb650447763fef5f67700673f03",
+      "source": "Official MG5 tagged Git source",
+      "uri": "https://github.com/mg5amcnlo/mg5amcnlo/blob/4492b3e392effbb650447763fef5f67700673f03/models/sm/vertices.py",
+      "format": "py",
+      "sha256": "0a4d978fb87f251253b622f6ed01cb6b4ae09dec31a131632f9494eb54541721",
+      "bytes": 32496
+    },
+    {
+      "name": "models/sm/restrict_default.dat",
+      "version": "4492b3e392effbb650447763fef5f67700673f03",
+      "source": "Official MG5 tagged Git source",
+      "uri": "https://github.com/mg5amcnlo/mg5amcnlo/blob/4492b3e392effbb650447763fef5f67700673f03/models/sm/restrict_default.dat",
+      "format": "dat",
+      "sha256": "cc9e735d3dea306b31dcf3ef179719fceeefb505406bd163308324dc9aebda53",
+      "bytes": 1437
+    },
+    {
+      "name": "gfortran-14-x86-64-linux-gnu_14.2.0-19_amd64.deb",
+      "source": "Debian trixie official package",
+      "uri": "https://deb.debian.org/debian/pool/main/g/gcc-14/gfortran-14-x86-64-linux-gnu_14.2.0-19_amd64.deb",
+      "version": "14.2.0-19",
+      "format": "deb",
+      "sha256": "520b3283edc193b75644d655654834662f56f9006a78751d91feb882b74ca684",
+      "bytes": 11702288
+    },
+    {
+      "name": "libgfortran-14-dev_14.2.0-19_amd64.deb",
+      "source": "Debian trixie official package",
+      "uri": "https://deb.debian.org/debian/pool/main/g/gcc-14/libgfortran-14-dev_14.2.0-19_amd64.deb",
+      "version": "14.2.0-19",
+      "format": "deb",
+      "sha256": "8460dfd941d9f60e92516e5c4e3f8bb08e60983e7526f376a7c87969a8a2dbfb",
+      "bytes": 879856
+    },
+    {
+      "name": "InRelease",
+      "source": "Debian trixie signed release metadata",
+      "uri": "https://deb.debian.org/debian/dists/trixie/InRelease",
+      "version": "2026-11-21",
+      "format": "text",
+      "sha256": "bfacad4ca61899ce20d4a0d439f29339f66541561b67506364efb88e27dee870",
+      "bytes": 140420
+    },
+    {
+      "name": "Packages.xz",
+      "source": "Debian packages index authenticated by InRelease",
+      "uri": "https://deb.debian.org/debian/dists/trixie/main/binary-amd64/by-hash/SHA256/be3d7d96a040eda0505c1808cccc67f183bbc05dff0842c50f88e6c396557412",
+      "version": "2026-11-21",
+      "format": "xz",
+      "sha256": "be3d7d96a040eda0505c1808cccc67f183bbc05dff0842c50f88e6c396557412",
+      "bytes": 9679304
+    },
+    {
+      "name": "python3-six_1.17.0-1_all.deb",
+      "version": "1.17.0-1",
+      "source": "Signed Debian trixie index",
+      "uri": "https://deb.debian.org/debian/pool/main/s/six/python3-six_1.17.0-1_all.deb",
+      "format": "deb",
+      "sha256": "cd1caa92b2860d1de83311cb77f9fab1ee66034ef997cc436d41a1707458666d",
+      "bytes": 16476
+    },
+    {
+      "name": "libgfortran5_14.2.0-19_amd64.deb",
+      "version": "14.2.0-19",
+      "source": "Signed Debian trixie index",
+      "uri": "https://deb.debian.org/debian/pool/main/g/gcc-14/libgfortran5_14.2.0-19_amd64.deb",
+      "format": "deb",
+      "sha256": "11b62b53f4704de557e44b510e18a1a2106bcd9a3fc31a475a45952a9aa3dbb2",
+      "bytes": 836252
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "process": "e+ e- > mu+ mu- / z",
+      "alpha_inverse": 137.036,
+      "sqrts_GeV": 100
+    },
+    "numerics": {
+      "seed": 27183
+    },
+    "conventions": {
+      "weight": "LHE average",
+      "level": "parton"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "compiler": "GNU Fortran Debian 14.2.0-19",
+      "python": "3.12.14",
+      "build": "transient Debian GNU Fortran tools and six"
+    },
+    "dependencies": {
+      "mg5": "3.5.17",
+      "six": "1.17.0",
+      "gnu_fortran": "14.2.0-19",
+      "libgfortran5": "14.2.0-19"
+    },
+    "hardware": {
+      "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+      "logical_cpu_count_visible": 9
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "branch_commit",
+      "checkout_ref": "refs/heads/main",
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null,
+      "working_tree_state": "dirty",
+      "dirty_paths": [
+        "docs/benchmarks/mg5-qed-lived-lhe/TASK_BRIEF.md",
+        "docs/benchmarks/mg5-qed-lived-lhe/generate.mg5"
+      ]
+    },
+    "command": "python mg/bin/mg5_aMC repo/docs/benchmarks/mg5-qed-lived-lhe/generate.mg5",
+    "started_at": "2026-11-23T16:58:43.833031+00:00",
+    "finished_at": "2026-11-23T16:58:53.709580+00:00",
+    "exit_code": 0,
+    "wall_time_s": 9.876549
+  },
+  "outputs": [
+    {
+      "path": "docs/benchmarks/mg5-qed-lived-lhe/unweighted_events.lhe.gz",
+      "role": "Unmodified native LHE event gzip with actual process, run and SLHA cards",
+      "format": "gz",
+      "sha256": "a327716b960989c32bcf34d8f59d7ddf3899f52a5ddbdf0478b5d329f7ab54fd",
+      "bytes": 193245
+    },
+    {
+      "path": "docs/benchmarks/mg5-qed-lived-lhe/native_cutflow.json",
+      "role": "Independent offline LHE reader output",
+      "format": "json",
+      "sha256": "0aad4064fb89f61458e2d9d7e15e88411e93d90c5c84d8af8b0193710946a224",
+      "bytes": 786
+    },
+    {
+      "path": "docs/benchmarks/mg5-qed-lived-lhe/cutflow.csv",
+      "role": "Normalized truth-level cutflow",
+      "format": "csv",
+      "sha256": "05788867acfad53cdb794b8c076648715cc8b73b8b031366f4ad349a21e820a5",
+      "bytes": 115,
+      "rows": 2,
+      "columns": [
+        "stage",
+        "count",
+        "acceptance",
+        "cross_section_pb"
+      ],
+      "units": {
+        "stage": "1",
+        "count": "count",
+        "acceptance": "1",
+        "cross_section_pb": "pb"
+      }
+    },
+    {
+      "path": "docs/benchmarks/mg5-qed-lived-lhe/generator_evidence.txt",
+      "role": "Selected native stdout lines; trailing format trimmed",
+      "format": "txt",
+      "sha256": "cc4f2d7aa01539b3f6462706aa0a5991ae91fb34e004762415d085eb94585615",
+      "bytes": 188
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "NATIVE",
+        "name": "Compiled generator and native LHE",
+        "category": "software",
+        "observed": 5000,
+        "method": "Verify process executable ELF, MG5 version, native LHE records and fixed seed.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/mg5-qed-lived-lhe/native_cutflow.json"
+      },
+      {
+        "check_id": "BORN",
+        "name": "Independent total rate",
+        "category": "independent",
+        "observed": 0.0009475669944496445,
+        "method": "Massless Born cross section from actual archived alpha.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/mg5-qed-lived-lhe/native_cutflow.json",
+        "threshold": 0.04342723783497225,
+        "unit": "pb"
+      },
+      {
+        "check_id": "MOMENTUM",
+        "name": "Native four-momentum checks",
+        "category": "integrity",
+        "observed": 0.0,
+        "method": "Require masses, particle IDs, status and beam energies plus momentum balance.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/mg5-qed-lived-lhe/native_cutflow.json",
+        "threshold": 2e-05,
+        "unit": "GeV"
+      },
+      {
+        "check_id": "ANGLE",
+        "name": "Independent truth angular acceptance",
+        "category": "independent",
+        "observed": 0.985204870100515,
+        "method": "Integrate analytic Born distribution and compare using binomial variance.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/mg5-qed-lived-lhe/native_cutflow.json",
+        "threshold": 5.0,
+        "unit": "binomial standard errors"
+      },
+      {
+        "check_id": "NEGATIVE",
+        "name": "Malformed sample controls",
+        "category": "regression",
+        "observed": "3/3 rejected",
+        "method": "Truncated file, incorrect outgoing PDG, or unexpected ANSI inside an event.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/mg5-qed-lived-lhe/native_cutflow.json"
+      },
+      {
+        "check_id": "REPLAY",
+        "name": "Offline reader replay",
+        "category": "regression",
+        "observed": "Byte-identical cross-check",
+        "method": "Analyze same untouched native gzip twice.",
+        "status": "passed",
+        "evidence_path": "docs/benchmarks/mg5-qed-lived-lhe/native_cutflow.json"
+      }
+    ],
+    "report_path": "docs/benchmarks/mg5-qed-lived-lhe/validation_report.json"
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "0b2715cf8b70bfa3b42ca804a9e0b4d45a3cd0f78723aedf0d72d88e962b8d10",
+      "task_id": "20261123-mg5-qed-live-lhe-cutflow",
+      "task_brief_path": "docs/benchmarks/mg5-qed-lived-lhe/TASK_BRIEF.md",
+      "task_brief_sha256": "62750996a3bb2c1f37273f1eca2422ebc2f84e6d037142779b9f4061aa9424cc",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1"
+      ],
+      "project_extensions": [
+        "docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md"
+      ]
+    },
+    "collider_mc": {
+      "process": "e+ e- > mu+ mu- / z",
+      "model": "default restricted SM (massless e, μ)",
+      "ufo_commit": "4492b3e392effbb650447763fef5f67700673f03",
+      "ufo_tree": "43f03be33e64783ebb837aa7df1a08c2a180e327",
+      "beam_ids": [
+        -11,
+        11
+      ],
+      "beams_GeV": [
+        50,
+        50
+      ],
+      "sqrts_GeV": 100,
+      "pdf": "no PDF for either beam",
+      "multiparticle_definitions": "not used",
+      "scales": "LHE SCALUP 100 GeV, fixed EM coupling in process; no PDF, QCD running or factorization effects",
+      "cuts": "no generation cuts; negative-muon |cos(angle with incoming electron)|<0.8 in analysis",
+      "merging": "none",
+      "decays": "none",
+      "widths": "virtual photon only; zero width",
+      "alpha_inverse": 137.036,
+      "random_seed": 27183,
+      "event_level": "parton LHEF v3.0 gzip",
+      "generator_versions": {
+        "madgraph": "3.5.17",
+        "pythia": "not run",
+        "delphes": "not run",
+        "madanalysis": "not run",
+        "feynrules": "not run",
+        "lhapdf": "not used"
+      },
+      "event_counts": {
+        "requested": 5000,
+        "generated": 5000,
+        "selected": 3671
+      },
+      "weights": {
+        "scheme": "native IDWTUP=-4 average, common positive raw weight",
+        "common_pb": 8.6845,
+        "sum_pb": 43422.5
+      },
+      "uncertainties": {
+        "integration_pb": 0.0038517,
+        "acceptance_binomial_sigma": 0.006293107340575084,
+        "systematic": "not evaluated"
+      }
+    },
+    "mg5_source_tree": "5510f1d7678bbcecc869476c2b8cb6d1fa4d54cd",
+    "mg5_development_warning": true,
+    "unarchived_native_binary": {
+      "sha256": "2ddb90cec2d4ee83aa81087482866f82dd090e70806ea8ed2e4e450649f1fc2b",
+      "bytes": 2299720,
+      "format": "Linux x86-64 ELF"
+    },
+    "banner_cards": {
+      "MG5ProcCard": {
+        "bytes": 2341,
+        "sha256": "145326c1a6282cf4dc78d1d457b1a40cebf6131fb6ff6b4d061718112a67abf3"
+      },
+      "MGRunCard": {
+        "bytes": 11583,
+        "sha256": "7bc6740e6229b863638befa17518d1393cee3223a43f0e07df95d4c743e7b794"
+      },
+      "slha": {
+        "bytes": 2008,
+        "sha256": "85481af84a66665aac2262ac96dab48101402148c3bb2256629317b22478455a"
+      }
+    },
+    "analysis_script": {
+      "path": "docs/benchmarks/mg5-qed-lived-lhe/analyze_lhe.py",
+      "role": "Independent fixed-fixture LHE cutflow reader",
+      "format": "py",
+      "sha256": "6f3ecd50ad83898d8e52458ca4ad85bad4d96c703ccbc64fdcc9d301fabe2219",
+      "bytes": 5455
+    },
+    "raw_lhe_sha256": "dcfc8bee00f318ba4c037a059bdafd531bdc0223d239e2c10f6e7aee459fc13e",
+    "normalized_read_view_sha256": "a6ec3dd2ae58ad0c0ee20631c61f97ed3c4c374f8553a0ad7c94a563d26b45e7"
+  }
+}

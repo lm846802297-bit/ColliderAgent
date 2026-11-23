@@ -1,0 +1,33 @@
+{
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "db503f0eb579bdbcac702e44237a6610c34690e7",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "0b2715cf8b70bfa3b42ca804a9e0b4d45a3cd0f78723aedf0d72d88e962b8d10",
+  "task_id": "20261123-mg5-qed-live-lhe-cutflow",
+  "task_brief_path": "docs/benchmarks/mg5-qed-lived-lhe/TASK_BRIEF.md",
+  "task_brief_sha256": "62750996a3bb2c1f37273f1eca2422ebc2f84e6d037142779b9f4061aa9424cc",
+  "applied_profiles": [
+    "core-governance",
+    "research-compute",
+    "task-handoff",
+    "research-quality-gate",
+    "calculation-result-archive",
+    "rcrps-v1.0.1"
+  ],
+  "project_extensions": [
+    {
+      "path": "docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md",
+      "scope": "Collider Monte Carlo model, process, beams, weights, native parton LHE and truth cutflow.",
+      "sha256": "36c8b57cff417b093c12369cfc54da2a6f0e34fa45d39abc685177fc75d65005"
+    }
+  ],
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "repository": "lm846802297-bit/ColliderAgent",
+  "acceptance_criteria": [
+    "Genuine native MG5 fixed source, LO photon-only process, seed 27183 and 5000 positive common-weight LHE events.",
+    "Born cross section within max(0.5%, five integration standard errors), raw event momentum residual at most 2e-5 GeV.",
+    "Truth acceptance within five binomial standard errors of 0.728; malformed event controls rejected.",
+    "Exact native gzip and separate normalized read-view fingerprint."
+  ]
+}
