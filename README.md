@@ -215,7 +215,7 @@ claude -p "Execute the analysis following prompt.md"
 
 ### Result archival and reproducibility
 
-Generated files in a local or Magnus working directory are not automatically archived. Follow the mandatory [research-result archival policy](docs/RESEARCH_RESULT_ARCHIVAL.md): commit essential native result files directly, do not create a new ZIP/TAR as a substitute for extracted outputs, preserve run provenance and checksums, and verify the remote files after pushing. Large event samples require Git LFS or durable versioned storage with a manifest.
+Generated files in a local or Magnus working directory are not automatically archived. Follow the mandatory [research-result archival policy](docs/RESEARCH_RESULT_ARCHIVAL.md) and the [RCRPS v1.0.1 structured-result standard](docs/STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.md): commit essential native result files directly, do not create a new ZIP/TAR as a substitute for extracted outputs, preserve run provenance and checksums, and verify the remote files after pushing. Large event samples require Git LFS or durable versioned storage with a manifest.
 
 ### Standalone Tasks
 

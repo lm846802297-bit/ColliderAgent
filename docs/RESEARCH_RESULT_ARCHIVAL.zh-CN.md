@@ -52,4 +52,4 @@ Collider-Agent 可以通过本地工具或 Magnus 平台生成模型、Monte Car
 
 ## 7. 结构化 JSON/CSV 结果记录
 
-新产生的重要运行应遵循[结构化科研结果数据规范](STRUCTURED_RESULT_DATA_STANDARD.md)，并使用 `schemas/research-result-record-v1.0.0.schema.json` 校验 `run_manifest`、`result_summary` 和 `validation_report`。运行来源、物理结果和验证检查分别记录。cutflow、截面扫描和直方图表使用 CSV；事例级数据保留 LHE/HepMC/ROOT 等原生格式，并记录事件数、分析层级、权重约定和 SHA-256。对撞机专用字段见规范中的 `extensions.collider_mc`。
+新产生的重要运行应遵循[结构化科研结果数据规范](STRUCTURED_RESULT_DATA_STANDARD_v1.0.1.zh-CN.md)，并使用 `schemas/research-result-record-v1.0.1.schema.json` 校验 `run_manifest`、`result_summary` 和 `validation_report`。运行来源、物理结果和验证检查分别记录。新的 v1.0.1 运行清单必须包含完整的 14 个 `execution.source_control` 字段，并在 `source.commit_sha` 中记录实际检出的 commit。cutflow、截面扫描和直方图表使用 CSV；事例级数据保留 LHE/HepMC/ROOT 等原生格式，并记录事件数、分析层级、权重约定和 SHA-256。对撞机专用字段见规范中的 `extensions.collider_mc`。
