@@ -23,6 +23,10 @@ The `scripts/` directory contains Python entry points for [Magnus](https://githu
 > [!NOTE]
 > These scripts are not meant to be run directly from the command line. They are executed by Magnus blueprints called from [`python-agent/tools/`](../python-agent/tools/).
 
+The separate [analytic capability preflight](../docs/ANALYTIC_TOOLCHAIN.md)
+is a local CLI, not a Magnus blueprint. It distinguishes discovery from
+explicit Wolfram, FeynCalc, and FeynArts native smoke checks.
+
 ## Blueprints
 
 | Script | Blueprint name | Description |
