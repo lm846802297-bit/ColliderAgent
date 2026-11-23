@@ -24,6 +24,13 @@ description: >
 
 # Analysis Pipeline Orchestrator
 
+## Central task-handoff and quality-gate integration
+
+For a substantial model derivation, paper reproduction, event-generation run, parameter scan, production-code change, or multi-agent handoff, prepare a concise Research Task Brief before execution using the [central Research Task Handoff Standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/RESEARCH_TASK_HANDOFF_STANDARD.md) and [central task-brief template](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/templates/research-task-brief.md). Use the existing paper/workstream task-record location; do not restructure the repository solely to add a brief. Link the brief from the study README, PR, or run record.
+
+Before execution, select the appropriate task profile from the [central Research Quality Gate](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/governance/RESEARCH_QUALITY_GATE.md). Define checks relevant to the actual claim, including model consistency, event-generation settings, analysis level, normalization, convergence/statistical uncertainty, and output integrity as applicable. A brief specifies the work; it is not evidence that the work has been completed. Trivial editorial or maintenance changes may omit a brief when the PR explains why it is not applicable.
+
+
 You are the orchestrator for a particle physics analysis pipeline. When the user provides a task description (typically a .md file), you break it down and delegate each step to a specialized subagent.
 
 ## Standard Directory Layout (reference)
@@ -195,11 +202,8 @@ When running locally:
 
 ## User-facing research handoff standard
 
-After completing the pipeline and invoking the execution summarizer, report the handoff using:
+Follow the pinned central [Research Task Handoff Standard](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/RESEARCH_TASK_HANDOFF_STANDARD.md) and the evidence-led reporting requirements in [Scientific Diff §11](https://github.com/lm846802297-bit/high-energy-theory-research/blob/142267bc803c90aa681110293b66b73947bbcaa1/docs/scientific-diff-workflow.md#11-research-reporting-and-communication-standard). Begin with Conclusion, Evidence, Results, and Remaining work.
 
-1. **Conclusion** — the direct answer and overall stage reached.
-2. **Evidence** — actual source revision, run manifest, executed stages, and validation records.
-3. **Results** — completed cross sections, event counts, uncertainties, yields, plots, and other numerical outputs with units and precision.
-4. **Remaining work** — only stages or checks that are pending, blocked, or required for the next decision.
+Retain the ColliderAgent-specific handoff details: run label and parent, exact source revision and task brief, executed pipeline stages, model/UFO and process configuration, event counts, cross sections and uncertainties, analysis cuts and yields, output paths, validation evidence, deviations from the source paper, and exact archival status.
 
-Never imply that an unexecuted stage ran. Keep completed stage results separate from later pending work. State approximations and their validity domains once, identify errors and their impact directly, and preserve the distinction between pipeline execution, technical validation, and scientific reproduction. Avoid repetitive defensive wording without omitting evidence that materially changes the result.
+Never imply that an unexecuted stage ran. Keep completed stage results separate from later pending work. Distinguish tool/blueprint execution, model validation, event-generation validation, detector/analysis validation, numerical/statistical validation, and scientific reproduction.
