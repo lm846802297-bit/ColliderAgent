@@ -1,0 +1,80 @@
+{
+  "ai_weighted_derivative": {
+    "apparent_infinity_pole_order": 3,
+    "determinant": "3*(z + 1)*(z + 9)",
+    "epsilon_denominators": [],
+    "epsilon_factorized": false,
+    "finite_kinematic_poles_generic": {
+      "z": 1,
+      "z + 1": 1,
+      "z + 9": 1
+    },
+    "max_epsilon_degree_if_polynomial": 2,
+    "nonzero_entries": 4,
+    "reference_match": true,
+    "symbolic_operation_count": 36,
+    "zero_epsilon_nonzero_entries_if_regular": 3
+  },
+  "autonomous_ai_search": "NOT_RUN",
+  "coordinate": "z = -s24/m_e^2; m_e=1; d=2-2eps",
+  "family": "PL1 equal-mass sunrise D1,D2,D8; exact Laporta–Remiddi block",
+  "fixed_lowest_dot": {
+    "apparent_infinity_pole_order": 1,
+    "determinant": "1",
+    "epsilon_denominators": [],
+    "epsilon_factorized": false,
+    "finite_kinematic_poles_generic": {
+      "z": 1,
+      "z + 1": 1,
+      "z + 9": 1
+    },
+    "max_epsilon_degree_if_polynomial": 2,
+    "nonzero_entries": 5,
+    "reference_match": true,
+    "symbolic_operation_count": 49,
+    "zero_epsilon_nonzero_entries_if_regular": 5
+  },
+  "inputs": {
+    "laporta_remiddi_pdf_sha256": "90e6d09ec39b9fc8b8021c0db7d95efa0cd72c72d9fdc2fd3198a442641cf84d",
+    "lar_eq28_matrix_sha256": "3c4c5dd9661c66a8ab6ae36a23bcf9dcefc57fe63b93a6628395c658e2051287",
+    "paper_ancillary_sha256": "4054767d0a8a3b1a253a9845c17adb8f8027f972fd78bd9b6c54d89b88d5f83b"
+  },
+  "mode": "one AI proposal vs one fixed rule; not a blinded trial",
+  "native_ibp": "NOT_RUN",
+  "parameter_integral": {
+    "absolute_tolerance": 2e-08,
+    "dimensions": 2,
+    "points": [
+      {
+        "S": 0.14303391888285466,
+        "d2S_dz2": 0.000902176766688284,
+        "dS_dz": -0.006685910154564921,
+        "residual": -1.1879386363489175e-14,
+        "z": 0.5
+      },
+      {
+        "S": 0.13391513904008714,
+        "d2S_dz2": 0.0006521214052217631,
+        "dS_dz": -0.00553468373680521,
+        "residual": -4.574118861455645e-14,
+        "z": 2.0
+      },
+      {
+        "S": 0.1091231984735073,
+        "d2S_dz2": 0.0002456369133419401,
+        "dS_dz": -0.003119154474070736,
+        "residual": -4.2099657093785936e-13,
+        "z": 8.0
+      }
+    ],
+    "scipy": "1.17.0"
+  },
+  "python": "3.12.14",
+  "structural_decision": {
+    "reasons": [
+      "higher apparent one-form pole order at infinity"
+    ],
+    "recommendation": "KEEP_BASELINE"
+  },
+  "sympy": "1.14.0"
+}

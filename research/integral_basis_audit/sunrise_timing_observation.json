@@ -1,0 +1,40 @@
+{
+  "environment": "local cloud Linux x86_64, one Python process",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "order": [
+    "fixed_lowest_dot",
+    "ai_weighted_derivative"
+  ],
+  "grid": "same five pairs (z=k/3, eps=1/(17+k)), k=2,3,5,9,23",
+  "metric": {
+    "median_ns": [
+      43857320,
+      31556597
+    ],
+    "points_per_round": 5,
+    "rounds": 7,
+    "samples_ns": [
+      [
+        47698122,
+        42422240,
+        43857320,
+        49114528,
+        46111927,
+        36960128,
+        39263944
+      ],
+      [
+        28148308,
+        30645444,
+        36741776,
+        32501686,
+        30110928,
+        32460803,
+        31556597
+      ]
+    ],
+    "scope": "exact pre-reduced DE evaluation only; no native IBP"
+  },
+  "native_ibp": "NOT_RUN"
+}
