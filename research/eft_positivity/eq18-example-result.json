@@ -1,0 +1,19 @@
+{
+  "coefficient_unit": "TeV^-4",
+  "constraint": "CWZ-v1-Eq18",
+  "determinant_exact": "0",
+  "failed_principal_minors": [],
+  "hankel_matrix_exact": [
+    [
+      "16/81",
+      "-16/27"
+    ],
+    [
+      "-16/27",
+      "16/9"
+    ]
+  ],
+  "kind": "theory_screen_only",
+  "source": "https://arxiv.org/html/2611.26692v1",
+  "status": "BOUNDARY"
+}
