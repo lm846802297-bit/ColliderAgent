@@ -1,0 +1,10 @@
+{
+  "basis_id": "arxiv:2611.26692v1:appendix-D:rescaled-F-over-Lambda4",
+  "unit": "TeV^-4",
+  "coefficients": {
+    "F_M1": "-4/81",
+    "F_M3": "-4/9",
+    "F_M5": "16/27",
+    "F_M7": "-16/81"
+  }
+}
