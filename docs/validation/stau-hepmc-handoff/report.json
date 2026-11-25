@@ -1,0 +1,32 @@
+{
+  "classification": "native HepMC3 round-trip, detector NOT RUN",
+  "counts_by_process": {
+    "1": 1753,
+    "2": 747,
+    "3": 808,
+    "4": 338,
+    "5": 397,
+    "6": 173
+  },
+  "events": 4216,
+  "exact_vectors_and_weights": true,
+  "exact_zero_photon_events": [
+    "1:964",
+    "3:110"
+  ],
+  "invisible_particles": 20157,
+  "max_beam_to_final_component_residual_gev": 1.682377879192766e-05,
+  "native_bytes": 68770417,
+  "native_sha256": "33ea082ce28778eb99cdc7219730a69e9c8278021bd7f28f0d588c1764d3317a",
+  "neff": 3868.6576767263928,
+  "pyhepmc": "2.15.1",
+  "python": "3.12.14",
+  "source_sha256": "ac20e8b056e16b98b19d566dc683f9658277393f321b21c864cc38241ea1614e",
+  "stable_particles": 476355,
+  "status": "PASS",
+  "stau_vertices": 8432,
+  "sum_weight_fb": 6.906428701209656,
+  "tau_vertices": 8432,
+  "truth_invisible_met_weighted_mean_gev": 143.50922824981166,
+  "weight_normalization": "cross section in fb; do not divide by event count"
+}
