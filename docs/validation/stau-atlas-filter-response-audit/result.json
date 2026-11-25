@@ -1,0 +1,759 @@
+{
+  "atlas_t17_sha256": "71c8ffa21d6163b35d13b8c1676f64bc5fe2d1f0a9dafa5eeeb7168ef628517b",
+  "atlas_t17_weighted_filter_ratio": 0.762788509292417,
+  "counterfactual_atlas_LR_xsec_mix_only": {
+    "parent": 0.9030331990575994,
+    "parent_both_had": 0.39462888637238164,
+    "visible_all": 0.7572886601510324,
+    "visible_both_had": 0.36664452967956207
+  },
+  "data": {
+    "L": {
+      "cuts": {
+        "difference": {
+          "parent_minus_visible": {
+            "delta": 0.14598798172359323,
+            "first_only": 433,
+            "second_only": 0,
+            "sigma": 0.006777140011568443
+          },
+          "unrestricted_minus_had_parent": {
+            "delta": 0.5070556892157629,
+            "first_only": 1498,
+            "second_only": 0,
+            "sigma": 0.009603279940409895
+          }
+        },
+        "had_pair": {
+          "conditional_sigma": 0.009535522786315264,
+          "fraction": 0.4364883796218382,
+          "raw_pass": 1283,
+          "sum_fb": 2.109407640978867
+        },
+        "parent": {
+          "conditional_sigma": 0.005515874357348735,
+          "fraction": 0.905816334996392,
+          "raw_pass": 2669,
+          "sum_fb": 4.377518366056555
+        },
+        "parent_both_had": {
+          "conditional_sigma": 0.009414901560349713,
+          "fraction": 0.39876064578062914,
+          "raw_pass": 1171,
+          "sum_fb": 1.9270816644880104
+        },
+        "parent_eta_only": {
+          "conditional_sigma": 0.005379424439241525,
+          "fraction": 0.9098291809123709,
+          "raw_pass": 2679,
+          "sum_fb": 4.396911156867092
+        },
+        "parent_pt_only": {
+          "conditional_sigma": 0.002232833305021437,
+          "fraction": 0.9864064160630809,
+          "raw_pass": 2918,
+          "sum_fb": 4.7669842504323565
+        },
+        "visible_all": {
+          "conditional_sigma": 0.008161296070617318,
+          "fraction": 0.7598283532727989,
+          "raw_pass": 2236,
+          "sum_fb": 3.6720055081755993
+        },
+        "visible_both_had": {
+          "conditional_sigma": 0.009249677347812254,
+          "fraction": 0.36189262746687845,
+          "raw_pass": 1061,
+          "sum_fb": 1.7489104160205207
+        }
+      },
+      "events": 2958,
+      "sum_fb": 4.832677659841486
+    },
+    "L0": {
+      "cuts": {
+        "difference": {
+          "parent_minus_visible": {
+            "delta": 0.1477467199087279,
+            "first_only": 259,
+            "second_only": 0,
+            "sigma": 0.008475245880520312
+          },
+          "unrestricted_minus_had_parent": {
+            "delta": 0.5088419851682829,
+            "first_only": 892,
+            "second_only": 0,
+            "sigma": 0.011940187007412475
+          }
+        },
+        "had_pair": {
+          "conditional_sigma": 0.011798491557288345,
+          "fraction": 0.42270393610952656,
+          "raw_pass": 741,
+          "sum_fb": 0.9992722021758842
+        },
+        "parent": {
+          "conditional_sigma": 0.0074247770172518905,
+          "fraction": 0.8916143753565318,
+          "raw_pass": 1563,
+          "sum_fb": 2.107776588395286
+        },
+        "parent_both_had": {
+          "conditional_sigma": 0.011609192599939469,
+          "fraction": 0.38277239018824866,
+          "raw_pass": 671,
+          "sum_fb": 0.9048740184345725
+        },
+        "parent_eta_only": {
+          "conditional_sigma": 0.007355599865762766,
+          "fraction": 0.8938961779806046,
+          "raw_pass": 1567,
+          "sum_fb": 2.113170770323361
+        },
+        "parent_pt_only": {
+          "conditional_sigma": 0.002536538187828835,
+          "fraction": 0.9885909868796349,
+          "raw_pass": 1733,
+          "sum_fb": 2.337029320338471
+        },
+        "visible_all": {
+          "conditional_sigma": 0.010425312744577142,
+          "fraction": 0.7438676554478038,
+          "raw_pass": 1304,
+          "sum_fb": 1.758503308552433
+        },
+        "visible_both_had": {
+          "conditional_sigma": 0.011381009423407121,
+          "fraction": 0.34854535082715343,
+          "raw_pass": 611,
+          "sum_fb": 0.8239612895134483
+        }
+      },
+      "events": 1753,
+      "sum_fb": 2.364000229978846
+    },
+    "L1": {
+      "cuts": {
+        "difference": {
+          "parent_minus_visible": {
+            "delta": 0.1459729400434478,
+            "first_only": 116,
+            "second_only": 0,
+            "sigma": 0.012613522814962919
+          },
+          "unrestricted_minus_had_parent": {
+            "delta": 0.4968673740299319,
+            "first_only": 400,
+            "second_only": 0,
+            "sigma": 0.017771846788842492
+          }
+        },
+        "had_pair": {
+          "conditional_sigma": 0.01767708895384844,
+          "fraction": 0.4498694710987614,
+          "raw_pass": 365,
+          "sum_fb": 0.6692937649167077
+        },
+        "parent": {
+          "conditional_sigma": 0.01020494271904033,
+          "fraction": 0.9095400865642892,
+          "raw_pass": 735,
+          "sum_fb": 1.3531691923714477
+        },
+        "parent_both_had": {
+          "conditional_sigma": 0.017489244125720813,
+          "fraction": 0.41267271253435733,
+          "raw_pass": 335,
+          "sum_fb": 0.6139542493868744
+        },
+        "parent_eta_only": {
+          "conditional_sigma": 0.0101095089401919,
+          "fraction": 0.911713983099244,
+          "raw_pass": 737,
+          "sum_fb": 1.3564034091607435
+        },
+        "parent_pt_only": {
+          "conditional_sigma": 0.004254773695332776,
+          "fraction": 0.9854568831864038,
+          "raw_pass": 796,
+          "sum_fb": 1.4661144840524571
+        },
+        "visible_all": {
+          "conditional_sigma": 0.015145879962920251,
+          "fraction": 0.7635671465208413,
+          "raw_pass": 619,
+          "sum_fb": 1.1359978017922636
+        },
+        "visible_both_had": {
+          "conditional_sigma": 0.017146045885677377,
+          "fraction": 0.3694674276027776,
+          "raw_pass": 300,
+          "sum_fb": 0.5496755426199335
+        }
+      },
+      "events": 808,
+      "sum_fb": 1.4877510209395277
+    },
+    "L2": {
+      "cuts": {
+        "difference": {
+          "parent_minus_visible": {
+            "delta": 0.14177229422499926,
+            "first_only": 58,
+            "second_only": 0,
+            "sigma": 0.01820866189528421
+          },
+          "unrestricted_minus_had_parent": {
+            "delta": 0.5182031842544692,
+            "first_only": 206,
+            "second_only": 0,
+            "sigma": 0.02613988193557942
+          }
+        },
+        "had_pair": {
+          "conditional_sigma": 0.026037749662468967,
+          "fraction": 0.44941360521656576,
+          "raw_pass": 177,
+          "sum_fb": 0.44084167388627493
+        },
+        "parent": {
+          "conditional_sigma": 0.013280066721810431,
+          "fraction": 0.9343948505740206,
+          "raw_pass": 371,
+          "sum_fb": 0.9165725852898218
+        },
+        "parent_both_had": {
+          "conditional_sigma": 0.02575513817066027,
+          "fraction": 0.41619166631955135,
+          "raw_pass": 165,
+          "sum_fb": 0.4082533966665636
+        },
+        "parent_eta_only": {
+          "conditional_sigma": 0.012222417830627004,
+          "fraction": 0.9453685505328008,
+          "raw_pass": 375,
+          "sum_fb": 0.9273369773829877
+        },
+        "parent_pt_only": {
+          "conditional_sigma": 0.006478977442550741,
+          "fraction": 0.9825818096788314,
+          "raw_pass": 389,
+          "sum_fb": 0.9638404460414286
+        },
+        "visible_all": {
+          "conditional_sigma": 0.021318186936067986,
+          "fraction": 0.7926225563490213,
+          "raw_pass": 313,
+          "sum_fb": 0.7775043978309024
+        },
+        "visible_both_had": {
+          "conditional_sigma": 0.02542091114338078,
+          "fraction": 0.3825705786625977,
+          "raw_pass": 150,
+          "sum_fb": 0.37527358388713883
+        }
+      },
+      "events": 397,
+      "sum_fb": 0.9809264089231119
+    },
+    "R": {
+      "cuts": {
+        "difference": {
+          "parent_minus_visible": {
+            "delta": 0.14510273511622548,
+            "first_only": 188,
+            "second_only": 0,
+            "sigma": 0.010227271940479541
+          },
+          "unrestricted_minus_had_parent": {
+            "delta": 0.5119597745592351,
+            "first_only": 648,
+            "second_only": 0,
+            "sigma": 0.014690708741171173
+          }
+        },
+        "had_pair": {
+          "conditional_sigma": 0.014579925762167023,
+          "fraction": 0.42784499204398796,
+          "raw_pass": 531,
+          "sum_fb": 0.8872439977953765
+        },
+        "parent": {
+          "conditional_sigma": 0.008830867980808064,
+          "fraction": 0.8956958406735097,
+          "raw_pass": 1123,
+          "sum_fb": 1.8574501823458296
+        },
+        "parent_both_had": {
+          "conditional_sigma": 0.014367381938830148,
+          "fraction": 0.3837360661142746,
+          "raw_pass": 475,
+          "sum_fb": 0.7957730667150019
+        },
+        "parent_eta_only": {
+          "conditional_sigma": 0.008584120854111815,
+          "fraction": 0.902115266309862,
+          "raw_pass": 1131,
+          "sum_fb": 1.8707624729442007
+        },
+        "parent_pt_only": {
+          "conditional_sigma": 0.0032299216336830455,
+          "fraction": 0.9864099154758079,
+          "raw_pass": 1240,
+          "sum_fb": 2.0455685894338456
+        },
+        "visible_all": {
+          "conditional_sigma": 0.01257595046697436,
+          "fraction": 0.7505931055572842,
+          "raw_pass": 935,
+          "sum_fb": 1.556543234293187
+        },
+        "visible_both_had": {
+          "conditional_sigma": 0.014341396230026886,
+          "fraction": 0.379172271876637,
+          "raw_pass": 469,
+          "sum_fb": 0.786308893662111
+        }
+      },
+      "events": 1258,
+      "sum_fb": 2.0737510413681703
+    },
+    "R0": {
+      "cuts": {
+        "difference": {
+          "parent_minus_visible": {
+            "delta": 0.16198125836680055,
+            "first_only": 121,
+            "second_only": 0,
+            "sigma": 0.013480281116835068
+          },
+          "unrestricted_minus_had_parent": {
+            "delta": 0.5261044176706827,
+            "first_only": 393,
+            "second_only": 0,
+            "sigma": 0.01826909370979694
+          }
+        },
+        "had_pair": {
+          "conditional_sigma": 0.017955709656229578,
+          "fraction": 0.4042838018741633,
+          "raw_pass": 302,
+          "sum_fb": 0.4115195119887165
+        },
+        "parent": {
+          "conditional_sigma": 0.011795141103410262,
+          "fraction": 0.8821954484605087,
+          "raw_pass": 659,
+          "sum_fb": 0.8979846304654443
+        },
+        "parent_both_had": {
+          "conditional_sigma": 0.017519933515552442,
+          "fraction": 0.35609103078982596,
+          "raw_pass": 266,
+          "sum_fb": 0.3624642059238364
+        },
+        "parent_eta_only": {
+          "conditional_sigma": 0.011558873331223431,
+          "fraction": 0.8875502008032129,
+          "raw_pass": 663,
+          "sum_fb": 0.9034352200282088
+        },
+        "parent_pt_only": {
+          "conditional_sigma": 0.0042048725923211575,
+          "fraction": 0.9866131191432396,
+          "raw_pass": 737,
+          "sum_fb": 1.0042711269393512
+        },
+        "visible_all": {
+          "conditional_sigma": 0.016424167979447176,
+          "fraction": 0.7202141900937082,
+          "raw_pass": 538,
+          "sum_fb": 0.7331042961918195
+        },
+        "visible_both_had": {
+          "conditional_sigma": 0.017475099303896017,
+          "fraction": 0.35207496653279785,
+          "raw_pass": 263,
+          "sum_fb": 0.35837626375176307
+        }
+      },
+      "events": 747,
+      "sum_fb": 1.0178976008462624
+    },
+    "R1": {
+      "cuts": {
+        "difference": {
+          "parent_minus_visible": {
+            "delta": 0.12750243461652336,
+            "first_only": 45,
+            "second_only": 0,
+            "sigma": 0.01799618822935452
+          },
+          "unrestricted_minus_had_parent": {
+            "delta": 0.49724304687607307,
+            "first_only": 166,
+            "second_only": 0,
+            "sigma": 0.0274780465495364
+          }
+        },
+        "had_pair": {
+          "conditional_sigma": 0.02727564235785415,
+          "fraction": 0.44442130158400794,
+          "raw_pass": 152,
+          "sum_fb": 0.2810947556676263
+        },
+        "parent": {
+          "conditional_sigma": 0.016998020562176273,
+          "fraction": 0.8945994938015269,
+          "raw_pass": 303,
+          "sum_fb": 0.5658307224119142
+        },
+        "parent_both_had": {
+          "conditional_sigma": 0.02680039731669339,
+          "fraction": 0.3973564469254538,
+          "raw_pass": 137,
+          "sum_fb": 0.2513264169907327
+        },
+        "parent_eta_only": {
+          "conditional_sigma": 0.016061414207767362,
+          "fraction": 0.9070291366051085,
+          "raw_pass": 307,
+          "sum_fb": 0.5736924234475208
+        },
+        "parent_pt_only": {
+          "conditional_sigma": 0.007787941018011498,
+          "fraction": 0.9792627203811062,
+          "raw_pass": 331,
+          "sum_fb": 0.6193798860199533
+        },
+        "visible_all": {
+          "conditional_sigma": 0.02310183917144738,
+          "fraction": 0.7670970591850036,
+          "raw_pass": 258,
+          "sum_fb": 0.4851859252840152
+        },
+        "visible_both_had": {
+          "conditional_sigma": 0.026731594972877155,
+          "fraction": 0.3916648130598484,
+          "raw_pass": 135,
+          "sum_fb": 0.24772648056756935
+        }
+      },
+      "events": 338,
+      "sum_fb": 0.632496135234174
+    },
+    "R2": {
+      "cuts": {
+        "difference": {
+          "parent_minus_visible": {
+            "delta": 0.13081578127836585,
+            "first_only": 22,
+            "second_only": 0,
+            "sigma": 0.027024546706590654
+          },
+          "unrestricted_minus_had_parent": {
+            "delta": 0.49993795553897225,
+            "first_only": 89,
+            "second_only": 0,
+            "sigma": 0.03946696276680953
+          }
+        },
+        "had_pair": {
+          "conditional_sigma": 0.039460748110245365,
+          "fraction": 0.4597292351120621,
+          "raw_pass": 77,
+          "sum_fb": 0.19462973013903373
+        },
+        "parent": {
+          "conditional_sigma": 0.020343019861906887,
+          "fraction": 0.9297934027639794,
+          "raw_pass": 161,
+          "sum_fb": 0.39363482946847106
+        },
+        "parent_both_had": {
+          "conditional_sigma": 0.03930203674711427,
+          "fraction": 0.42985544722500724,
+          "raw_pass": 72,
+          "sum_fb": 0.18198244380043282
+        },
+        "parent_eta_only": {
+          "conditional_sigma": 0.020343019861906887,
+          "fraction": 0.9297934027639794,
+          "raw_pass": 161,
+          "sum_fb": 0.39363482946847106
+        },
+        "parent_pt_only": {
+          "conditional_sigma": 0.0033997708330677653,
+          "fraction": 0.9965992583682602,
+          "raw_pass": 172,
+          "sum_fb": 0.42191757647454087
+        },
+        "visible_all": {
+          "conditional_sigma": 0.03199047694008205,
+          "fraction": 0.7989776214856136,
+          "raw_pass": 139,
+          "sum_fb": 0.3382530128173525
+        },
+        "visible_both_had": {
+          "conditional_sigma": 0.03928355938702592,
+          "fraction": 0.4256597136555889,
+          "raw_pass": 71,
+          "sum_fb": 0.1802061493427786
+        }
+      },
+      "events": 173,
+      "sum_fb": 0.423357305287734
+    },
+    "all": {
+      "cuts": {
+        "difference": {
+          "parent_minus_visible": {
+            "delta": 0.14572217414730207,
+            "first_only": 621,
+            "second_only": 0,
+            "sigma": 0.005649713532467498
+          },
+          "unrestricted_minus_had_parent": {
+            "delta": 0.5085282088822879,
+            "first_only": 2146,
+            "second_only": 0,
+            "sigma": 0.008038005108183015
+          }
+        },
+        "had_pair": {
+          "conditional_sigma": 0.00798018182815322,
+          "fraction": 0.4338930825781756,
+          "raw_pass": 1814,
+          "sum_fb": 2.9966516387742432
+        },
+        "parent": {
+          "conditional_sigma": 0.004683272132094586,
+          "fraction": 0.902777516158291,
+          "raw_pass": 3792,
+          "sum_fb": 6.234968548402385
+        },
+        "parent_both_had": {
+          "conditional_sigma": 0.007874578348672008,
+          "fraction": 0.39424930727600305,
+          "raw_pass": 1646,
+          "sum_fb": 2.7228547312030122
+        },
+        "parent_eta_only": {
+          "conditional_sigma": 0.004562500567863338,
+          "fraction": 0.9075129710256061,
+          "raw_pass": 3810,
+          "sum_fb": 6.267673629811293
+        },
+        "parent_pt_only": {
+          "conditional_sigma": 0.001838924640052369,
+          "fraction": 0.9864074668103052,
+          "raw_pass": 4158,
+          "sum_fb": 6.8125528398662025
+        },
+        "visible_all": {
+          "conditional_sigma": 0.006846324011242979,
+          "fraction": 0.7570553420109889,
+          "raw_pass": 3171,
+          "sum_fb": 5.228548742468786
+        },
+        "visible_both_had": {
+          "conditional_sigma": 0.0077760426085903105,
+          "fraction": 0.3670810804487984,
+          "raw_pass": 1530,
+          "sum_fb": 2.5352193096826316
+        }
+      },
+      "events": 4216,
+      "sum_fb": 6.906428701209656
+    },
+    "jet0": {
+      "cuts": {
+        "difference": {
+          "parent_minus_visible": {
+            "delta": 0.15203109018554697,
+            "first_only": 380,
+            "second_only": 0,
+            "sigma": 0.0071817073231906095
+          },
+          "unrestricted_minus_had_parent": {
+            "delta": 0.5140377035216893,
+            "first_only": 1285,
+            "second_only": 0,
+            "sigma": 0.009996150611079163
+          }
+        },
+        "had_pair": {
+          "conditional_sigma": 0.009861771410369523,
+          "fraction": 0.4171597678988424,
+          "raw_pass": 1043,
+          "sum_fb": 1.4107917141646007
+        },
+        "parent": {
+          "conditional_sigma": 0.0062886841260124705,
+          "fraction": 0.8887794277710013,
+          "raw_pass": 2222,
+          "sum_fb": 3.00576121886073
+        },
+        "parent_both_had": {
+          "conditional_sigma": 0.009680930520133219,
+          "fraction": 0.37474172424931196,
+          "raw_pass": 937,
+          "sum_fb": 1.267338224358409
+        },
+        "parent_eta_only": {
+          "conditional_sigma": 0.006208380519503988,
+          "fraction": 0.8919861395149199,
+          "raw_pass": 2230,
+          "sum_fb": 3.01660599035157
+        },
+        "parent_pt_only": {
+          "conditional_sigma": 0.002178505918085433,
+          "fraction": 0.9879956800654203,
+          "raw_pass": 2470,
+          "sum_fb": 3.3413004472778223
+        },
+        "visible_all": {
+          "conditional_sigma": 0.008808614072023501,
+          "fraction": 0.7367483375854543,
+          "raw_pass": 1842,
+          "sum_fb": 2.4916076047442526
+        },
+        "visible_both_had": {
+          "conditional_sigma": 0.009537078473310416,
+          "fraction": 0.3496077091651072,
+          "raw_pass": 874,
+          "sum_fb": 1.1823375532652114
+        }
+      },
+      "events": 2500,
+      "sum_fb": 3.381897830825108
+    },
+    "jet1": {
+      "cuts": {
+        "difference": {
+          "parent_minus_visible": {
+            "delta": 0.1404629582168789,
+            "first_only": 161,
+            "second_only": 0,
+            "sigma": 0.010357132456221729
+          },
+          "unrestricted_minus_had_parent": {
+            "delta": 0.4969794419190951,
+            "first_only": 566,
+            "second_only": 0,
+            "sigma": 0.014923143262779154
+          }
+        },
+        "had_pair": {
+          "conditional_sigma": 0.014834831833231425,
+          "fraction": 0.4482442142733256,
+          "raw_pass": 517,
+          "sum_fb": 0.950388520584334
+        },
+        "parent": {
+          "conditional_sigma": 0.008777147242708068,
+          "fraction": 0.9050831216519493,
+          "raw_pass": 1038,
+          "sum_fb": 1.9189999147833618
+        },
+        "parent_both_had": {
+          "conditional_sigma": 0.014649263012544355,
+          "fraction": 0.4081036797328541,
+          "raw_pass": 472,
+          "sum_fb": 0.865280666377607
+        },
+        "parent_eta_only": {
+          "conditional_sigma": 0.008560560981245968,
+          "fraction": 0.9103164350383598,
+          "raw_pass": 1044,
+          "sum_fb": 1.9300958326082645
+        },
+        "parent_pt_only": {
+          "conditional_sigma": 0.0037838401136476053,
+          "fraction": 0.9836090872707464,
+          "raw_pass": 1127,
+          "sum_fb": 2.0854943700724102
+        },
+        "visible_all": {
+          "conditional_sigma": 0.01266692211399313,
+          "fraction": 0.7646201634350704,
+          "raw_pass": 877,
+          "sum_fb": 1.621183727076279
+        },
+        "visible_both_had": {
+          "conditional_sigma": 0.014435266579757609,
+          "fraction": 0.37608918416215786,
+          "raw_pass": 435,
+          "sum_fb": 0.7974020231875028
+        }
+      },
+      "events": 1146,
+      "sum_fb": 2.1202471561737015
+    },
+    "jet2": {
+      "cuts": {
+        "difference": {
+          "parent_minus_visible": {
+            "delta": 0.13846917267662784,
+            "first_only": 80,
+            "second_only": 0,
+            "sigma": 0.015104816768967038
+          },
+          "unrestricted_minus_had_parent": {
+            "delta": 0.5126966630784385,
+            "first_only": 295,
+            "second_only": 0,
+            "sigma": 0.02180406388132529
+          }
+        },
+        "had_pair": {
+          "conditional_sigma": 0.021737165590656866,
+          "fraction": 0.4525235161488855,
+          "raw_pass": 254,
+          "sum_fb": 0.6354714040253087
+        },
+        "parent": {
+          "conditional_sigma": 0.011120484037078255,
+          "fraction": 0.9330076262363973,
+          "raw_pass": 532,
+          "sum_fb": 1.3102074147582927
+        },
+        "parent_both_had": {
+          "conditional_sigma": 0.021549545172890157,
+          "fraction": 0.4203109631579588,
+          "raw_pass": 237,
+          "sum_fb": 0.5902358404669964
+        },
+        "parent_eta_only": {
+          "conditional_sigma": 0.010515504288820669,
+          "fraction": 0.9406730231816401,
+          "raw_pass": 536,
+          "sum_fb": 1.3209718068514589
+        },
+        "parent_pt_only": {
+          "conditional_sigma": 0.004648353002294409,
+          "fraction": 0.9868077287321619,
+          "raw_pass": 561,
+          "sum_fb": 1.3857580225159694
+        },
+        "visible_all": {
+          "conditional_sigma": 0.017741580687946755,
+          "fraction": 0.7945384535597695,
+          "raw_pass": 452,
+          "sum_fb": 1.1157574106482548
+        },
+        "visible_both_had": {
+          "conditional_sigma": 0.021378941177340707,
+          "fraction": 0.39556090240786984,
+          "raw_pass": 221,
+          "sum_fb": 0.5554797332299174
+        }
+      },
+      "events": 570,
+      "sum_fb": 1.404283714210846
+    }
+  },
+  "independent_visible_four_vectors_checked": 8432,
+  "input_sha256": "ac20e8b056e16b98b19d566dc683f9658277393f321b21c864cc38241ea1614e",
+  "official_filter_exact_definition": "UNVERIFIED"
+}
