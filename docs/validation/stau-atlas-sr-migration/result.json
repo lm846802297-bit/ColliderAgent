@@ -1,0 +1,321 @@
+{
+  "controls": {
+    "no_visible_only_events": true,
+    "parent_replay_all_rows": true
+  },
+  "cutflow": {
+    "common": [
+      {
+        "label": "Total",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 959.9935894681421,
+        "parent_fb": 6.906428701209656,
+        "visible_events_139": 959.9935894681421,
+        "visible_fb": 6.906428701209656
+      },
+      {
+        "label": "Generator filter",
+        "lost_n": 621,
+        "paired_absolute_sigma_events_139": 5.863167826741368,
+        "parent_events_139": 866.6606282279315,
+        "parent_fb": 6.234968548402385,
+        "visible_events_139": 726.7682752031612,
+        "visible_fb": 5.228548742468786
+      },
+      {
+        "label": "Baseline",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 185.83187505523426,
+        "parent_fb": 1.3369199644261458,
+        "visible_events_139": 185.83187505523426,
+        "visible_fb": 1.3369199644261458
+      },
+      {
+        "label": "Medium OS/third veto",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 84.65139653967563,
+        "parent_fb": 0.6090028528034218,
+        "visible_events_139": 84.65139653967563,
+        "visible_fb": 0.6090028528034218
+      },
+      {
+        "label": "b veto",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 84.35159801872574,
+        "parent_fb": 0.6068460289116959,
+        "visible_events_139": 84.35159801872574,
+        "visible_fb": 0.6068460289116959
+      },
+      {
+        "label": "Lepton veto",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 84.35159801872574,
+        "parent_fb": 0.6068460289116959,
+        "visible_events_139": 84.35159801872574,
+        "visible_fb": 0.6068460289116959
+      },
+      {
+        "label": "Z/H veto",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 75.23918427378499,
+        "parent_fb": 0.541289095494856,
+        "visible_events_139": 75.23918427378499,
+        "visible_fb": 0.541289095494856
+      }
+    ],
+    "high": [
+      {
+        "label": "Trigger & offline cuts",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 26.15230972792895,
+        "parent_fb": 0.188146113150568,
+        "visible_events_139": 26.15230972792895,
+        "visible_fb": 0.188146113150568
+      },
+      {
+        "label": "At least 1 tight tau",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 24.99149635448596,
+        "parent_fb": 0.17979493780205727,
+        "visible_events_139": 24.99149635448596,
+        "visible_fb": 0.17979493780205727
+      },
+      {
+        "label": "Delta phi > 0.8",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 24.228143469686263,
+        "parent_fb": 0.17430319042939757,
+        "visible_events_139": 24.228143469686263,
+        "visible_fb": 0.17430319042939757
+      },
+      {
+        "label": "Delta R < 3.2",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 23.19374940454373,
+        "parent_fb": 0.16686150650750886,
+        "visible_events_139": 23.19374940454373,
+        "visible_fb": 0.16686150650750886
+      },
+      {
+        "label": "mT2 > 70",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 16.62397724537107,
+        "parent_fb": 0.11959695859979186,
+        "visible_events_139": 16.62397724537107,
+        "visible_fb": 0.11959695859979186
+      }
+    ],
+    "low": [
+      {
+        "label": "Trigger & offline cuts",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 40.85888179842469,
+        "parent_fb": 0.2939487899167244,
+        "visible_events_139": 40.85888179842469,
+        "visible_fb": 0.2939487899167244
+      },
+      {
+        "label": "75 < MET < 150",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 13.66972208307217,
+        "parent_fb": 0.0983433243386487,
+        "visible_events_139": 13.66972208307217,
+        "visible_fb": 0.0983433243386487
+      },
+      {
+        "label": "2 tight tau",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 8.536402758036152,
+        "parent_fb": 0.06141296948227447,
+        "visible_events_139": 8.536402758036152,
+        "visible_fb": 0.06141296948227447
+      },
+      {
+        "label": "Delta phi > 0.8",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 8.536402758036152,
+        "parent_fb": 0.06141296948227447,
+        "visible_events_139": 8.536402758036152,
+        "visible_fb": 0.06141296948227447
+      },
+      {
+        "label": "Delta R < 3.2",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 7.734883139621,
+        "parent_fb": 0.05564664129223741,
+        "visible_events_139": 7.734883139621,
+        "visible_fb": 0.05564664129223741
+      },
+      {
+        "label": "mT2 > 70",
+        "lost_n": 0,
+        "paired_absolute_sigma_events_139": 0.0,
+        "parent_events_139": 4.6753741411282785,
+        "parent_fb": 0.03363578518797323,
+        "visible_events_139": 4.6753741411282785,
+        "visible_fb": 0.03363578518797323
+      }
+    ]
+  },
+  "high_before_mt2_n": 300,
+  "high_matched_pair_n": 300,
+  "high_probe_all": {
+    "both_truth": {
+      "gained_n": 6,
+      "lost_n": 6,
+      "matrix_fb": [
+        [
+          0.04390940639185846,
+          0.0033551415158585432
+        ],
+        [
+          0.0031589817679354374,
+          0.11643797683185642
+        ]
+      ],
+      "net_yield_delta_139": 0.027266204961311713,
+      "paired_delta_fraction": 0.0011755841837271111,
+      "paired_se": 0.011573264816200808,
+      "precut_fb": 0.16686150650750886,
+      "reco_efficiency": 0.7167438500527378,
+      "reco_fb": 0.11959695859979186,
+      "substituted_efficiency": 0.7179194342364649,
+      "substituted_fb": 0.11979311834771496
+    },
+    "met_truth": {
+      "gained_n": 1,
+      "lost_n": 2,
+      "matrix_fb": [
+        [
+          0.04661347948038602,
+          0.0006510684273309802
+        ],
+        [
+          0.0009221113670859044,
+          0.11867484723270595
+        ]
+      ],
+      "net_yield_delta_139": -0.037674968625934474,
+      "paired_delta_fraction": -0.0016243586997863235,
+      "paired_se": 0.005541612958203869,
+      "precut_fb": 0.16686150650750886,
+      "reco_efficiency": 0.7167438500527378,
+      "reco_fb": 0.11959695859979186,
+      "substituted_efficiency": 0.7151194913529514,
+      "substituted_fb": 0.11932591566003693
+    },
+    "tau_truth": {
+      "gained_n": 3,
+      "lost_n": 4,
+      "matrix_fb": [
+        [
+          0.0454944498637176,
+          0.0017700980439994062
+        ],
+        [
+          0.00224641324397479,
+          0.11735054535581707
+        ]
+      ],
+      "net_yield_delta_139": -0.06620781279657835,
+      "paired_delta_fraction": -0.0028545541146360763,
+      "paired_se": 0.00938574676989083,
+      "precut_fb": 0.16686150650750886,
+      "reco_efficiency": 0.7167438500527378,
+      "reco_fb": 0.11959695859979186,
+      "substituted_efficiency": 0.7138892959381018,
+      "substituted_fb": 0.11912064339981648
+    }
+  },
+  "high_probe_within_10gev_of_reco_threshold": {
+    "both_truth": {
+      "gained_n": 1,
+      "lost_n": 3,
+      "matrix_fb": [
+        [
+          0.005716786851724205,
+          0.0006510684273309802
+        ],
+        [
+          0.0017317464344384715,
+          0.004185858032028537
+        ]
+      ],
+      "net_yield_delta_139": -0.15021424298794128,
+      "paired_delta_fraction": -0.0879639858411792,
+      "paired_se": 0.0983772598784997,
+      "precut_fb": 0.012285459745522193,
+      "reco_efficiency": 0.48167545936763645,
+      "reco_fb": 0.005917604466467008,
+      "substituted_efficiency": 0.3937114735264572,
+      "substituted_fb": 0.004836926459359517
+    },
+    "met_truth": {
+      "gained_n": 1,
+      "lost_n": 1,
+      "matrix_fb": [
+        [
+          0.005716786851724205,
+          0.0006510684273309802
+        ],
+        [
+          0.0004074445575495856,
+          0.005510159908917423
+        ]
+      ],
+      "net_yield_delta_139": 0.033863717899613836,
+      "paired_delta_fraction": 0.019830260716957752,
+      "paired_se": 0.06214729586253181,
+      "precut_fb": 0.012285459745522193,
+      "reco_efficiency": 0.48167545936763645,
+      "reco_fb": 0.005917604466467008,
+      "substituted_efficiency": 0.5015057200845942,
+      "substituted_fb": 0.006161228336248403
+    },
+    "tau_truth": {
+      "gained_n": 1,
+      "lost_n": 3,
+      "matrix_fb": [
+        [
+          0.005716786851724205,
+          0.0006510684273309802
+        ],
+        [
+          0.0017317464344384715,
+          0.004185858032028537
+        ]
+      ],
+      "net_yield_delta_139": -0.15021424298794128,
+      "paired_delta_fraction": -0.0879639858411792,
+      "paired_se": 0.0983772598784997,
+      "precut_fb": 0.012285459745522193,
+      "reco_efficiency": 0.48167545936763645,
+      "reco_fb": 0.005917604466467008,
+      "substituted_efficiency": 0.3937114735264572,
+      "substituted_fb": 0.004836926459359517
+    }
+  },
+  "high_unmatched_pair_fb": 0.0,
+  "high_unmatched_pair_final_fb": 0.0,
+  "high_unmatched_pair_n": 0,
+  "reference_baseline_sha256": "e2b522970d492a46d0c878ce91c30b39e46cd3eb8002621b0e9f74dbe378c46b",
+  "root_sha256": "b5e6d26d82d63acfe0949f1de8557befb7c8703670b8700fe283cce3d6f0a9f5",
+  "status": "DIAGNOSTIC_NOT_SR_VALIDATION",
+  "truth_sha256": "ac20e8b056e16b98b19d566dc683f9658277393f321b21c864cc38241ea1614e"
+}
