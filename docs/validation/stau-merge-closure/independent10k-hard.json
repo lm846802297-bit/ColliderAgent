@@ -1,0 +1,16 @@
+{
+  "acceptance": "hard_event_topology_only",
+  "detector": "NOT_RUN",
+  "events": 10000,
+  "matrix_element_event_counts": {
+    "L0": 3309,
+    "L1": 2343,
+    "L2": 1331,
+    "R0": 1418,
+    "R1": 1017,
+    "R2": 582
+  },
+  "max_scaled_momentum_residual": 6.354880629713523e-11,
+  "merging": "NOT_RUN",
+  "sha256": "614ba091937eb45849dd0c9dcc20267280c0f962fe4265f9e5224c6e2812b4cb"
+}

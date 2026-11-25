@@ -1,0 +1,27 @@
+FINAL-STAT 20 41324 1
+ | sum                                                |        3309       3309       1329 |   1.792e-12  3.820e-14 |
+END-FINAL-STAT
+FINAL-STAT 20 41324 4
+ | sum                                                |        1017       1017        395 |   7.804e-13  3.209e-14 |
+END-FINAL-STAT
+FINAL-STAT 20 41324 6
+ | sum                                                |         582        582        261 |   6.851e-13  3.186e-14 |
+END-FINAL-STAT
+FINAL-STAT 30 41324 1
+ | sum                                                |        3309       3309       1753 |   2.364e-12  3.901e-14 |
+END-FINAL-STAT
+FINAL-STAT 30 41324 3
+ | sum                                                |        2343       2343        808 |   1.488e-12  4.360e-14 |
+END-FINAL-STAT
+FINAL-STAT 30 41324 6
+ | sum                                                |         582        582        173 |   4.234e-13  2.715e-14 |
+END-FINAL-STAT
+FINAL-STAT 40 41324 1
+ | sum                                                |        3309       3309       2020 |   2.724e-12  3.822e-14 |
+END-FINAL-STAT
+FINAL-STAT 40 41324 4
+ | sum                                                |        1017       1017        341 |   6.079e-13  2.780e-14 |
+END-FINAL-STAT
+FINAL-STAT 40 41324 6
+ | sum                                                |         582        582        142 |   3.204e-13  2.349e-14 |
+END-FINAL-STAT

@@ -1,0 +1,27 @@
+set automatic_html_opening False
+set lhapdf @LHAPDF_CONFIG@
+set nb_core 4
+launch ref280_independent10k
+shower=OFF
+detector=OFF
+analysis=OFF
+set nevents 10000
+set iseed 266031
+set lpp1 1
+set lpp2 1
+set ebeam1 6500
+set ebeam2 6500
+set pdlabel lhapdf
+set lhaid 247000
+set fixed_fac_scale True
+set dsqrt_q2fact1 280
+set dsqrt_q2fact2 280
+set ickkw 0
+set xqcut 0
+set ktdurham 20
+set ptj 0
+set etaj 5
+set drjj 0
+set use_syst False
+done
+quit

@@ -1,0 +1,72 @@
+FINAL-STAT 20 41324 1
+ | sum                                                |         328        328        136 |   1.848e-12  1.218e-13 |
+END-FINAL-STAT
+FINAL-STAT 20 41324 6
+ | sum                                                |          57         57         32 |   7.827e-13  9.178e-14 |
+END-FINAL-STAT
+FINAL-STAT 20 51997 4
+ | sum                                                |         104        104         39 |   7.437e-13  9.439e-14 |
+END-FINAL-STAT
+FINAL-STAT 20 70123 4
+ | sum                                                |         104        104         43 |   8.226e-13  9.637e-14 |
+END-FINAL-STAT
+FINAL-STAT 20 70123 5
+ | sum                                                |         132        132         55 |   1.434e-12  1.481e-13 |
+END-FINAL-STAT
+FINAL-STAT 20 70123 6
+ | sum                                                |          57         57         31 |   7.557e-13  9.181e-14 |
+END-FINAL-STAT
+FINAL-STAT 30 41324 1
+ | sum                                                |         328        328        171 |   2.324e-12  1.237e-13 |
+END-FINAL-STAT
+FINAL-STAT 30 41324 4
+ | sum                                                |         104        104         36 |   6.814e-13  9.204e-14 |
+END-FINAL-STAT
+FINAL-STAT 30 41324 5
+ | sum                                                |         132        132         38 |   8.450e-13  1.159e-13 |
+END-FINAL-STAT
+FINAL-STAT 30 41324 6
+ | sum                                                |          57         57         24 |   5.444e-13  8.463e-14 |
+END-FINAL-STAT
+FINAL-STAT 30 51997 4
+ | sum                                                |         104        104         40 |   7.522e-13  9.355e-14 |
+END-FINAL-STAT
+FINAL-STAT 30 51997 5
+ | sum                                                |         132        132         42 |   9.633e-13  1.230e-13 |
+END-FINAL-STAT
+FINAL-STAT 30 51997 6
+ | sum                                                |          57         57         23 |   5.311e-13  8.560e-14 |
+END-FINAL-STAT
+FINAL-STAT 30 70123 3
+ | sum                                                |         251        251        101 |   1.772e-12  1.376e-13 |
+END-FINAL-STAT
+FINAL-STAT 30 70123 4
+ | sum                                                |         104        104         44 |   8.187e-13  9.405e-14 |
+END-FINAL-STAT
+FINAL-STAT 30 70123 5
+ | sum                                                |         132        132         41 |   9.785e-13  1.271e-13 |
+END-FINAL-STAT
+FINAL-STAT 40 41324 1
+ | sum                                                |         328        328        205 |   2.786e-12  1.203e-13 |
+END-FINAL-STAT
+FINAL-STAT 40 41324 4
+ | sum                                                |         104        104         31 |   5.514e-13  8.313e-14 |
+END-FINAL-STAT
+FINAL-STAT 40 41324 5
+ | sum                                                |         132        132         30 |   6.807e-13  1.094e-13 |
+END-FINAL-STAT
+FINAL-STAT 40 51997 4
+ | sum                                                |         104        104         36 |   6.464e-13  8.732e-14 |
+END-FINAL-STAT
+FINAL-STAT 40 51997 5
+ | sum                                                |         132        132         27 |   5.977e-13  1.027e-13 |
+END-FINAL-STAT
+FINAL-STAT 40 51997 6
+ | sum                                                |          57         57         19 |   4.411e-13  8.269e-14 |
+END-FINAL-STAT
+FINAL-STAT 40 70123 4
+ | sum                                                |         104        104         37 |   6.536e-13  8.645e-14 |
+END-FINAL-STAT
+FINAL-STAT 40 70123 5
+ | sum                                                |         132        132         27 |   5.937e-13  1.020e-13 |
+END-FINAL-STAT
