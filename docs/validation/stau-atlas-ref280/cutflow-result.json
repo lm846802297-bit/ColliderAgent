@@ -1,0 +1,258 @@
+{
+  "atlas_merge_validation": "NOT_RUN",
+  "benchmarks": {
+    "120_1": {
+      "atlas_baseline_fraction": 0.06295794082595534,
+      "atlas_weighted_total": "26792.49",
+      "generator_filter_fraction": 0.5030301401624112,
+      "regions": {
+        "high": {
+          "atlas_eff_times_acc": 0.0002679855437101964,
+          "ma5_baseline_normalized_final": 8.24,
+          "ma5_final_relative_difference": 0.14763231197771587,
+          "ma5_mt2_conditional_relative_difference": 0.3076083642749839,
+          "stages": [
+            {
+              "id": 15,
+              "label": "Trigger & offline cuts",
+              "raw_count": 1272,
+              "stat": "1.90",
+              "step_eff": 0.07925702483830643,
+              "weighted": "58.33"
+            },
+            {
+              "id": 16,
+              "label": "$\\ge$ 1 tight $\\tau$",
+              "raw_count": 1249,
+              "stat": "1.88",
+              "step_eff": 0.9821704097376993,
+              "weighted": "57.29"
+            },
+            {
+              "id": 17,
+              "label": "$|\\Delta \\phi(\\tau,\\tau)| >$ 0.8",
+              "raw_count": 1236,
+              "stat": "1.88",
+              "step_eff": 0.9898760691220109,
+              "weighted": "56.71"
+            },
+            {
+              "id": 18,
+              "label": "$\\Delta R(\\tau,\\tau) <$ 3.2",
+              "raw_count": 1132,
+              "stat": "1.79",
+              "step_eff": 0.9123611356021866,
+              "weighted": "51.74"
+            },
+            {
+              "id": 19,
+              "label": "$ m_{T2} > 70 GeV $",
+              "raw_count": 170,
+              "stat": "0.63",
+              "step_eff": 0.13877077696173173,
+              "weighted": "7.18"
+            }
+          ]
+        },
+        "low": {
+          "atlas_eff_times_acc": 0.0003650276626024681,
+          "ma5_baseline_normalized_final": 14.65,
+          "ma5_final_relative_difference": 0.49795501022494887,
+          "ma5_mt2_conditional_relative_difference": 0.43578069543978026,
+          "stages": [
+            {
+              "id": 8,
+              "label": "Trigger & offline cuts",
+              "raw_count": 6512,
+              "stat": "3.55",
+              "step_eff": 0.33823849122234906,
+              "weighted": "248.93"
+            },
+            {
+              "id": 9,
+              "label": "75 GeV $< E_{T}^{miss} <$ 150 GeV",
+              "raw_count": 2228,
+              "stat": "2.07",
+              "step_eff": 0.3442734905395091,
+              "weighted": "85.70"
+            },
+            {
+              "id": 10,
+              "label": "2 tight $\\tau$",
+              "raw_count": 1565,
+              "stat": "1.73",
+              "step_eff": 0.7023337222870478,
+              "weighted": "60.19"
+            },
+            {
+              "id": 11,
+              "label": "$|\\Delta \\phi(\\tau,\\tau)| >$ 0.8",
+              "raw_count": 1564,
+              "stat": "1.73",
+              "step_eff": 0.9991692972254528,
+              "weighted": "60.14"
+            },
+            {
+              "id": 12,
+              "label": "$\\Delta R(\\tau,\\tau) <$ 3.2",
+              "raw_count": 1429,
+              "stat": "1.65",
+              "step_eff": 0.9100432324575989,
+              "weighted": "54.73"
+            },
+            {
+              "id": 13,
+              "label": "$ m_{T2} > 70 GeV $",
+              "raw_count": 280,
+              "stat": "0.67",
+              "step_eff": 0.17869541384980814,
+              "weighted": "9.78"
+            }
+          ]
+        }
+      }
+    },
+    "280_1": {
+      "atlas_baseline_fraction": 0.16063291249531675,
+      "atlas_weighted_total": "1147.71",
+      "generator_filter_fraction": 0.762788509292417,
+      "regions": {
+        "high": {
+          "atlas_eff_times_acc": 0.012503158463374894,
+          "ma5_baseline_normalized_final": 13.37,
+          "ma5_final_relative_difference": -0.06829268292682927,
+          "ma5_mt2_conditional_relative_difference": 0.03917558992663098,
+          "stages": [
+            {
+              "id": 15,
+              "label": "Trigger & offline cuts",
+              "raw_count": 1096,
+              "stat": "1.57",
+              "step_eff": 0.2987512007684918,
+              "weighted": "24.88"
+            },
+            {
+              "id": 16,
+              "label": "$\\ge$ 1 tight $\\tau$",
+              "raw_count": 1076,
+              "stat": "1.54",
+              "step_eff": 0.9730707395498392,
+              "weighted": "24.21"
+            },
+            {
+              "id": 17,
+              "label": "$|\\Delta \\phi(\\tau,\\tau)| >$ 0.8",
+              "raw_count": 1045,
+              "stat": "1.50",
+              "step_eff": 0.9619991738950847,
+              "weighted": "23.29"
+            },
+            {
+              "id": 18,
+              "label": "$\\Delta R(\\tau,\\tau) <$ 3.2",
+              "raw_count": 973,
+              "stat": "1.48",
+              "step_eff": 0.9424645770717046,
+              "weighted": "21.95"
+            },
+            {
+              "id": 19,
+              "label": "$ m_{T2} > 70 GeV $",
+              "raw_count": 691,
+              "stat": "1.13",
+              "step_eff": 0.6537585421412301,
+              "weighted": "14.35"
+            }
+          ]
+        },
+        "low": {
+          "atlas_eff_times_acc": 0.005297505467409014,
+          "ma5_baseline_normalized_final": 5.64,
+          "ma5_final_relative_difference": -0.07236842105263158,
+          "ma5_mt2_conditional_relative_difference": -0.006941266209000763,
+          "stages": [
+            {
+              "id": 8,
+              "label": "Trigger & offline cuts",
+              "raw_count": 1920,
+              "stat": "2.22",
+              "step_eff": 0.5384245917387128,
+              "weighted": "44.84"
+            },
+            {
+              "id": 9,
+              "label": "75 GeV $< E_{T}^{miss} <$ 150 GeV",
+              "raw_count": 738,
+              "stat": "1.38",
+              "step_eff": 0.3898305084745763,
+              "weighted": "17.48"
+            },
+            {
+              "id": 10,
+              "label": "2 tight $\\tau$",
+              "raw_count": 512,
+              "stat": "1.13",
+              "step_eff": 0.6887871853546911,
+              "weighted": "12.04"
+            },
+            {
+              "id": 11,
+              "label": "$|\\Delta \\phi(\\tau,\\tau)| >$ 0.8",
+              "raw_count": 512,
+              "stat": "1.13",
+              "step_eff": 1.0,
+              "weighted": "12.04"
+            },
+            {
+              "id": 12,
+              "label": "$\\Delta R(\\tau,\\tau) <$ 3.2",
+              "raw_count": 478,
+              "stat": "1.07",
+              "step_eff": 0.920265780730897,
+              "weighted": "11.08"
+            },
+            {
+              "id": 13,
+              "label": "$ m_{T2} > 70 GeV $",
+              "raw_count": 278,
+              "stat": "0.79",
+              "step_eff": 0.5487364620938628,
+              "weighted": "6.08"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "detector_validation": "NOT_RUN",
+  "five_region_fitting": "NOT_RUN",
+  "grid_280_1": {
+    "high": {
+      "acceptance": 0.061759,
+      "acceptance_times_efficiency": 0.012502,
+      "conditional_efficiency": 0.20243,
+      "cutflow_vs_grid_relative_delta": 9.266224403248202e-05,
+      "product_relative_printed_delta": -1.004879219324908e-05
+    },
+    "low": {
+      "acceptance": 0.030226,
+      "acceptance_times_efficiency": 0.0052989,
+      "conditional_efficiency": 0.17531,
+      "cutflow_vs_grid_relative_delta": -0.00026317397780395435,
+      "product_relative_printed_delta": 3.7856913699069617e-06
+    }
+  },
+  "grid_sha256": {
+    "10.17182/hepdata.92006.v2/t11": "b31bdaadf388e60535dfa018a9d1655ef98d58ded2a1a6d4a51a4dd81f6a4886",
+    "10.17182/hepdata.92006.v2/t12": "55f310b951f6c5aff02c71c73e83080b40e42eec94fef829c545bde1c5ae3628",
+    "10.17182/hepdata.92006.v2/t13": "a24ac6b32ccdbbdcda0cdd68aee3a4a0ad9b33c72ea143f61319feb5e4e6fc26",
+    "10.17182/hepdata.92006.v2/t14": "a036b3ac56509b7dbb5dd82f313e4f9e1bf1fe9d0f8ee92957577d47b1fab766",
+    "10.17182/hepdata.92006.v2/t15": "0a4ab412b16693fcb2e3aa6439ae7a49dd8d715b5369a5b128fca95fdcb7cdab",
+    "10.17182/hepdata.92006.v2/t16": "6823f6426725dd8b6b852f6d91787c4c14d4aa4e6d448c2819f22c99192902d0"
+  },
+  "ma5_status": "baseline_normalized_different_matching_not_independent_detector_calibration",
+  "published_t17": "two_signal_regions_only",
+  "published_t18": "observations_and_backgrounds_only_no_signal_cutflow",
+  "t17_sha256": "71c8ffa21d6163b35d13b8c1676f64bc5fe2d1f0a9dafa5eeeb7168ef628517b",
+  "t18_sha256": "35f99bb0b8f87a609cc998da764900d773b52ecfd4b9ed9549f0ea00f99fc0f0"
+}

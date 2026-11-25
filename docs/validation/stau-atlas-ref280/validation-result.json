@@ -1,0 +1,15 @@
+{
+  "by_scale": {
+    "20.0": {
+      "above_matching_cut": 979,
+      "nonzero_ckkwl_weight": 410
+    },
+    "40.0": {
+      "above_matching_cut": 737,
+      "nonzero_ckkwl_weight": 471
+    }
+  },
+  "scope": "native hard event and CKKW-L interface; no detector gate passed",
+  "status": "PASS",
+  "validated_trials": 24
+}
