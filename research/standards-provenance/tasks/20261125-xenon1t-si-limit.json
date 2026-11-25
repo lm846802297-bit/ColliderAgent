@@ -1,0 +1,34 @@
+{
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "task_id": "20261125-xenon1t-si-limit",
+  "repository": "lm846802297-bit/ColliderAgent",
+  "task_brief_path": "research/phenomenology-benchmarks/xenon1t-si-limit/TASK.md",
+  "task_brief_sha256": "b8282de079e471c247bb339ecff36938fac0699433e949123ac00ef560a803d2",
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "14155487afc075d301fa7f6cf452c7bff137e869",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "b735a7cab9c434064e8221f5ecad0c16697b6f62cdb5327c217b8ee210e0113a",
+  "applied_profiles": [
+    "core-governance",
+    "research-compute",
+    "task-handoff",
+    "research-quality-gate",
+    "calculation-result-archive",
+    "rcrps-v1.0.1",
+    "git-review-and-merge"
+  ],
+  "project_extensions": [
+    {
+      "path": "AGENTS.md",
+      "scope": "PhenoAgent execution and evidence separation",
+      "sha256": "71f79abe08cd3a868d881c1590686ba1a31dd09734a94d623ea4e12b45919d95"
+    }
+  ],
+  "acceptance_criteria": [
+    "Absolute recoil differential rate agrees with wimprates below 1 percent",
+    "Upper crossings agree with official v1.0.0 solver below 1 percent",
+    "Null signal rejected",
+    "Curve and reconstructed arrays byte-identical under independent replay"
+  ]
+}

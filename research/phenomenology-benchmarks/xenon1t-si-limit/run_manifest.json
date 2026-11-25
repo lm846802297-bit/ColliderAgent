@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0.1",
+  "record_type": "run_manifest",
+  "run_id": "20261125-xenon1t-si-limit",
+  "created_at": "2026-11-25T15:07:18.825252+00:00",
+  "project": {
+    "project_id": "phenoagent",
+    "repository": "lm846802297-bit/ColliderAgent"
+  },
+  "source": {
+    "commit_sha": "1254037e968d996befb2b69a40b019a6df0617de",
+    "script_path": "research/phenomenology-benchmarks/xenon1t-si-limit/elastic_limit.py",
+    "script_sha256": "ce474d7f322bcee7798bb160717a70e0cdbe8e1bf32ad9d22969de8668e43617"
+  },
+  "inputs": [
+    {
+      "name": "Frozen scenario and gates",
+      "source": "lm846802297-bit/ColliderAgent",
+      "format": "json",
+      "path": "research/phenomenology-benchmarks/xenon1t-si-limit/design.json",
+      "sha256": "1e975cd73302b35bcac795a5bbf52d4e47ee2a60c59214117d5c7f98e8764776",
+      "bytes": 998
+    },
+    {
+      "name": "Official XENON1T approximate likelihood release",
+      "source": "Official XENON1T approximate likelihood release",
+      "version": "v1.0.0",
+      "uri": "https://github.com/XENON1T/xenon1t_approximate_nuclear_recoil_likelihood/tree/v1.0.0",
+      "format": "gz",
+      "sha256": "0b48903ff1dbf0e9160f54ded71d23025ebdfbb17736334072f77084c9b25e77",
+      "bytes": 34511085
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "model": "heavy isoscalar vector contact SI O1; Dirac DM; SHM"
+    },
+    "numerics": {
+      "masses": 45,
+      "minimum_GeV": 6,
+      "maximum_GeV": 1000
+    },
+    "conventions": {
+      "platform": "study-specific conventions in README and design.json"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "engine": "CPython",
+      "version": "3.12.14"
+    },
+    "dependencies": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "wimprates": "0.3.2",
+      "numericalunits": "1.25",
+      "matplotlib": "3.10.8",
+      "tqdm": "4.67.1",
+      "boltons": "21.0.0",
+      "pandas": "2.2.3"
+    },
+    "hardware": {
+      "architecture": "x86_64",
+      "allowed_cpu_count": 9
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "command": "PYTHONPATH=\"$PWD/deps:$PWD/wimprates-0.3.2:$PWD/xenon1t_approximate_nuclear_recoil_likelihood-1.0.0\" python elastic_limit.py > validation.json && python plot_limits.py",
+    "started_at": null,
+    "finished_at": null,
+    "exit_code": 0,
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "unknown",
+      "working_tree_state": "unknown",
+      "dirty_paths": [],
+      "checkout_ref": null,
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "research/phenomenology-benchmarks/xenon1t-si-limit/limits.csv",
+      "role": "reproducibility-artifact",
+      "format": "csv",
+      "sha256": "d8c5da047433144ade1e2dde24fd212e35dd14cdc4efc3088240c9c3fd0f5fce",
+      "bytes": 7968,
+      "rows": 45,
+      "columns": [
+        "m_chi_GeV",
+        "native_toy_cm2",
+        "independent_toy_cm2",
+        "delta_toy",
+        "native_asymptotic_cm2",
+        "independent_asymptotic_cm2",
+        "delta_asymptotic",
+        "C90_GeVminus2"
+      ],
+      "units": {
+        "m_chi_GeV": "GeV",
+        "native_toy_cm2": "cm^2",
+        "independent_toy_cm2": "cm^2",
+        "delta_toy": "dimensionless",
+        "native_asymptotic_cm2": "cm^2",
+        "independent_asymptotic_cm2": "cm^2",
+        "delta_asymptotic": "dimensionless",
+        "C90_GeVminus2": "GeV^-2"
+      }
+    },
+    {
+      "path": "research/phenomenology-benchmarks/xenon1t-si-limit/validation.json",
+      "role": "reproducibility-artifact",
+      "format": "json",
+      "sha256": "e596db644ad86ca6860e2868819cbbb2961dbb7a1fd738a7f06a3990cc322ee5",
+      "bytes": 289
+    },
+    {
+      "path": "research/phenomenology-benchmarks/xenon1t-si-limit/validation-replay.json",
+      "role": "reproducibility-artifact",
+      "format": "json",
+      "sha256": "5f66c18e0fae08e8d891d8510d5d221a639501a9141a9e65431dbd8e7460da49",
+      "bytes": 288
+    },
+    {
+      "path": "research/phenomenology-benchmarks/xenon1t-si-limit/selected_signals_per_ref.json",
+      "role": "reproducibility-artifact",
+      "format": "json",
+      "sha256": "ed53aa89efa54bff533acad1f002936fba2e0a4242865870e01f4bbe468b3126",
+      "bytes": 81183
+    },
+    {
+      "path": "research/phenomenology-benchmarks/xenon1t-si-limit/PhenoAgent_XENON1T_SI_90CL.pdf",
+      "role": "reproducibility-artifact",
+      "format": "pdf",
+      "sha256": "ef4b38ae6b6bfc2c0a5dafb062a6517d26373259a4f96b1cba628160e50f264a",
+      "bytes": 37633
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "check-1",
+        "name": "Absolute recoil differential rate agrees with wimprates below 1 percent",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-2",
+        "name": "Upper crossings agree with official v1.0.0 solver below 1 percent",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-3",
+        "name": "Null signal rejected",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-4",
+        "name": "Curve and reconstructed arrays byte-identical under independent replay",
+        "category": "independent",
+        "status": "passed"
+      }
+    ]
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "record_type": "task_provenance",
+      "provenance_version": "1.0.0",
+      "task_id": "20261125-xenon1t-si-limit",
+      "repository": "lm846802297-bit/ColliderAgent",
+      "task_brief_path": "research/phenomenology-benchmarks/xenon1t-si-limit/TASK.md",
+      "task_brief_sha256": "b8282de079e471c247bb339ecff36938fac0699433e949123ac00ef560a803d2",
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "14155487afc075d301fa7f6cf452c7bff137e869",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "b735a7cab9c434064e8221f5ecad0c16697b6f62cdb5327c217b8ee210e0113a",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1",
+        "git-review-and-merge"
+      ],
+      "project_extensions": [
+        {
+          "path": "AGENTS.md",
+          "scope": "PhenoAgent execution and evidence separation",
+          "sha256": "71f79abe08cd3a868d881c1590686ba1a31dd09734a94d623ea4e12b45919d95"
+        }
+      ],
+      "acceptance_criteria": [
+        "Absolute recoil differential rate agrees with wimprates below 1 percent",
+        "Upper crossings agree with official v1.0.0 solver below 1 percent",
+        "Null signal rejected",
+        "Curve and reconstructed arrays byte-identical under independent replay"
+      ]
+    },
+    "source_identity_note": "commit_sha is the pinned project base. Added source scripts were executed from uncommitted study workspaces and are identified by their SHA-256. No actions or external job ran."
+  }
+}

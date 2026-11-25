@@ -1,0 +1,19 @@
+{
+  "question":"Does fixed two-bin m_hhh profiling improve point-vs-point median Asimov separation relative to a single bin?",
+  "source":"https://arxiv.org/html/2611.33105v1#S2.SS2",
+  "figure":"8 lower-left panel, red dashed and blue dotted",
+  "simulated_channel":"bbb b gamma gamma (two H to bb and one H to gamma gamma), illustrative only, no detector efficiency map",
+  "cut_GeV":750,
+  "cut_rule":"twice the on-shell 3h threshold 3*125 GeV, selected before reading bin differences or executing the likelihood",
+  "axis_policy":"integrate only the source histogram displayed window (preserve step widths and log-to-linear); no unmeasured overflow",
+  "signal_A_events":30,
+  "background_events":100,
+  "background_high_fraction":0.30,
+  "additional_selected_signal_events":[10,100,300],
+  "migration":[0,0.1,0.2],
+  "normalization_log_width":{"s":0.15,"b":0.20},
+  "shape_width_absolute_fractions":{"s":0.05,"b":0.05},
+  "shape_width_scenarios":[0,0.025,0.05,0.10],
+  "comparison":"Both truth directions; native LO rate ratio and exact equal total control. Independently normalized two-point shape; background and signal fraction nuisances preserve totals (Gaussian auxiliary constraints). Only interpret q_A as median Asimov discrimination proxy, not calibrated Z or CLs.",
+  "acceptance":"Positive two-bin increment for both directions after profiling; identical shape negative control and one/two-bin data processing check; independent profile optimizer; explicitly assess plausibility, not claim ATLAS/CMS projection."
+}

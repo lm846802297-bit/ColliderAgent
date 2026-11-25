@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0.1",
+  "record_type": "run_manifest",
+  "run_id": "20261125-hhh-two-bin-shape",
+  "created_at": "2026-11-25T15:07:19.169825+00:00",
+  "project": {
+    "project_id": "phenoagent",
+    "repository": "lm846802297-bit/ColliderAgent"
+  },
+  "source": {
+    "commit_sha": "1254037e968d996befb2b69a40b019a6df0617de",
+    "script_path": "research/phenomenology-benchmarks/hhh-two-bin-shape/profile.py",
+    "script_sha256": "5e47a46a733632bcf9e5470b34cbd2f35f9c17f0d89a5c0718ad8f3a4ccc300f"
+  },
+  "inputs": [
+    {
+      "name": "Frozen scenario and gates",
+      "source": "lm846802297-bit/ColliderAgent",
+      "format": "json",
+      "path": "research/phenomenology-benchmarks/hhh-two-bin-shape/design.json",
+      "sha256": "a9230faaa2b7b024dfc3d6490d7f78868d86f1ff84ae7ee9c1fec132401c6fa2",
+      "bytes": 1531
+    },
+    {
+      "name": "Campbell et al. publication source bundle",
+      "source": "Campbell et al. publication source bundle",
+      "version": "2611.33105v1",
+      "uri": "https://arxiv.org/src/2611.33105v1",
+      "format": "tar.gz",
+      "sha256": "5ffded2747827c6e9e0b6f83c0f00ddae88f2fd80db2f4d6ad5b9a3ec9d39917",
+      "bytes": 1109223
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "scope": "Fig. 8 parton-level templates and illustrative 4b2gamma detector surrogate only"
+    },
+    "numerics": {
+      "cut_GeV": 750,
+      "profile_rows": 30
+    },
+    "conventions": {
+      "platform": "study-specific conventions in README and design.json"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "engine": "CPython",
+      "version": "3.12.14"
+    },
+    "dependencies": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "PyMuPDF": "1.26.6"
+    },
+    "hardware": {
+      "architecture": "x86_64",
+      "allowed_cpu_count": 9
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "command": "python extract.py && python profile.py > results.json",
+    "started_at": null,
+    "finished_at": null,
+    "exit_code": 0,
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "unknown",
+      "working_tree_state": "unknown",
+      "dirty_paths": [],
+      "checkout_ref": null,
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "research/phenomenology-benchmarks/hhh-two-bin-shape/templates.json",
+      "role": "reproducibility-artifact",
+      "format": "json",
+      "sha256": "1773478ba28c091b42eaf8d10626135a2433408a24492c324a380e7740b3a73e",
+      "bytes": 6763
+    },
+    {
+      "path": "research/phenomenology-benchmarks/hhh-two-bin-shape/results.json",
+      "role": "reproducibility-artifact",
+      "format": "json",
+      "sha256": "3bb58b723fd08645bd0f70353cd7813943ad6ecd2f5962fc69e212404077fcce",
+      "bytes": 15978
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "check-1",
+        "name": "750 GeV split integrated in linear probability and verified against independent midpoint sum",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-2",
+        "name": "Two profiles agree in both truth directions; identical-shape and Poisson factorization controls pass",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-3",
+        "name": "Native results.json repeats byte-identically",
+        "category": "independent",
+        "status": "passed"
+      }
+    ]
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "record_type": "task_provenance",
+      "provenance_version": "1.0.0",
+      "task_id": "20261125-hhh-two-bin-shape",
+      "repository": "lm846802297-bit/ColliderAgent",
+      "task_brief_path": "research/phenomenology-benchmarks/hhh-two-bin-shape/TASK.md",
+      "task_brief_sha256": "083fb22c4f6fe2f7472682c4cecc97c1a3dc4f210aaf8c5597c6f7c8e15ae3e3",
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "14155487afc075d301fa7f6cf452c7bff137e869",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "b735a7cab9c434064e8221f5ecad0c16697b6f62cdb5327c217b8ee210e0113a",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1",
+        "git-review-and-merge"
+      ],
+      "project_extensions": [
+        {
+          "path": "AGENTS.md",
+          "scope": "PhenoAgent execution and evidence separation",
+          "sha256": "71f79abe08cd3a868d881c1590686ba1a31dd09734a94d623ea4e12b45919d95"
+        }
+      ],
+      "acceptance_criteria": [
+        "750 GeV split integrated in linear probability and verified against independent midpoint sum",
+        "Two profiles agree in both truth directions; identical-shape and Poisson factorization controls pass",
+        "Native results.json repeats byte-identically"
+      ]
+    },
+    "source_identity_note": "commit_sha is the pinned project base. Added source scripts were executed from uncommitted study workspaces and are identified by their SHA-256. No actions or external job ran."
+  }
+}

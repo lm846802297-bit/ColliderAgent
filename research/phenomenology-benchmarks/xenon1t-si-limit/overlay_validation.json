@@ -1,0 +1,36 @@
+{
+  "toy": {
+    "max_abs_percent": 0.33060992572990777,
+    "mass_of_max_GeV": 6.0,
+    "rms_percent": 0.11235705846499504
+  },
+  "asymptotic": {
+    "max_abs_percent": 0.38700913184019914,
+    "mass_of_max_GeV": 6.0,
+    "rms_percent": 0.11790415481886526
+  },
+  "original_pdf_sha256": "239cae7a8737d87434af65e97d33b4b8ef81cc19b107af05cfbbf5e49b492aac",
+  "nodes": 50,
+  "original_axis_calibration": {
+    "x_ticks_pt": [
+      167.41558837890625,
+      418.55780029296875,
+      669.7000122070312
+    ],
+    "y_ticks_pt": [
+      464.8619689941406,
+      308.8825378417969,
+      152.90310668945312
+    ],
+    "x_tick_values_GeV": [
+      10,
+      100,
+      1000
+    ],
+    "y_tick_values_cm2": [
+      1e-46,
+      1e-45,
+      1e-44
+    ]
+  }
+}

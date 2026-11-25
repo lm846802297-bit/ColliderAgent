@@ -1,0 +1,33 @@
+{
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "task_id": "20261125-hhh-two-bin-shape",
+  "repository": "lm846802297-bit/ColliderAgent",
+  "task_brief_path": "research/phenomenology-benchmarks/hhh-two-bin-shape/TASK.md",
+  "task_brief_sha256": "083fb22c4f6fe2f7472682c4cecc97c1a3dc4f210aaf8c5597c6f7c8e15ae3e3",
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "14155487afc075d301fa7f6cf452c7bff137e869",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "b735a7cab9c434064e8221f5ecad0c16697b6f62cdb5327c217b8ee210e0113a",
+  "applied_profiles": [
+    "core-governance",
+    "research-compute",
+    "task-handoff",
+    "research-quality-gate",
+    "calculation-result-archive",
+    "rcrps-v1.0.1",
+    "git-review-and-merge"
+  ],
+  "project_extensions": [
+    {
+      "path": "AGENTS.md",
+      "scope": "PhenoAgent execution and evidence separation",
+      "sha256": "71f79abe08cd3a868d881c1590686ba1a31dd09734a94d623ea4e12b45919d95"
+    }
+  ],
+  "acceptance_criteria": [
+    "750 GeV split integrated in linear probability and verified against independent midpoint sum",
+    "Two profiles agree in both truth directions; identical-shape and Poisson factorization controls pass",
+    "Native results.json repeats byte-identically"
+  ]
+}
