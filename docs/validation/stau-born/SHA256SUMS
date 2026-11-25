@@ -1,0 +1,5 @@
+06199ab7fdee0b054d4d24efb9459bc9780e110132c0dcd29273740ac93a660a  docs/pheno-stau-born-benchmark.md
+0efece53e56524ceeaf836932dd0c3e8c94197e994c2701dded73c7e073fdc36  python-agent/tools/stau_born.py
+7733dd2b6cdf14f1dc72f34848d2db3276cd8d4e21e61ace21ad54569531d266  python-agent/tests/test_stau_born.py
+856c39ae9c7753bf8bd01a1fa5f186218763c72043902ea0fa9dadec46092842  docs/validation/stau-born/uL.json
+334c56a11a0e6c389e80109cfc38d35286758264d12ece705658205b48642ee9  docs/validation/stau-born/dR.json
