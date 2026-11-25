@@ -11,7 +11,7 @@
 [![Claude Code](https://img.shields.io/badge/Claude_Code-compatible-7c3aed)](https://claude.ai/code)
 ![Status](https://img.shields.io/badge/status-beta-orange)
 
-> From a LaTeX Lagrangian to a publication-ready figure — fully automated.
+> Development goal: one workflow from a model Lagrangian to its relevant experimental constraints.
 
 [Overview](#overview) • [Quickstart](#quickstart) • [Installation](#installation) • [Examples](#example-prompts) • [Python Agent](#python-agent) • [Citation](#citation)
 
@@ -33,13 +33,26 @@
 
 Collider-Agent enables AI coding agents (Claude Code, Cursor, Windsurf, and more) to autonomously reproduce collider phenomenology results from physics papers. It combines specialized sub-agents and reusable skill modules that interface with standard HEP tools via the [Magnus](https://github.com/Rise-AGI/magnus) cloud platform — no local HEP software installation required.
 
-**Full pipeline, fully automated:**
+**Current collider workflow:**
 
 - Parse a LaTeX Lagrangian and generate a FeynRules model
 - Validate the model and produce a UFO output for MadGraph5
 - Run parton-level and showered event generation with MadGraph5 + Pythia8
 - Apply detector simulation (Delphes) and analysis cuts (MadAnalysis5)
 - Generate kinematic distributions, cutflow tables, exclusion contours in parameter space, etc.
+
+## Development goal: from a Lagrangian to experimental limits
+
+Given a model Lagrangian, ColliderAgent should provide one workflow to **find every relevant experimental analysis in a versioned catalog and obtain its constraint wherever the evidence permits**. It should derive the spectrum, couplings, rates, and signatures as needed, route each applicable analysis to a validated backend, and return reproducible constraints on the model parameters. This is the development target, not a claim of current coverage.
+
+| Step | Expected output |
+| --- | --- |
+| Specify the model | Lagrangian, field and parameter conventions, and scan domain. Request or explicitly record missing external inputs instead of guessing. |
+| Discover relevant analyses | Match decay and scattering channels, lifetimes and energy scales against a versioned catalog. Cover colliders, fixed-target and beam-dump searches, precision and rare-decay measurements, and dark-matter searches where relevant. Report astrophysical and cosmological constraints separately with their additional assumptions. |
+| Evaluate each analysis | Distinguish an applicable published limit mapped to the model from a validated numerical recast. Record the analysis and dataset version, assumptions, statistical method, applicable parameter region, and missing response or likelihood inputs. |
+| Report coverage and limits | List computed, mapped-only, blocked/not verified, and not-applicable analyses with reasons. Output per-analysis limits, confidence levels, uncertainty and reproducibility records. Combine only when overlap and correlations are demonstrably handled. Keep theoretical consistency tests separate from experimental exclusions. |
+
+**First acceptance milestone:** take one specified Lagrangian through model validation, observable prediction, and one public experimental analysis to a numerical limit checked against an independent reference. Publish the coverage report, including at least one inapplicable or blocked analysis as a negative control. Then demonstrate a second model and an applicable non-collider channel before claiming broader coverage. A catalog gap or unpublished input is reported, not interpreted as absence of a constraint.
 
 ## Roadmap
 
