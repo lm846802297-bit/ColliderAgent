@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "catalog_version": "0.1.0",
+  "analyses": [
+    {
+      "id": "ATLAS-SUSY-2018-04",
+      "release": "HEPData.92006.v2.r2",
+      "family": "collider",
+      "sources": ["https://arxiv.org/abs/1911.06660v2", "https://doi.org/10.17182/hepdata.92006.v2"],
+      "requires_true": ["direct_stau_pair", "unmixed_degenerate_staus", "bino_lsp", "stau_to_tau_lsp_exclusive_prompt"],
+      "thresholds": [],
+      "route": "independent-detector-yields-to-histfactory",
+      "requires_evidence": ["matched_model_and_spectrum", "validated_signal_normalization", "validated_detector_sr1_sr2", "validated_detector_qcr1_qcr2_wcr", "combined_likelihood_and_nuisance_contract"]
+    },
+    {
+      "id": "ATLAS-EXOT-2020-11",
+      "release": "arXiv.2202.07953v2",
+      "family": "collider",
+      "sources": ["https://arxiv.org/abs/2202.07953v2"],
+      "requires_true": ["sm_like_vbf_production", "invisible_identical_pair_channel"],
+      "thresholds": [{"parent": "higgs_mass_gev", "daughter": "invisible_pair_mass_gev", "multiplicity": 2}],
+      "route": "published-branching-ratio-mapping-only",
+      "requires_evidence": ["validated_partial_and_total_widths", "sm_like_production_and_acceptance_check"]
+    }
+  ]
+}
