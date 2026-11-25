@@ -1,0 +1,10 @@
+{
+  "nodes": 50,
+  "max_limit_solver_rel_diff": 2.0246111166244418e-05,
+  "density_rescaling_controls_GeV": [
+    6,
+    30,
+    100
+  ],
+  "zero_transfer_and_contact_limits": "PASS"
+}
