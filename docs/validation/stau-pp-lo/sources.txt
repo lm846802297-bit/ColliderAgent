@@ -1,0 +1,3 @@
+https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.5.tar.gz
+https://lhapdfsets.web.cern.ch/lhapdfsets/current/NNPDF23_lo_as_0130_qed.tar.gz
+https://files.pythonhosted.org/packages/e5/d8/26dbd4f3a708a45a13e0239098bbd31fe49ff5b86ac891c9a31dbb1c0030/pythia8mc-8.317.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl

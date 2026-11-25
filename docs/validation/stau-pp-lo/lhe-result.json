@@ -1,0 +1,14 @@
+{
+  "n_events": 2048,
+  "pool": 16384,
+  "seed": 740641,
+  "sigma_pool_fb": 1.4733332281992724,
+  "sigma_pool_stderr_fb": 0.02218741490986785,
+  "reference_fb": 1.4472083514941985,
+  "unique_pool_kinematics": 1555,
+  "proposal_effective_count": 3474.5771088141514,
+  "helicity_magnitude_bounds": [
+    0.9988716053783663,
+    0.9999982784904511
+  ]
+}

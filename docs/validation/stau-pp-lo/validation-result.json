@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "max_lhe_conservation_scaled": 7.961955297086404e-16,
+  "scope": "Born+PDF integration and native shower/LHE longitudinal tau-spin handoff only"
+}

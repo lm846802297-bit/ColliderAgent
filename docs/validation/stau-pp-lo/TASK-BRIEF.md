@@ -1,0 +1,3 @@
+# Hadronic and shower qualification 
+Question: does the pinned native proton PDF connect the validated stau Born process to a numerically stable 13 TeV pp result, and can Pythia preserve a controlled external tau-helicity tag in an LHE stream?
+Pass: independent x1/x2 and log(tau)/y quadratures agree within 0.1%; retain per-state normalization and PDF domain; verify event kinematics before shower. A Pythia integration test must witness ISR recoil and opposite pion-energy slopes for reversed tau tags versus unpolarized. No detector, QCD precision normalization or limit. ATLAS used NNPDF2.3 LO with up to 2 jets, A14 and CKKW-L; our member-0 Born-only variant is deliberately not equivalent.
