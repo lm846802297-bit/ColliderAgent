@@ -1,0 +1,44 @@
+[
+  {
+    "channel": "bb",
+    "mass_GeV": 6,
+    "limit_cms": 4.8761624015470934e-27,
+    "direct_per_bin_limit_cms": 4.876162401437723e-27,
+    "relative_difference": 2.2429613721897113e-11
+  },
+  {
+    "channel": "bb",
+    "mass_GeV": 100,
+    "limit_cms": 2.084630262827015e-26,
+    "direct_per_bin_limit_cms": 2.084630262815713e-26,
+    "relative_difference": 5.4216631184544894e-12
+  },
+  {
+    "channel": "bb",
+    "mass_GeV": 1000,
+    "limit_cms": 1.9013508726712482e-25,
+    "direct_per_bin_limit_cms": 1.901350872671249e-25,
+    "relative_difference": 6.661338147750939e-16
+  },
+  {
+    "channel": "tautau",
+    "mass_GeV": 2,
+    "limit_cms": 3.0256729468783645e-27,
+    "direct_per_bin_limit_cms": 3.025672946447537e-27,
+    "relative_difference": 1.423906548225773e-10
+  },
+  {
+    "channel": "tautau",
+    "mass_GeV": 100,
+    "limit_cms": 2.83546843598028e-26,
+    "direct_per_bin_limit_cms": 2.835468436002012e-26,
+    "relative_difference": 7.664313628197306e-12
+  },
+  {
+    "channel": "tautau",
+    "mass_GeV": 1000,
+    "limit_cms": 7.156914662771744e-25,
+    "direct_per_bin_limit_cms": 7.15691466277175e-25,
+    "relative_difference": 8.881784197001252e-16
+  }
+]

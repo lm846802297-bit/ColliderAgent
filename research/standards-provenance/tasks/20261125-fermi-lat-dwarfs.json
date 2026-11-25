@@ -1,0 +1,34 @@
+{
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "task_id": "20261125-fermi-lat-dwarfs",
+  "repository": "lm846802297-bit/ColliderAgent",
+  "task_brief_path": "research/phenomenology-benchmarks/fermi-lat-dwarfs/TASK.md",
+  "task_brief_sha256": "fa1b06efa52adc263bb5aa5de4e613136bcc20051829a98995b1117cd1e7d398",
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "14155487afc075d301fa7f6cf452c7bff137e869",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "b735a7cab9c434064e8221f5ecad0c16697b6f62cdb5327c217b8ee210e0113a",
+  "applied_profiles": [
+    "core-governance",
+    "research-compute",
+    "task-handoff",
+    "research-quality-gate",
+    "calculation-result-archive",
+    "rcrps-v1.0.1",
+    "git-review-and-merge"
+  ],
+  "project_extensions": [
+    {
+      "path": "AGENTS.md",
+      "scope": "PhenoAgent execution and evidence separation",
+      "sha256": "71f79abe08cd3a868d881c1590686ba1a31dd09734a94d623ea4e12b45919d95"
+    }
+  ],
+  "acceptance_criteria": [
+    "Independent direct per-bin nuisance profile in six masses agrees within 1e-4 relative",
+    "Original vector path numerically validates against the official release at each observed node",
+    "Zero in-band signal and fixed-J out-of-domain flux rejected",
+    "Original axes and legend independently render and visual inspection distinguishes model output from observed curve"
+  ]
+}

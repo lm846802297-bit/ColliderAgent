@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0.1",
+  "record_type": "run_manifest",
+  "run_id": "20261125-fermi-lat-dwarfs",
+  "created_at": "2026-11-25T16:09:39.971235+00:00",
+  "project": {
+    "project_id": "phenoagent",
+    "repository": "lm846802297-bit/ColliderAgent"
+  },
+  "source": {
+    "commit_sha": "1254037e968d996befb2b69a40b019a6df0617de",
+    "script_path": "research/phenomenology-benchmarks/fermi-lat-dwarfs/recalc.py",
+    "script_sha256": "34668fb7d82f8dbbbedefe3c3f9f7da55ff4279c167934c6d10bb2ad46e948fd"
+  },
+  "inputs": [
+    {
+      "name": "Frozen scenario and gates",
+      "source": "lm846802297-bit/ColliderAgent",
+      "format": "json",
+      "path": "research/phenomenology-benchmarks/fermi-lat-dwarfs/design.json",
+      "sha256": "701d0ff0ef84e545786c880e833bc4f69db9fe2e660c79e6819a9e8f006c1a67",
+      "bytes": 280
+    },
+    {
+      "name": "Fermi-LAT public likelihood and limit release",
+      "source": "Fermi-LAT public likelihood and limit release",
+      "version": "01-00-02",
+      "uri": "https://www-glast.stanford.edu/pub_data/1048/release-01-00-02.tar.gz",
+      "format": "gz",
+      "sha256": "8dc6ea5836afefb758277baae4ffa55cc36fc9de6c6a04aa7b3632648e45e6d1",
+      "bytes": 176066
+    },
+    {
+      "name": "Fermipy DMFit photon-spectrum grid",
+      "source": "Fermipy DMFit photon-spectrum grid",
+      "version": "fbecde1a01c03fd3d8a9ecc8e997506d5bda9589",
+      "uri": "https://raw.githubusercontent.com/fermipy/fermipy/fbecde1a01c03fd3d8a9ecc8e997506d5bda9589/fermipy/data/gammamc_dif.dat",
+      "format": "pin",
+      "sha256": "368e139b6e4e736e0dc49178d23b1233a711b217fce6f53107bc4f019f8e5cad",
+      "bytes": 936288
+    },
+    {
+      "name": "Fermi-LAT paper and vector figures",
+      "source": "Fermi-LAT paper and vector figures",
+      "version": "arXiv:1503.02641v2",
+      "uri": "https://arxiv.org/src/1503.02641v2",
+      "format": "gz",
+      "sha256": "7486790b1918de6f2f135fa80d9f42b404469e0a62d9177956826eee2aebea8c",
+      "bytes": 2433638
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "analysis": "Fermi-LAT 15 dwarf observed six-year Pass 8",
+      "channels": [
+        "bb",
+        "tautau"
+      ],
+      "reference_wimp": "self-conjugate; pure prompt channels"
+    },
+    "numerics": {
+      "release": "01-00-02",
+      "q_limit": 2.71,
+      "energy_bins": 24,
+      "nominal_j": "Table 1 rounded log10 J",
+      "comparison_nodes": 23
+    },
+    "conventions": {
+      "platform": "study-specific conventions in README and design.json"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "engine": "CPython",
+      "version": "3.12.14"
+    },
+    "dependencies": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "pymupdf": "1.26.6"
+    },
+    "hardware": {
+      "architecture": "x86_64",
+      "allowed_cpu_count": 9
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "command": "sha256sum -c SOURCE.SHA256 && OPENBLAS_NUM_THREADS=1 python recalc.py > trial.log && OPENBLAS_NUM_THREADS=1 python verify.py > independent.json && OPENBLAS_NUM_THREADS=1 python overlay.py",
+    "started_at": null,
+    "finished_at": null,
+    "exit_code": 0,
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "unknown",
+      "working_tree_state": "unknown",
+      "dirty_paths": [],
+      "checkout_ref": null,
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "research/phenomenology-benchmarks/fermi-lat-dwarfs/trial.log",
+      "role": "reproducibility-artifact",
+      "format": "log",
+      "sha256": "94c362c00eb612ccd9a27d6fb14bd53163f655ab6238eb5a9380edc9c762ea8e",
+      "bytes": 2566
+    },
+    {
+      "path": "research/phenomenology-benchmarks/fermi-lat-dwarfs/independent.json",
+      "role": "reproducibility-artifact",
+      "format": "json",
+      "sha256": "538bb18391b74fa5c1d39ac7005ae3130e6ab925fb609358425b3371ff4b62f5",
+      "bytes": 1186
+    },
+    {
+      "path": "research/phenomenology-benchmarks/fermi-lat-dwarfs/Fermi_LAT_Fig1_Pointwise.csv",
+      "role": "reproducibility-artifact",
+      "format": "csv",
+      "sha256": "3b5fc907ab3756c91564e15b738e7e9fb20b2aa49ff43f50d6d3eef391596f23",
+      "bytes": 3224,
+      "rows": 23,
+      "columns": [
+        "channel",
+        "mass_GeV",
+        "published_table_cm3_per_s",
+        "published_vector_cm3_per_s",
+        "reconstructed_cm3_per_s",
+        "relative_to_table",
+        "relative_to_pdf",
+        "fixed_J_cm3_per_s"
+      ],
+      "units": {
+        "channel": "dimensionless",
+        "mass_GeV": "GeV",
+        "published_table_cm3_per_s": "cm^3/s",
+        "published_vector_cm3_per_s": "cm^3/s",
+        "reconstructed_cm3_per_s": "cm^3/s",
+        "relative_to_table": "dimensionless",
+        "relative_to_pdf": "dimensionless",
+        "fixed_J_cm3_per_s": "cm^3/s"
+      }
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "check-1",
+        "name": "Independent direct per-bin nuisance profile in six masses agrees within 1e-4 relative",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-2",
+        "name": "Original vector path numerically validates against the official release at each observed node",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-3",
+        "name": "Zero in-band signal and fixed-J out-of-domain flux rejected",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-4",
+        "name": "Original axes and legend independently render and visual inspection distinguishes model output from observed curve",
+        "category": "independent",
+        "status": "passed"
+      }
+    ]
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "record_type": "task_provenance",
+      "provenance_version": "1.0.0",
+      "task_id": "20261125-fermi-lat-dwarfs",
+      "repository": "lm846802297-bit/ColliderAgent",
+      "task_brief_path": "research/phenomenology-benchmarks/fermi-lat-dwarfs/TASK.md",
+      "task_brief_sha256": "fa1b06efa52adc263bb5aa5de4e613136bcc20051829a98995b1117cd1e7d398",
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "14155487afc075d301fa7f6cf452c7bff137e869",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "b735a7cab9c434064e8221f5ecad0c16697b6f62cdb5327c217b8ee210e0113a",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1",
+        "git-review-and-merge"
+      ],
+      "project_extensions": [
+        {
+          "path": "AGENTS.md",
+          "scope": "PhenoAgent execution and evidence separation",
+          "sha256": "71f79abe08cd3a868d881c1590686ba1a31dd09734a94d623ea4e12b45919d95"
+        }
+      ],
+      "acceptance_criteria": [
+        "Independent direct per-bin nuisance profile in six masses agrees within 1e-4 relative",
+        "Original vector path numerically validates against the official release at each observed node",
+        "Zero in-band signal and fixed-J out-of-domain flux rejected",
+        "Original axes and legend independently render and visual inspection distinguishes model output from observed curve"
+      ]
+    },
+    "source_identity_note": "commit_sha is the pinned project base. Added source scripts were executed from uncommitted study workspaces and are identified by their SHA-256. No actions or external job ran."
+  }
+}

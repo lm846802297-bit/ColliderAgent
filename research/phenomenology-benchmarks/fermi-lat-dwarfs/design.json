@@ -1,0 +1,1 @@
+{"physics":{"analysis":"Fermi-LAT 15 dwarf observed six-year Pass 8","channels":["bb","tautau"],"reference_wimp":"self-conjugate; pure prompt channels"},"numerics":{"release":"01-00-02","q_limit":2.71,"energy_bins":24,"nominal_j":"Table 1 rounded log10 J","comparison_nodes":23}}
