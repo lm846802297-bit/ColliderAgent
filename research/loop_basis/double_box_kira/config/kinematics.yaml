@@ -5,13 +5,13 @@ kinematics:
   kinematic_invariants:
     - [s, 2]
     - [t, 2]
-    - [Q3sq, 2]
-    - [Q4sq, 2]
+    - [q3sq, 2]
+    - [q4sq, 2]
     - [m2, 2]
   scalarproduct_rules:
     - [[p1, p1], 0]
     - [[p2, p2], 0]
-    - [[p3, p3], Q3sq]
+    - [[p3, p3], q3sq]
     - [[p1, p2], s/2]
-    - [[p2, p3], (t-Q3sq)/2]
-    - [[p1, p3], (Q4sq-s-t)/2]
+    - [[p2, p3], (t-q3sq)/2]
+    - [[p1, p3], (q4sq-s-t)/2]

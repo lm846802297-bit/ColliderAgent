@@ -1,0 +1,32 @@
+{
+  "status": "native-master-discovery-PASS",
+  "source_git": "25b36e4a027383e25e020fb620e4c01387e7552d",
+  "tools": {
+    "kira": "3.1 128-bit, external FireFly with FLINT",
+    "kira_sha256": "88491da6c07affbb1ea158bd09475340cd9a41dd1fc2971cd5c5e663406cb334",
+    "kira_source": "doi:10.17632/v3cmsnfrnn.3",
+    "fermat": "Intel Linux 7.9b",
+    "fermat_source": "https://home.bway.net/lewis/ferm7.html",
+    "fermat_archive_sha256": "67954cc4cbc6e96b8a2080e142e0ce7cad05d1036edc928e6600de47888a606c",
+    "fermat_binary_sha256": "cca7f136820e21be0b9f8a23a0efe9289ce62e59d0e88702150809d9815dfc2d"
+  },
+  "discovery": {
+    "r8-s2": {
+      "native_log_sha256": "9e8b91811fdb0c88dd58c3d7b52a30085cef4de1d99254cfbc1e4b549f0d67bf",
+      "master_sha256": "8209cf740fec8c87076c4321bfea79e8594b3b18407091df22487ed5dc56dcdb",
+      "master_count": 37,
+      "sector_count": 24,
+      "returncode": 0
+    },
+    "r9-s3": {
+      "native_log_sha256": "901d5b71ce83440e3a6ea2d92fccba9df4e12c92b1c97ee73f7c855bef72e026",
+      "master_sha256": "8209cf740fec8c87076c4321bfea79e8594b3b18407091df22487ed5dc56dcdb",
+      "master_count": 37,
+      "sector_count": 24,
+      "returncode": 0
+    }
+  },
+  "sector30": "native FireFly reduction, exact independent analytic check",
+  "prepared_target_count": 438,
+  "full_symbolic_results": "not included in this discovery record"
+}

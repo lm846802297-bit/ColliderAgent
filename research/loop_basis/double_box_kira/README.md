@@ -3,9 +3,7 @@
 This directory contains an independent Kira family and matching derivative
 generator for Table 1 / §IV.1 of
 [CANON arXiv:2611.33100v1](https://arxiv.org/html/2611.33100v1#S4.SS1).
-There is no recovered original pre-canonical table in this commit. No production
-Kira run, search arm or timing occurred. The local tests cover the algebra and
-file contracts, not whether these seed bounds close the reduction.
+The author's original pre-canonical table is not needed for this independently generated basis. The [native discovery receipt](native_discovery/receipt.json) records two successful 37-master runs with byte-identical order, plus a native sector-30 check; it is not evidence that the full symbolic run is complete. No search timing is reported.
 
 ## Derivatives before IBP
 
@@ -53,8 +51,7 @@ different construction (Minkowski components and linear constraints).
    `{"schema":"pheno-pdb-ibp-v1","masters":[...],"rules":{"PDB[...]":{"PDB[...]":"exact rational coefficient"}}}`
    without changing the order or coefficients (`d` or `eps` accepted).
    A zero rule must be present as an empty object; a missing target does not
-   imply zero. A specialized Kira-table converter has **not** been validated
-   on this family's native output. Obtain the 21-letter alphabet as exact
+   imply zero. Use `python python-agent/tools/kira_pdb_export.py KIRA_EXPORT.m NEW_JOB/preferred-masters NEW_JOB/targets NORMALIZED.json`. The data-only converter was exercised on a real export for the sector-30 subfamily. Kira uses lowercase `q3sq,q4sq` for Fermat; the converter maps them back to the intake names without changing kinematics. Obtain the 21-letter alphabet as exact
    expressions from the published output only; do not expose its residue
    matrices or canonical basis.
 4. Run `python python-agent/tools/canon_pdb_intake.py assemble NEW_JOB NORMALIZED.json LETTERS.json SOURCE.json`.
@@ -70,3 +67,13 @@ As a small analytic control, sector 30 factorizes into two massless bubbles
 carrying s; their scaling is `(-s-i0)^(-2*eps)`. A closed row from the
 single-bubble IBP relation goes through the assembled format and verifier;
 this is not a native reduction or evidence that the other 36 rows are known.
+
+### Native evidence
+
+The deposited Kira build is [Kira 3.1/FireFly, Mendeley v3](https://doi.org/10.17632/v3cmsnfrnn.3).
+The 128-bit build's bytes matched the deposit's SHA-256 before execution.
+For this noncommercial research run, obtain Fermat separately from the
+[author](https://home.bway.net/lewis/ferm7.html), preserving the `BACKWARD`
+directory, and set `FERMATPATH` to the executable. No binaries are stored here.
+The sector-30 native rules reproduce the independent result (3-d)/s for the
+dotted bubble ratio and explicitly set its scaleless counterpart to zero.

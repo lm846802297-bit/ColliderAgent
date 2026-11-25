@@ -1,0 +1,9 @@
+# Trial seeding, not an asserted closed basis. Compare successive larger seeds.
+jobs:
+  - reduce_sectors:
+      reduce:
+        - {sectors: [127], r: 9, s: 3}
+      select_integrals:
+        select_mandatory_recursively:
+          - {sectors: [127], r: 9, s: 3}
+      run_initiate: masters

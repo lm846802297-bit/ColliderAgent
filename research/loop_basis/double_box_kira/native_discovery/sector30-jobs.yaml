@@ -1,0 +1,14 @@
+jobs:
+  - reduce_sectors:
+      reduce:
+        - {sectors: [30], r: 6, s: 1}
+      select_integrals:
+        select_mandatory_list:
+          - [PDB, targets]
+      run_initiate: true
+      run_firefly: true
+      preferred_masters: "preferred-masters"
+  - kira2math:
+      reconstruct_mass: true
+      target:
+        - [PDB, targets]
