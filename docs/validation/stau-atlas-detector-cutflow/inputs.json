@@ -1,0 +1,58 @@
+{
+  "compiler": "GCC 14.2.0 Debian 14.2.0-19",
+  "local_source_digests": {
+    "atlas.pdf": {
+      "bytes": 883232,
+      "sha256": "87abbdfec1fd96c8a60712d06ed33235f49868f535066613cf05c7cdd38500db"
+    },
+    "card-34025.tcl": {
+      "bytes": 20703,
+      "sha256": "a9733413872702a485dfec35ed7951fca493ecc738da9af2e6ae3778f59b9b36"
+    },
+    "card-34026.tcl": {
+      "bytes": 20703,
+      "sha256": "0d29fccf11217c5e9d50b854a46faebc4acdd160abbc5d7e7110bca2a1eaeb2f"
+    },
+    "card-34027.tcl": {
+      "bytes": 20703,
+      "sha256": "8dde2e76dcb1b2d67f23fd01749d446c5c311d68e493ba94da79156312c6fbea"
+    },
+    "delphes.tar.gz": {
+      "bytes": 5012530,
+      "sha256": "635f05cddd803a04eb1f3bb70632e25e3e7b63e3feef0220fe426f93a0f609b9"
+    },
+    "detector-34025.root": {
+      "bytes": 44052225,
+      "sha256": "b5e6d26d82d63acfe0949f1de8557befb7c8703670b8700fe283cce3d6f0a9f5"
+    },
+    "detector-34026.root": {
+      "bytes": 44019105,
+      "sha256": "f2296769271e0434669b3e364d9afb4ca7126126a3cb228514eb573bbe8d7e68"
+    },
+    "detector-34027.root": {
+      "bytes": 44032401,
+      "sha256": "bb0c6dc34f4d0556e70d0ea0dd81545d76d014b0ac1359fbdaff973e9552e913"
+    },
+    "recast-1579": {
+      "bytes": 20627,
+      "sha256": "66248229f75a734fb65f6a6a7865f3e24c7c025f73183a518030126f7afafc5c"
+    },
+    "recast-1580": {
+      "bytes": 12839,
+      "sha256": "e3a29c1846122a998837490262dadabf974dd675aa777094ce6b62d3bfa363fb"
+    }
+  },
+  "native_input_hepmc_sha256": "33ea082ce28778eb99cdc7219730a69e9c8278021bd7f28f0d588c1764d3317a",
+  "public_t17_sha256": "71c8ffa21d6163b35d13b8c1676f64bc5fe2d1f0a9dafa5eeeb7168ef628517b",
+  "source_commit": "28658365abeb71ee36dfc739f9670c1514c0cb10",
+  "wheel_digests": {
+    "mt2-1.3.1-cp312-cp312-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl": {
+      "bytes": 120173,
+      "sha256": "ab013d44551828bda00ed877a3004f09f0633d9ff8ccce930072ca7a9ca4ec66"
+    },
+    "root-0.1a10-cp312-cp312-manylinux_2_28_x86_64.whl": {
+      "bytes": 243423938,
+      "sha256": "9f3adfd54c324cdf46013094f6a9e38d259a61f3c485853ce5879d55c0f5c7b2"
+    }
+  }
+}
