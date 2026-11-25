@@ -1,0 +1,30 @@
+{
+  "record_type": "task_provenance",
+  "provenance_version": "1.0.0",
+  "task_id": "20261125-pdb-derivative-intake",
+  "repository": "lm846802297-bit/ColliderAgent",
+  "task_brief_path": "research/loop_basis/double_box_kira/TASK.md",
+  "task_brief_sha256": "47dd7fd3ee0e2edd8c87b92cbe34cbdc27c4ebe287613d58b010c61a91490b89",
+  "central_repository": "lm846802297-bit/high-energy-theory-research",
+  "central_commit_sha": "14155487afc075d301fa7f6cf452c7bff137e869",
+  "lock_file_path": "research/standards-lock.yaml",
+  "lock_file_sha256": "b735a7cab9c434064e8221f5ecad0c16697b6f62cdb5327c217b8ee210e0113a",
+  "applied_profiles": [
+    "core-governance",
+    "task-handoff",
+    "research-quality-gate",
+    "git-review-and-merge"
+  ],
+  "project_extensions": [
+    {
+      "path": "AGENTS.md",
+      "scope": "Project preflight and evidence boundaries",
+      "sha256": "71f79abe08cd3a868d881c1590686ba1a31dd09734a94d623ea4e12b45919d95"
+    }
+  ],
+  "acceptance_criteria": [
+    "PDB family exact scalar-product map and squared-mass sign",
+    "All 45 derivative components checked against explicit rational Minkowski vectors and an independent Euler identity",
+    "Missing or nonclosing reductions rejected; independent bubble-product control accepted; no production IBP/timing claims"
+  ]
+}
