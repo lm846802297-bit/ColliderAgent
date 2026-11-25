@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0.1",
+  "record_type": "run_manifest",
+  "run_id": "20261125-fermi-axial-contact",
+  "created_at": "2026-11-25T17:08:08.850232+00:00",
+  "project": {
+    "project_id": "phenoagent",
+    "repository": "lm846802297-bit/ColliderAgent"
+  },
+  "source": {
+    "commit_sha": "0e66d7d69c551ddd2a1118d9659d6d8666cf9ffa",
+    "script_path": "research/phenomenology-benchmarks/fermi-axial-contact/contact.py",
+    "script_sha256": "0fbd46983ec7170f7aaf9b85c3c478178e7affb0590d514e782a1caeede21264"
+  },
+  "inputs": [
+    {
+      "name": "Frozen scenario and gates",
+      "source": "lm846802297-bit/ColliderAgent",
+      "format": "json",
+      "path": "research/phenomenology-benchmarks/fermi-axial-contact/design.json",
+      "sha256": "4bd1242b01a3641c3b76e265c128f6fb12fbf15b2e118c1a2891011fc804072f",
+      "bytes": 259
+    },
+    {
+      "name": "Fermi-LAT public likelihood and limit release",
+      "source": "Fermi-LAT public likelihood and limit release",
+      "version": "01-00-02",
+      "uri": "https://www-glast.stanford.edu/pub_data/1048/release-01-00-02.tar.gz",
+      "format": "gz",
+      "sha256": "8dc6ea5836afefb758277baae4ffa55cc36fc9de6c6a04aa7b3632648e45e6d1",
+      "bytes": 176066
+    },
+    {
+      "name": "Fermipy DMFit photon-spectrum grid",
+      "source": "Fermipy DMFit photon-spectrum grid",
+      "version": "fbecde1a01c03fd3d8a9ecc8e997506d5bda9589",
+      "uri": "https://raw.githubusercontent.com/fermipy/fermipy/fbecde1a01c03fd3d8a9ecc8e997506d5bda9589/fermipy/data/gammamc_dif.dat",
+      "format": "pin",
+      "sha256": "368e139b6e4e736e0dc49178d23b1233a711b217fce6f53107bc4f019f8e5cad",
+      "bytes": 936288
+    }
+  ],
+  "configuration": {
+    "physics": {
+      "model": "symmetric Dirac axial-lepton dimension-six contact benchmark",
+      "channels": [
+        "mumu",
+        "tautau",
+        "numu",
+        "nutau"
+      ],
+      "spectrum": "DMFit prompt only"
+    },
+    "numerics": {
+      "masses": 25,
+      "mass_min_GeV": 2,
+      "mass_max_GeV": 100,
+      "q_limit": 2.71,
+      "held_out": [
+        3.7,
+        17,
+        73
+      ]
+    },
+    "conventions": {
+      "platform": "study-specific conventions in README and design.json"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "runtime": {
+      "engine": "CPython",
+      "version": "3.12.14"
+    },
+    "dependencies": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "matplotlib": "3.10.8"
+    },
+    "hardware": {
+      "architecture": "x86_64",
+      "allowed_cpu_count": 9
+    }
+  },
+  "execution": {
+    "status": "succeeded",
+    "command": "OPENBLAS_NUM_THREADS=1 python contact.py ../fermi-lat-dwarfs && python plot.py",
+    "started_at": null,
+    "finished_at": null,
+    "exit_code": 0,
+    "source_control": {
+      "event": "local",
+      "checkout_mode": "unknown",
+      "working_tree_state": "unknown",
+      "dirty_paths": [],
+      "checkout_ref": null,
+      "pr_number": null,
+      "pr_url": null,
+      "pr_head_sha": null,
+      "base_sha": null,
+      "tested_merge_sha": null,
+      "head_ref": null,
+      "base_ref": null,
+      "workflow_run_id": null,
+      "workflow_run_attempt": null
+    }
+  },
+  "outputs": [
+    {
+      "path": "research/phenomenology-benchmarks/fermi-axial-contact/limits.csv",
+      "role": "reproducibility-artifact",
+      "format": "csv",
+      "sha256": "d29588df70ebf424a14657ddfec18b6b50c679863ffc9a9eeb8a68d1e539b6a5",
+      "bytes": 5155,
+      "rows": 25,
+      "columns": [
+        "mass_GeV",
+        "coefficient_95_GeVminus2",
+        "contact_scale_95_GeV",
+        "sigma_v_total_95_cm3_per_s",
+        "sigma_v_visible_95_cm3_per_s",
+        "BR_mumu",
+        "BR_tautau",
+        "BR_numu",
+        "BR_nutau",
+        "q"
+      ],
+      "units": {
+        "mass_GeV": "GeV",
+        "coefficient_95_GeVminus2": "GeV^-2",
+        "contact_scale_95_GeV": "GeV",
+        "sigma_v_total_95_cm3_per_s": "cm^3/s",
+        "sigma_v_visible_95_cm3_per_s": "cm^3/s",
+        "BR_mumu": "dimensionless",
+        "BR_tautau": "dimensionless",
+        "BR_numu": "dimensionless",
+        "BR_nutau": "dimensionless",
+        "q": "dimensionless"
+      }
+    },
+    {
+      "path": "research/phenomenology-benchmarks/fermi-axial-contact/signals.json",
+      "role": "reproducibility-artifact",
+      "format": "json",
+      "sha256": "0f5dace492fcc95828c4a711a246d4f50bdf888208d572151ddecdc69c108639",
+      "bytes": 14258
+    },
+    {
+      "path": "research/phenomenology-benchmarks/fermi-axial-contact/validation.json",
+      "role": "reproducibility-artifact",
+      "format": "json",
+      "sha256": "474be987828e23478049beaa92dad80322568cbfa8d16579ee933416a7af02b3",
+      "bytes": 1653
+    },
+    {
+      "path": "research/phenomenology-benchmarks/fermi-axial-contact/PhenoAgent_Fermi_Axial_Contact_95CL.pdf",
+      "role": "reproducibility-artifact",
+      "format": "pdf",
+      "sha256": "7ce8399b11f2d24dd0c00c62d810812dcba5f35d4a793cbd06795a9154f3fe7d",
+      "bytes": 31769
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checks": [
+      {
+        "check_id": "check-1",
+        "name": "Explicit Clifford-matrix traces pass in 30 cases, including near the tau threshold and chiral neutrinos",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-2",
+        "name": "Three held-out masses agree against original per-bin numerical nuisance solver within 1e-5",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-3",
+        "name": "Tau threshold, zero-coupling rejection, Dirac-versus-self-conjugate normalization, and pure limit controls pass",
+        "category": "independent",
+        "status": "passed"
+      },
+      {
+        "check_id": "check-4",
+        "name": "CSV, per-bin fluxes, validation JSON and the PDF reproduce byte for byte; final PDF visually checked",
+        "category": "independent",
+        "status": "passed"
+      }
+    ]
+  },
+  "archive": {
+    "status": "local_only"
+  },
+  "extensions": {
+    "standards_provenance": {
+      "record_type": "task_provenance",
+      "provenance_version": "1.0.0",
+      "task_id": "20261125-fermi-axial-contact",
+      "repository": "lm846802297-bit/ColliderAgent",
+      "task_brief_path": "research/phenomenology-benchmarks/fermi-axial-contact/TASK.md",
+      "task_brief_sha256": "f36ae6adfcdd7f4dc46e6b2015ca629cda8bc9312c2d457a0f7a4a6a40c02d16",
+      "central_repository": "lm846802297-bit/high-energy-theory-research",
+      "central_commit_sha": "14155487afc075d301fa7f6cf452c7bff137e869",
+      "lock_file_path": "research/standards-lock.yaml",
+      "lock_file_sha256": "b735a7cab9c434064e8221f5ecad0c16697b6f62cdb5327c217b8ee210e0113a",
+      "applied_profiles": [
+        "core-governance",
+        "research-compute",
+        "task-handoff",
+        "research-quality-gate",
+        "calculation-result-archive",
+        "rcrps-v1.0.1",
+        "git-review-and-merge"
+      ],
+      "project_extensions": [
+        {
+          "path": "AGENTS.md",
+          "scope": "PhenoAgent execution and evidence separation",
+          "sha256": "71f79abe08cd3a868d881c1590686ba1a31dd09734a94d623ea4e12b45919d95"
+        }
+      ],
+      "acceptance_criteria": [
+        "Explicit Clifford-matrix traces pass in 30 cases, including near the tau threshold and chiral neutrinos",
+        "Three held-out masses agree against original per-bin numerical nuisance solver within 1e-5",
+        "Tau threshold, zero-coupling rejection, Dirac-versus-self-conjugate normalization, and pure limit controls pass",
+        "CSV, per-bin fluxes, validation JSON and the PDF reproduce byte for byte; final PDF visually checked"
+      ]
+    },
+    "source_identity_note": "commit_sha is the pinned project base. Added source scripts were executed from uncommitted study workspaces and are identified by their SHA-256. No actions or external job ran."
+  }
+}

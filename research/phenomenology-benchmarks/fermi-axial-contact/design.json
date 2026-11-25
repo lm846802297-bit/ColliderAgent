@@ -1,0 +1,1 @@
+{"physics":{"model":"symmetric Dirac axial-lepton dimension-six contact benchmark","channels":["mumu","tautau","numu","nutau"],"spectrum":"DMFit prompt only"},"numerics":{"masses":25,"mass_min_GeV":2,"mass_max_GeV":100,"q_limit":2.71,"held_out":[3.7,17,73]}}

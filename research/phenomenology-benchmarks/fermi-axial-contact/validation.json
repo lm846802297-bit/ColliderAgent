@@ -1,0 +1,47 @@
+{
+  "trace": {
+    "tests": 30,
+    "max_relative_error": 3.3306690738754696e-16
+  },
+  "held_out": [
+    {
+      "mass_GeV": 3.7,
+      "coefficient_95_GeVminus2": 1.1608346732221347e-05,
+      "contact_scale_95_GeV": 293.504533756449,
+      "sigma_v_total_95_cm3_per_s": 1.8326905442585932e-26,
+      "sigma_v_visible_95_cm3_per_s": 1.1472213183242422e-26,
+      "BR_mumu": 0.3735660319525776,
+      "BR_tautau": 0.25241052580193707,
+      "BR_numu": 0.18701172112274267,
+      "BR_nutau": 0.18701172112274267,
+      "q": 2.709999999999982,
+      "independent_root_relative_difference": 7.207789920471441e-12
+    },
+    {
+      "mass_GeV": 17.0,
+      "coefficient_95_GeVminus2": 3.067988682628883e-06,
+      "contact_scale_95_GeV": 570.9171950158967,
+      "sigma_v_total_95_cm3_per_s": 3.015710865991527e-26,
+      "sigma_v_visible_95_cm3_per_s": 2.004948368766683e-26,
+      "BR_mumu": 0.335146164884954,
+      "BR_tautau": 0.3296882499048345,
+      "BR_numu": 0.1675827926051058,
+      "BR_nutau": 0.1675827926051058,
+      "q": 2.7099999999999875,
+      "independent_root_relative_difference": 2.7755575615628914e-15
+    },
+    {
+      "mass_GeV": 73.0,
+      "coefficient_95_GeVminus2": 1.343326916975168e-06,
+      "contact_scale_95_GeV": 862.7980233708118,
+      "sigma_v_total_95_cm3_per_s": 1.0716305179015018e-25,
+      "sigma_v_visible_95_cm3_per_s": 7.143141384397356e-26,
+      "BR_mumu": 0.33343139326783094,
+      "BR_tautau": 0.3331361657062514,
+      "BR_numu": 0.16671622051295884,
+      "BR_nutau": 0.16671622051295884,
+      "q": 2.7100000000000004,
+      "independent_root_relative_difference": 7.327471962526033e-15
+    }
+  ]
+}
